@@ -7,44 +7,107 @@
       "date": "2026-08-15",
       "occasion": "Independence Day",
       "pillar": "Trends & Festive",
-      "ig": {"format": "quote card", "hook_en": "Freedom from renovation chaos.", "caption_hi": "इस आज़ादी के दिन, ठेकेदारों के झंझट से भी आज़ादी लीजिए। एक टीम। एक कॉन्ट्रैक्ट। आपका पूरा घर। 🇮🇳", "hashtags": "#IndependenceDay #InteriorDesignIndia #TurnkeyInteriors #DelhiNCR #HomeInteriors"},
-      "pinterest": {"title": "Freedom from renovation chaos — turnkey home interiors India", "desc": "One team, one contract, complete home interiors. How turnkey design removes contractor stress for Indian homeowners."}
+      "photo_tag": "living",
+      "ig": {
+        "format": "quote card",
+        "hook_en": "Freedom from renovation chaos.",
+        "caption_hi": "इस आज़ादी के दिन, ठेकेदारों के झंझट से भी आज़ादी लीजिए। एक टीम। एक कॉन्ट्रैक्ट। आपका पूरा घर। 🇮🇳",
+        "hashtags": "#IndependenceDay #InteriorDesignIndia #TurnkeyInteriors #DelhiNCR #HomeInteriors"
+      },
+      "pinterest": {
+        "title": "Freedom from renovation chaos — turnkey home interiors India",
+        "desc": "One team, one contract, complete home interiors. How turnkey design removes contractor stress for Indian homeowners."
+      }
     },
     {
       "date": "2026-08-16",
       "pillar": "Before/After & Concepts",
-      "ig": {"format": "concept transformation (labeled)", "hook_en": "Same room. Different life.", "caption_hi": "एक साधारण लिविंग रूम, और वही रूम सोच-समझकर डिज़ाइन के बाद। (Concept visualisation) आपका कमरा कौन-सा है — पहला या दूसरा?", "hashtags": "#BeforeAfter #LivingRoomDesign #InteriorDesignDelhi #HomeMakeover #ConceptDesign"},
-      "pinterest": {"title": "Living room transformation concept — warm modern Indian home", "desc": "Concept visualisation: from plain to warm modern living room. Interior design ideas for Indian metro apartments."}
+      "ig": {
+        "format": "concept transformation (labeled)",
+        "hook_en": "Same room. Different life.",
+        "caption_hi": "एक साधारण लिविंग रूम, और वही रूम सोच-समझकर डिज़ाइन के बाद। (Concept visualisation) आपका कमरा कौन-सा है — पहला या दूसरा?",
+        "hashtags": "#BeforeAfter #LivingRoomDesign #InteriorDesignDelhi #HomeMakeover #ConceptDesign"
+      },
+      "pinterest": {
+        "title": "Living room transformation concept — warm modern Indian home",
+        "desc": "Concept visualisation: from plain to warm modern living room. Interior design ideas for Indian metro apartments."
+      },
+      "photo_tag": "living"
     },
     {
       "date": "2026-08-17",
       "pillar": "Design Tips & Mistakes",
-      "ig": {"format": "tips card / carousel", "hook_en": "5 modular kitchen mistakes that cost you lakhs.", "caption_hi": "मॉड्यूलर किचन बनवाने से पहले ये 5 ग़लतियाँ जान लीजिए — नंबर 3 सबसे महँगी पड़ती है। Save कर लीजिए, काम आएगा। 🔖", "hashtags": "#ModularKitchen #KitchenDesign #InteriorTips #HomeRenovation #KitchenIndia"},
-      "pinterest": {"title": "5 modular kitchen mistakes to avoid — Indian kitchens", "desc": "Costly modular kitchen design mistakes Indian homeowners make, and how to avoid them. Kitchen planning checklist."}
+      "ig": {
+        "format": "tips card / carousel",
+        "hook_en": "5 modular kitchen mistakes that cost you lakhs.",
+        "caption_hi": "मॉड्यूलर किचन बनवाने से पहले ये 5 ग़लतियाँ जान लीजिए — नंबर 3 सबसे महँगी पड़ती है। Save कर लीजिए, काम आएगा। 🔖",
+        "hashtags": "#ModularKitchen #KitchenDesign #InteriorTips #HomeRenovation #KitchenIndia"
+      },
+      "pinterest": {
+        "title": "5 modular kitchen mistakes to avoid — Indian kitchens",
+        "desc": "Costly modular kitchen design mistakes Indian homeowners make, and how to avoid them. Kitchen planning checklist."
+      },
+      "photo_tag": "kitchen"
     },
     {
       "date": "2026-08-18",
       "pillar": "Budget & Process Transparency",
-      "ig": {"format": "cost breakdown card", "hook_en": "What does a 2BHK interior really cost in Delhi NCR?", "caption_hi": "सीधा जवाब, कोई छुपी बात नहीं — 2BHK इंटीरियर का असली बजट ब्रेकडाउन। सवाल हों तो कमेंट में पूछिए, हम सच बताते हैं।", "hashtags": "#InteriorCost #2BHKInterior #DelhiNCR #BudgetPlanning #HomeInteriorsIndia"},
-      "pinterest": {"title": "2BHK interior cost breakdown Delhi NCR — honest budget guide", "desc": "Realistic 2BHK home interior budget breakdown for Delhi NCR: kitchen, wardrobes, false ceiling, finishes."}
+      "ig": {
+        "format": "cost breakdown card",
+        "hook_en": "What does a 2BHK interior really cost in Delhi NCR?",
+        "caption_hi": "सीधा जवाब, कोई छुपी बात नहीं — 2BHK इंटीरियर का असली बजट ब्रेकडाउन। सवाल हों तो कमेंट में पूछिए, हम सच बताते हैं।",
+        "hashtags": "#InteriorCost #2BHKInterior #DelhiNCR #BudgetPlanning #HomeInteriorsIndia"
+      },
+      "pinterest": {
+        "title": "2BHK interior cost breakdown Delhi NCR — honest budget guide",
+        "desc": "Realistic 2BHK home interior budget breakdown for Delhi NCR: kitchen, wardrobes, false ceiling, finishes."
+      },
+      "photo_tag": "living"
     },
     {
       "date": "2026-08-19",
       "pillar": "Trends & Festive",
-      "ig": {"format": "trend card", "hook_en": "Japandi × Indian warmth = 2026's coziest homes.", "caption_hi": "जापानी सादगी + भारतीय गर्माहट — यही है इस साल का सबसे सुकून भरा ट्रेंड। आपको minimal पसंद है या full-glam?", "hashtags": "#Japandi #InteriorTrends2026 #IndianHomes #MinimalDesign #HomeDecorIndia"},
-      "pinterest": {"title": "Japandi style with Indian warmth — 2026 interior trend", "desc": "How Japandi minimalism blends with Indian textures and warmth. Interior trend ideas for modern Indian homes."}
+      "ig": {
+        "format": "trend card",
+        "hook_en": "Japandi × Indian warmth = 2026's coziest homes.",
+        "caption_hi": "जापानी सादगी + भारतीय गर्माहट — यही है इस साल का सबसे सुकून भरा ट्रेंड। आपको minimal पसंद है या full-glam?",
+        "hashtags": "#Japandi #InteriorTrends2026 #IndianHomes #MinimalDesign #HomeDecorIndia"
+      },
+      "pinterest": {
+        "title": "Japandi style with Indian warmth — 2026 interior trend",
+        "desc": "How Japandi minimalism blends with Indian textures and warmth. Interior trend ideas for modern Indian homes."
+      },
+      "photo_tag": "living"
     },
     {
       "date": "2026-08-20",
       "pillar": "Turnkey Education",
-      "ig": {"format": "explainer card", "hook_en": "Turnkey kya hota hai?", "caption_hi": "10 ठेकेदार, 100 फ़ोन कॉल, अनगिनत सिरदर्द — या एक टीम जो डिज़ाइन से लेकर चाबी सौंपने तक सब संभाले? यही होता है turnkey. एक कॉन्ट्रैक्ट, ज़ीरो झंझट।", "hashtags": "#TurnkeyInteriors #InteriorDesignIndia #HomeInteriors #StressFreeRenovation #DesignInfra"},
-      "pinterest": {"title": "What is turnkey interior design? One team, one contract", "desc": "Turnkey interiors explained: how one accountable team from design to handover removes renovation stress."}
+      "ig": {
+        "format": "explainer card",
+        "hook_en": "Turnkey kya hota hai?",
+        "caption_hi": "10 ठेकेदार, 100 फ़ोन कॉल, अनगिनत सिरदर्द — या एक टीम जो डिज़ाइन से लेकर चाबी सौंपने तक सब संभाले? यही होता है turnkey. एक कॉन्ट्रैक्ट, ज़ीरो झंझट।",
+        "hashtags": "#TurnkeyInteriors #InteriorDesignIndia #HomeInteriors #StressFreeRenovation #DesignInfra"
+      },
+      "pinterest": {
+        "title": "What is turnkey interior design? One team, one contract",
+        "desc": "Turnkey interiors explained: how one accountable team from design to handover removes renovation stress."
+      },
+      "photo_tag": "living"
     },
     {
       "date": "2026-08-21",
       "pillar": "Trends & Festive",
-      "ig": {"format": "checklist card", "hook_en": "Festive season is 6 weeks away. Is your home ready?", "caption_hi": "रक्षाबंधन से दिवाली तक मेहमानों का सीज़न शुरू होने वाला है। घर को नया रूप देने का सही समय अभी है — त्योहारों पर नहीं। Free consultation — link in bio.", "hashtags": "#FestiveHome #DiwaliDecor #HomeMakeover #FestiveSeason #InteriorDesignDelhi"},
-      "pinterest": {"title": "Get your home festive-ready — Indian festive season interior checklist", "desc": "Six weeks to festive season: home interior refresh checklist for Raksha Bandhan, Ganesh Chaturthi and Diwali hosting."}
+      "ig": {
+        "format": "checklist card",
+        "hook_en": "Festive season is 6 weeks away. Is your home ready?",
+        "caption_hi": "रक्षाबंधन से दिवाली तक मेहमानों का सीज़न शुरू होने वाला है। घर को नया रूप देने का सही समय अभी है — त्योहारों पर नहीं। Free consultation — link in bio.",
+        "hashtags": "#FestiveHome #DiwaliDecor #HomeMakeover #FestiveSeason #InteriorDesignDelhi"
+      },
+      "pinterest": {
+        "title": "Get your home festive-ready — Indian festive season interior checklist",
+        "desc": "Six weeks to festive season: home interior refresh checklist for Raksha Bandhan, Ganesh Chaturthi and Diwali hosting."
+      },
+      "photo_tag": "living"
     }
   ]
 }

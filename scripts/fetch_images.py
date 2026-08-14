@@ -15,7 +15,7 @@ if os.path.exists(CREDITS_PATH):
 
 HEADERS = {"User-Agent": "DesignInfra-AURA/1.0 (marketing automation; contact via GitHub)"}
 
-def fetch(query, count=4):
+def fetch(query, room="living", count=4):
     slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")
     url = ("https://api.openverse.org/v1/images/?" + urllib.parse.urlencode({
         "q": query, "license": "cc0,pdm,by", "category": "photograph",
@@ -40,17 +40,34 @@ def fetch(query, count=4):
             credits[name] = {
                 "title": r.get("title"), "creator": r.get("creator"),
                 "license": r.get("license"), "license_url": r.get("license_url"),
-                "source": r.get("foreign_landing_url"), "query": query}
+                "source": r.get("foreign_landing_url"), "query": query, "room": room}
             saved += 1
             print("saved", name, "|", r.get("license"), "|", r.get("creator"))
         except Exception as e:
             print("skip:", e, file=sys.stderr)
     return saved
 
+DEFAULT_QUERIES = [
+    ("modern living room interior India", "living"),
+    ("modular kitchen interior design", "kitchen"),
+    ("cozy bedroom interior design warm", "bedroom"),
+    ("home office interior design", "office"),
+]
+
 if __name__ == "__main__":
-    queries = sys.argv[1:] or ["modern living room interior", "modular kitchen interior",
-                               "cozy bedroom interior design", "home office interior"]
-    total = sum(fetch(q) for q in queries)
+    # CLI usage: python fetch_images.py "query1" "query2" ...  -> all tagged "living"
+    # (weekly workflow calls with no args and uses DEFAULT_QUERIES with proper room tags)
+    if len(sys.argv) > 1:
+        def infer_room(q):
+            ql = q.lower()
+            for room in ("kitchen", "bedroom", "office", "bathroom", "balcony"):
+                if room in ql:
+                    return room
+            return "living"
+        jobs = [(q, infer_room(q)) for q in sys.argv[1:]]
+    else:
+        jobs = DEFAULT_QUERIES
+    total = sum(fetch(q, room=r) for q, r in jobs)
     json.dump(credits, open(CREDITS_PATH, "w"), indent=1, ensure_ascii=False)
     print(f"total saved: {total}")
     # CC-BY images MUST show credit on the post; renderer reads credits.json for that.

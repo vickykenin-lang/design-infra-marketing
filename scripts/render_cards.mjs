@@ -1,8 +1,8 @@
 // AURA — Visual Designer v2: illustrated-interior post cards
 // Usage: PW_EXEC=/opt/pw-browsers/chromium node scripts/render_cards.mjs [--only YYYY-MM-DD]
 import { chromium } from 'playwright';
-import { readFileSync, mkdirSync } from 'fs';
-import { dirname, join } from 'path';
+import { readFileSync, mkdirSync, existsSync } from 'fs';
+import { dirname, join, extname } from 'path';
 import { fileURLToPath } from 'url';
 import { roomScene } from './scene.mjs';
 
@@ -10,6 +10,34 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const cal = JSON.parse(readFileSync(join(ROOT, 'content/calendar.json'), 'utf8'));
 const only = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : null;
 mkdirSync(join(ROOT, 'content/queue'), { recursive: true });
+
+// ---- Real photo pool (Openverse-fetched by scripts/fetch_images.py) ----
+// content/assets/credits.json: { "<filename>": { room, license, creator, source, ... } }
+const ASSETS_DIR = join(ROOT, 'content/assets');
+const CREDITS_PATH = join(ASSETS_DIR, 'credits.json');
+const credits = existsSync(CREDITS_PATH) ? JSON.parse(readFileSync(CREDITS_PATH, 'utf8')) : {};
+const photosByRoom = {};
+for (const [file, meta] of Object.entries(credits)) {
+  const room = meta.room || 'living';
+  (photosByRoom[room] ||= []).push({ file, ...meta });
+}
+const usedPhotos = new Set(); // avoid repeating the same photo across a batch
+const mime = f => ({ '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' }[extname(f).toLowerCase()] || 'image/jpeg');
+
+function pickPhoto(tag) {
+  const pool = (photosByRoom[tag] || photosByRoom.living || []);
+  const fresh = pool.filter(p => !usedPhotos.has(p.file));
+  const chosen = (fresh.length ? fresh : pool)[0];
+  if (!chosen) return null;
+  usedPhotos.add(chosen.file);
+  try {
+    const data = readFileSync(join(ASSETS_DIR, chosen.file));
+    return { dataUri: `data:${mime(chosen.file)};base64,${data.toString('base64')}`, ...chosen };
+  } catch {
+    return null;
+  }
+}
+const needsCredit = lic => lic && /^by/i.test(lic); // CC BY / CC BY-SA require attribution; CC0/PDM don't
 
 const C = {
   ivory: '#faf7f2', ink: '#1f2937', ink2: '#6b7280',
@@ -31,9 +59,11 @@ function shell(inner, { w, h, dark = false }) {
   .bname{font-weight:800;font-size:27px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .btag{font-size:18px;color:#f5f0e8;opacity:.9;text-shadow:0 1px 4px rgba(0,0,0,.4)}
   .scene{position:relative;line-height:0}
+  .scene img{display:block;object-fit:cover}
   .scene .fade{position:absolute;left:0;right:0;bottom:-2px;height:130px;
     background:linear-gradient(180deg,transparent,${dark ? C.dark : C.ivory})}
   .badge{position:absolute;z-index:4;padding:9px 20px;border-radius:99px;font-size:21px;font-weight:800;letter-spacing:.02em}
+  .credit{position:absolute;z-index:4;font-size:15px;color:#fff;background:#00000070;padding:5px 12px;border-radius:8px}
   .content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 64px 0}
   .kicker{font-size:20px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:${C.amber}}
   .accent{height:6px;width:110px;border-radius:99px;background:linear-gradient(90deg,${C.terra},${C.gold});margin:22px 0 26px}
@@ -48,12 +78,27 @@ function shell(inner, { w, h, dark = false }) {
   </body></html>`;
 }
 
+// Returns { media: <img> or <svg> sized exactly w×h, credit: attribution chip html or '' }
+function sceneMedia(tag, w, h, fallbackStyle) {
+  const photo = pickPhoto(tag);
+  if (photo) {
+    const credit = needsCredit(photo.license)
+      ? `<span class="credit" style="left:20px;bottom:20px">📷 ${esc(photo.creator || 'Unknown')} · CC BY</span>` : '';
+    const media = `<div style="width:${w}px;height:${h}px;overflow:hidden">` +
+      `<img src="${photo.dataUri}" style="width:100%;height:100%;object-fit:cover;display:block"></div>`;
+    return { media, credit };
+  }
+  return { media: roomScene(w, h, fallbackStyle), credit: '' };
+}
+
 function heroCard(d, { w, h, dark, scene, badge }) {
   const sceneH = Math.round(h * 0.52);
   const hookSize = d.ig.hook_en.length > 38 ? 62 : 76;
+  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, scene);
   return shell(`
-    <div class="scene">${roomScene(w, sceneH, scene)}
+    <div class="scene">${media}
       ${badge ? `<span class="badge" style="right:40px;top:${sceneH - 64}px;background:#ffffffe6;color:${C.terra}">${badge}</span>` : ''}
+      ${credit}
       <div class="fade"></div></div>
     <div class="content">
       <span class="kicker">${esc(d.occasion || d.pillar)}</span><div class="accent"></div>
@@ -64,11 +109,15 @@ function heroCard(d, { w, h, dark, scene, badge }) {
 
 function beforeAfterCard(d, { w, h, dark }) {
   const half = Math.round(h * 0.335);
+  // BEFORE stays illustrated (we don't fake a "messy" real photo — honesty over drama).
+  // AFTER uses a real photo when the researcher found one for this room, else falls back to illustration.
+  const after = sceneMedia(d.photo_tag || 'living', w, half, 'warm');
   return shell(`
     <div class="scene">${roomScene(w, half, 'plain')}
       <span class="badge" style="left:40px;bottom:26px;background:#1f2937d9;color:#fff">BEFORE</span></div>
-    <div class="scene">${roomScene(w, half, 'warm')}
+    <div class="scene">${after.media}
       <span class="badge" style="left:40px;bottom:26px;background:#ffffffe6;color:${C.terra}">AFTER ✨</span>
+      ${after.credit}
       <div class="fade"></div></div>
     <div class="content" style="justify-content:flex-start;padding-top:30px">
       <div class="hook" style="font-size:58px">${esc(d.ig.hook_en)}</div>
@@ -78,6 +127,7 @@ function beforeAfterCard(d, { w, h, dark }) {
 
 function listCard(d, { w, h, dark, items, rows }) {
   const sceneH = Math.round(h * 0.30);
+  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, 'warm');
   const body = items
     ? items.map((t, i) => `<div style="display:flex;gap:18px;align-items:center;margin-bottom:21px">
         <div style="min-width:50px;height:50px;border-radius:50%;background:${C.amber}26;color:${C.terra};font-weight:800;font-size:23px;display:flex;align-items:center;justify-content:center">${i + 1}</div>
@@ -86,7 +136,7 @@ function listCard(d, { w, h, dark, items, rows }) {
         <span style="font-size:28px;font-weight:700">${r[0]}</span><span style="font-size:28px;font-weight:800;color:${C.terra}">${r[1]}</span></div>`).join('') +
       `<div style="font-size:20px;margin-top:20px;opacity:.7">*साधारण 2BHK, mid-premium रेंज। सटीक बजट डिज़ाइन के बाद।</div>`;
   return shell(`
-    <div class="scene">${roomScene(w, sceneH, 'warm')}<div class="fade"></div></div>
+    <div class="scene">${media}${credit}<div class="fade"></div></div>
     <div class="content" style="justify-content:flex-start;padding-top:8px">
       <span class="kicker">${esc(d.pillar)}</span><div class="accent" style="margin:16px 0 20px"></div>
       <div class="hook" style="font-size:50px;margin-bottom:32px">${esc(d.ig.hook_en)}</div>
