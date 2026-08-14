@@ -1,75 +1,83 @@
-[wikimedia] saved living-1.jpg (2032KB) lic='cc by 4.0' by 'Ajuytourism2026' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved living-3.jpg (1966KB) lic='cc0' by 'Estate Lookup Interiors' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved living-ov-3.jpg (22KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:La Florentina - Balay Bacabac-Babar Ancestral House.png
+[wikimedia] reject duplicate (already in pool): File:Spacious Living Room Interior Design in Kolkata by Estate Lookup Interiors.png
+[openverse] reject duplicate (already in pool): Interior Design
 [openverse] reject (no-interior-hint): Coffee Table
-[openverse] saved living-ov-5.jpg (24KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-== living: 4/10 from 'modern living room interior design sofa'
-[wikimedia] saved living-5.jpg (308KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved living-7.jpg (467KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved living-9.jpg (1669KB) lic='cc0' by 'Estate Lookup Interiors' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject duplicate (already in pool): Couch Furniture
+== living: 0/10 from 'modern living room interior design sofa'
+[wikimedia] reject duplicate (already in pool): File:American homes and gardens (1907) (17970714579).jpg
+[wikimedia] reject duplicate (already in pool): File:American homes and gardens (1909) (17536680823).jpg
+[wikimedia] reject duplicate (already in pool): File:Luxury Living Room Interior Design in Kolkata by Estate Lookup Interiors.png
 [wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== living: 3/10 from 'living room interior design India'
+== living: 0/10 from 'living room interior design India'
 [wikimedia] reject (bad-keyword): File:Miggla logo.png
 [wikimedia] reject duplicate (already in pool): File:Modular Kitchen Design - Picker Online.jpg
 == kitchen: 0/8 from 'modular kitchen interior design'
 [wikimedia] reject (bad-keyword): File:Interior, kitchen - Pope-Leighey House, 9000 Richmond Highway (moved from Falls Church, VA), Mount Vernon, Fairfax County, VA HABS VA,30-FALCH,2-23.tif
-[wikimedia] saved kitchen-2.jpg (200KB) lic='public domain' by '' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:Interior view of kitchen north wall, with cabinets, window, and chimney flue - High Island Bridge Tender's Station, Residence, State Highway 124 Crossing of Mud Bayou, High HABS TEX,84-HISL.V,1A-12.tif
 [wikimedia] reject (bad-keyword): File:KITCHEN, LOOKING TOWARD DOOR TO DINING ROOM - Mr. and Mrs. Charles Collier House, 6080 Leesburg Pike, Falls Church, Falls Church, VA HABS VA,30-FALCH.V,3-13.tif
-[wikimedia] saved kitchen-4.jpg (148KB) lic='public domain' by '' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved kitchen-ov-4.jpg (39KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:NORTHEAST INTERIOR CORNER OF 1936 KITCHEN-DINETTE ADDITION SHOWING CABINETS. VIEW IS TO NORTHEAST. - Randle Ranger Residence, Building No. 1135, Silverbrook Road, Randle, Lewis HABS WASH,21-RAND,1-5.tif
 [openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
 [openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
-[openverse] saved kitchen-ov-6.jpg (58KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved kitchen-ov-8.jpg (25KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved kitchen-ov-10.jpg (36KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved kitchen-ov-12.jpg (21KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[openverse] saved kitchen-ov-14.jpg (34KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-== kitchen: 8/8 from 'kitchen interior design cabinets'
+[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
+[openverse] reject duplicate (already in pool): Kitchen Interior
+[openverse] reject duplicate (already in pool): Kitchen Cabinet
+[openverse] reject duplicate (already in pool): Modern kitchen design with sleek cabinets and minimalistic counter space in a contemporary apartment
+[openverse] reject duplicate (already in pool): Modern kitchen interior design featuring light colors and minimalist style with sleek cabinets and elegant countertops
+[openverse] reject duplicate (already in pool): View From Dining Area
+== kitchen: 0/8 from 'kitchen interior design cabinets'
 [wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
-[wikimedia] saved bedroom-2.jpg (411KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
 [wikimedia] saved bedroom-4.jpg (142KB) lic='cc0' by 'JianfaTsai' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
 [wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
-== bedroom: 2/8 from 'bedroom interior design wardrobe'
-[wikimedia] saved bedroom-4.jpg (363KB) lic='public domain' by 'Arvind Acharya' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+== bedroom: 1/8 from 'bedroom interior design wardrobe'
+[wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
 [wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== bedroom: 1/8 from 'bedroom interior design India'
+== bedroom: 0/8 from 'bedroom interior design India'
 [wikimedia] reject (no-interior-hint): File:Building with assurance (1921) (14740809366).jpg
 [openverse] reject (no-interior-hint): multimedia desk
-[openverse] saved office-ov-1.jpg (66KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject duplicate (already in pool): standing desk in den / kitchen
 [openverse] reject (no-interior-hint): Detention cell
-[openverse] saved office-ov-3.jpg (18KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject duplicate (already in pool): Home Office
 [openverse] reject duplicate (already in pool): Home Office
 [openverse] reject duplicate (already in pool): Home Office
 [openverse] reject duplicate (already in pool): Home Office
 [openverse] reject duplicate (already in pool): Home Office
 [openverse] reject (no-interior-hint): Creative Corner Workspace
-== office: 2/6 from 'home office room interior design desk'
-[wikimedia] saved office-3.jpg (239KB) lic='public domain' by 'Boucher, Jack E.
-Related names:
-
-De Sibour, J H
-Wichfeldabe' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-5.jpg (696KB) lic='public domain' by 'Print made by: Thomas Rowlandson
-
-Published by: William Hum' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-7.jpg (511KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-9.jpg (514KB) lic='public domain' by 'Farrar, Jonathan
+== office: 0/6 from 'home office room interior design desk'
+[wikimedia] reject duplicate (already in pool): File:1972 DINING ROOM, NOW A STUDY FIRST (SECOND) FLOOR - Clarence Moore House, 1746 Massachusetts Avenue Northwest, Washington, District of Columbia, DC HABS DC,WASH,210-7.tif
+[wikimedia] reject duplicate (already in pool): File:A peep into Friar Bacon's study. (BM 1851,0901.178).jpg
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, east section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-13.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-11.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-12.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-18.tif
+[wikimedia] saved office-9.jpg (499KB) lic='public domain' by 'Farrar, Jonathan
 Related names:
 
 Kelham, George W
 Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-11.jpg (510KB) lic='public domain' by 'Farrar, Jonathan
+[wikimedia] saved office-10.jpg (519KB) lic='public domain' by 'Farrar, Jonathan
 Related names:
 
 Kelham, George W
 Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-13.jpg (524KB) lic='public domain' by 'Farrar, Jonathan
+[wikimedia] saved office-12.jpg (527KB) lic='public domain' by 'Farrar, Jonathan
 Related names:
 
 Kelham, George W
 Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-14.jpg (489KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject (bad-keyword): File:Drawing, An Interior, 1837–40 (CH 18708251).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297-2).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture and Plan of Glass Disc for Mr. Allen's Study and Mrs. Allen's Dressing Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800307).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture and Plan of Glass Disc for Mr. Allen's Study and Mrs. Allen's Dressing Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800307-2).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305-2).jpg
+[wikimedia] reject (bad-keyword): File:Drawing, Sitting Room, 7 Owen's Row, Islington, 1855 (CH 18708207).jpg
+[wikimedia] saved office-16.jpg (399KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-18.jpg (276KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
 == office: 6/6 from 'study room interior design'

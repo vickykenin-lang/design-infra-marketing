@@ -162,11 +162,11 @@
   "provider": "wikimedia"
  },
  "bedroom-4.jpg": {
-  "title": "File:HillfortPalaceInterior4.jpg",
-  "creator": "Arvind Acharya",
-  "license": "public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:HillfortPalaceInterior4.jpg",
-  "query": "bedroom interior design India",
+  "title": "File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png",
+  "creator": "JianfaTsai",
+  "license": "cc0",
+  "source": "https://commons.wikimedia.org/wiki/File:Remove_Wardrobe_Door_To_Replace_With_Sliding_Curtains_To_Free_Up_Bedroom_Space.png",
+  "query": "bedroom interior design wardrobe",
   "room": "bedroom",
   "provider": "wikimedia"
  },
@@ -216,10 +216,10 @@
   "provider": "wikimedia"
  },
  "office-9.jpg": {
-  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-11.tif",
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, south section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-15.tif",
   "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
   "license": "public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_northeast_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_HABS_CA-2678-A-11.tif",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_south_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_CA_HABS_CA-2678-A-15.tif",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
@@ -238,6 +238,51 @@
   "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
   "license": "public domain",
   "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_northwest_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_HABS_CA-2678-A-18.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-10.jpg": {
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, southeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-14.tif",
+  "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_southeast_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_HABS_CA-2678-A-14.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-12.jpg": {
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, southwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-16.tif",
+  "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_southwest_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_HABS_CA-2678-A-16.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-14.jpg": {
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif",
+  "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_west_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_CA_HABS_CA-2678-A-17.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-16.jpg": {
+  "title": "File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10604.tiff",
+  "creator": "Bedford Lemere &amp; Co",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:First_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10604.tiff",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-18.jpg": {
+  "title": "File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff",
+  "creator": "Bedford Lemere &amp; Co",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:First_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10605.tiff",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
