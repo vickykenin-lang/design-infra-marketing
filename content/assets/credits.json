@@ -162,11 +162,11 @@
   "provider": "wikimedia"
  },
  "bedroom-4.jpg": {
-  "title": "File:HillfortPalaceInterior4.jpg",
-  "creator": "Arvind Acharya",
-  "license": "public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:HillfortPalaceInterior4.jpg",
-  "query": "bedroom interior design India",
+  "title": "File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png",
+  "creator": "JianfaTsai",
+  "license": "cc0",
+  "source": "https://commons.wikimedia.org/wiki/File:Remove_Wardrobe_Door_To_Replace_With_Sliding_Curtains_To_Free_Up_Bedroom_Space.png",
+  "query": "bedroom interior design wardrobe",
   "room": "bedroom",
   "provider": "wikimedia"
  },
@@ -306,10 +306,10 @@
   "provider": "wikimedia"
  },
  "office-19.jpg": {
-  "title": "File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg",
-  "creator": "Richard Parminter Cuff Details on Google Art Project",
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif",
+  "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
   "license": "public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Richard_Parminter_Cuff_-_Sitting_Room,_7_Owen%27s_Row,_Islington_-_Google_Art_Project.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_west_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_CA_HABS_CA-2678-A-17.tif",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
@@ -328,6 +328,51 @@
   "creator": "Bedford Lemere &amp; Co",
   "license": "public domain",
   "source": "https://commons.wikimedia.org/wiki/File:Second_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10610.tiff",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-20.jpg": {
+  "title": "File:The study of Samuel Taylor Coleridge (BM 1870,1008.600).jpg",
+  "creator": "Print made by: George Scharf\n\nPrinted by: Charles Joseph Hu",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:The_study_of_Samuel_Taylor_Coleridge_(BM_1870,1008.600).jpg",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-22.jpg": {
+  "title": "File:The study of Samuel Taylor Coleridge (BM 1927,1126.1.11.2).jpg",
+  "creator": "Print made by: George Scharf\n\nPrinted by: Charles Joseph Hu",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:The_study_of_Samuel_Taylor_Coleridge_(BM_1927,1126.1.11.2).jpg",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-24.jpg": {
+  "title": "File:Third Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10614.tiff",
+  "creator": "Bedford Lemere &amp; Co",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Third_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10614.tiff",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-26.jpg": {
+  "title": "File:WAITING ROOM INTERIOR, LOOKING AT NORTH AND EAST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-24.tif",
+  "creator": "Lowe, Jet, creator",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:WAITING_ROOM_INTERIOR,_LOOKING_AT_NORTH_AND_EAST_WALLS._-_Baltimore_and_Ohio_Railroad,_Harpers_Ferry_Station,_Potomac_Street,_Harpers_Ferry,_Jefferson_County,_WV_HAER_WV-86-24.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-28.jpg": {
+  "title": "File:WAITING ROOM INTERIOR, LOOKING AT SOUTH AND WEST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-26.tif",
+  "creator": "Lowe, Jet, creator",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:WAITING_ROOM_INTERIOR,_LOOKING_AT_SOUTH_AND_WEST_WALLS._-_Baltimore_and_Ohio_Railroad,_Harpers_Ferry_Station,_Potomac_Street,_Harpers_Ferry,_Jefferson_County,_WV_HAER_WV-86-26.tif",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
