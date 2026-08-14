@@ -8,6 +8,12 @@ on:
   issues:
     types: [opened]
   workflow_dispatch:
+    inputs:
+      job:
+        description: 'Which job to run manually (heartbeat / publish / weekly / all)'
+        type: choice
+        default: heartbeat
+        options: [heartbeat, publish, weekly, all]
 
 permissions:
   contents: write
@@ -16,8 +22,29 @@ permissions:
 concurrency: aura-state
 
 jobs:
+  deploy:
+    # AURA's own update channel: owner opens an issue titled "AURA DEPLOY ..." whose body
+    # contains "PAYLOAD:" followed by base64 of a .tar.gz; files are extracted over the repo.
+    if: github.event_name == 'issues' && startsWith(github.event.issue.title, 'AURA DEPLOY') && github.event.issue.user.login == 'vickykenin-lang'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          printf '%s' "$BODY" | sed -n '/^PAYLOAD:/,$p' | tail -n +2 | tr -d ' \r\n' | base64 -d > /tmp/p.tgz
+          tar xzf /tmp/p.tgz
+          git config user.name "AURA" && git config user.email "aura@design-infra.bot"
+          git add -A && (git diff --cached --quiet || git commit -m "deploy: from issue #$ISSUE [skip ci]") && git pull --rebase --autostash && git push
+          gh issue close "$ISSUE" -c "🚀 Deployed. / अपडेट लागू हो गया।" || true
+
   heartbeat:
-    if: github.event_name == 'issues' || github.event_name == 'workflow_dispatch' || github.event.schedule == '15 */3 * * *'
+    if: |
+      github.event_name == 'issues' ||
+      github.event.schedule == '15 */3 * * *' ||
+      (github.event_name == 'workflow_dispatch' && (inputs.job == 'heartbeat' || inputs.job == 'all'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,7 +56,9 @@ jobs:
           git add -A && (git diff --cached --quiet || git commit -m "heartbeat [skip ci]") && git push
 
   publish:
-    if: github.event.schedule == '30 13 * * *' || github.event.schedule == '45 13 * * *'
+    if: |
+      github.event.schedule == '30 13 * * *' || github.event.schedule == '45 13 * * *' ||
+      (github.event_name == 'workflow_dispatch' && (inputs.job == 'publish' || inputs.job == 'all'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -44,7 +73,9 @@ jobs:
           git add -A && (git diff --cached --quiet || git commit -m "publish log [skip ci]") && git push
 
   weekly:
-    if: github.event.schedule == '0 6 * * 5'
+    if: |
+      github.event.schedule == '0 6 * * 5' ||
+      (github.event_name == 'workflow_dispatch' && (inputs.job == 'weekly' || inputs.job == 'all'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,9 +85,11 @@ jobs:
       - run: |
           npm install playwright --no-audit --no-fund
           npx playwright install --with-deps chromium
-      - run: python scripts/fetch_images.py "modern living room india" "modular kitchen" "bedroom interior warm"
+      - name: Research real interior photos (Openverse, CC0/CC-BY, tagged by room)
+        run: python scripts/fetch_images.py
         continue-on-error: true
-      - run: node scripts/render_cards.mjs
+      - name: Render post cards (uses real photos when available, illustration as fallback)
+        run: node scripts/render_cards.mjs
       - run: |
           git config user.name "AURA" && git config user.email "aura@design-infra.bot"
-          git add -A && (git diff --cached --quiet || git commit -m "weekly content [skip ci]") && git push
+          git add -A && (git diff --cached --quiet || git commit -m "weekly content: real photos + re-render [skip ci]") && git push
