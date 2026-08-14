@@ -85,11 +85,23 @@ jobs:
       - run: |
           npm install playwright --no-audit --no-fund
           npx playwright install --with-deps chromium
-      - name: Research real interior photos (Openverse, CC0/CC-BY, tagged by room)
+      - name: Research real interior photos (Wikimedia/Openverse, CC0/CC-BY, tagged by room, Gemini-vetted)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/fetch_images.py
         continue-on-error: true
       - name: Render post cards (uses real photos when available, illustration as fallback)
         run: node scripts/render_cards.mjs
+      - name: Creative Director AI review (interior-designer + marketer persona, before owner approval)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/creative_review.py
+        continue-on-error: true
+      - name: Customer-reaction second opinion (independent model, ordinary-homeowner persona)
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+        run: python scripts/customer_review.py
+        continue-on-error: true
       - run: |
           git config user.name "AURA" && git config user.email "aura@design-infra.bot"
           git add -A && (git diff --cached --quiet || git commit -m "weekly content: real photos + re-render [skip ci]") && git pull --rebase --autostash && git push
