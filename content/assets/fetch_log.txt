@@ -27,12 +27,15 @@
 == kitchen: 0/8 from 'kitchen interior design cabinets'
 [wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
 [wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] saved bedroom-4.jpg (142KB) lic='cc0' by 'JianfaTsai' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png
 [wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
-== bedroom: 1/8 from 'bedroom interior design wardrobe'
-[wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
+== bedroom: 0/8 from 'bedroom interior design wardrobe'
+[wikimedia] saved bedroom-4.jpg (363KB) lic='public domain' by 'Arvind Acharya' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
 [wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== bedroom: 0/8 from 'bedroom interior design India'
+== bedroom: 1/8 from 'bedroom interior design India'
 [wikimedia] reject (no-interior-hint): File:Building with assurance (1921) (14740809366).jpg
 [openverse] reject (no-interior-hint): multimedia desk
 [openverse] reject duplicate (already in pool): standing desk in den / kitchen
@@ -47,29 +50,20 @@
 [wikimedia] reject duplicate (already in pool): File:1972 DINING ROOM, NOW A STUDY FIRST (SECOND) FLOOR - Clarence Moore House, 1746 Massachusetts Avenue Northwest, Washington, District of Columbia, DC HABS DC,WASH,210-7.tif
 [wikimedia] reject duplicate (already in pool): File:A peep into Friar Bacon's study. (BM 1851,0901.178).jpg
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, east section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-13.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-11.tif
+[wikimedia] saved office-14.jpg (514KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-12.tif
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-18.tif
-[wikimedia] saved office-9.jpg (499KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-10.jpg (519KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-12.jpg (527KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-14.jpg (489KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, south section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-15.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-14.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-16.tif
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif
 [wikimedia] reject (bad-keyword): File:Drawing, An Interior, 1837–40 (CH 18708251).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297-2).jpg
@@ -78,6 +72,26 @@ Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Fou
 [wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305-2).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Sitting Room, 7 Owen's Row, Islington, 1855 (CH 18708207).jpg
-[wikimedia] saved office-16.jpg (399KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
-[wikimedia] saved office-18.jpg (276KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10604.tiff
+[wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff
+[wikimedia] saved office-15.jpg (421KB) lic='public domain' by 'Lowe, Jet, creator' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
+[wikimedia] saved office-17.jpg (169KB) lic='public domain' by 'Freeman, Joe C., creator' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
+[wikimedia] saved office-19.jpg (364KB) lic='public domain' by 'Richard Parminter Cuff Details on Google Art Project' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
+[wikimedia] saved office-21.jpg (205KB) lic='public domain' by '' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
+[wikimedia] saved office-23.jpg (274KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interaction'
 == office: 6/6 from 'study room interior design'

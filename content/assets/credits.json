@@ -162,11 +162,11 @@
   "provider": "wikimedia"
  },
  "bedroom-4.jpg": {
-  "title": "File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png",
-  "creator": "JianfaTsai",
-  "license": "cc0",
-  "source": "https://commons.wikimedia.org/wiki/File:Remove_Wardrobe_Door_To_Replace_With_Sliding_Curtains_To_Free_Up_Bedroom_Space.png",
-  "query": "bedroom interior design wardrobe",
+  "title": "File:HillfortPalaceInterior4.jpg",
+  "creator": "Arvind Acharya",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:HillfortPalaceInterior4.jpg",
+  "query": "bedroom interior design India",
   "room": "bedroom",
   "provider": "wikimedia"
  },
@@ -261,10 +261,10 @@
   "provider": "wikimedia"
  },
  "office-14.jpg": {
-  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif",
+  "title": "File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-11.tif",
   "creator": "Farrar, Jonathan\nRelated names:\n\nKelham, George W\nGarnsey,",
   "license": "public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_west_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_CA_HABS_CA-2678-A-17.tif",
+  "source": "https://commons.wikimedia.org/wiki/File:Detail_view_of_Powell_Library_main_reading_room_rotunda_ceiling,_northeast_section._-_University_of_California_Los_Angeles,_Powell_Library,_Westwood,_Los_Angeles,_Los_Angeles_County,_HABS_CA-2678-A-11.tif",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
@@ -283,6 +283,51 @@
   "creator": "Bedford Lemere &amp; Co",
   "license": "public domain",
   "source": "https://commons.wikimedia.org/wiki/File:First_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10605.tiff",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-15.jpg": {
+  "title": "File:INTERIOR OF EAST STORAGE ROOM (FORMERLY FIRST FLOOR OF SIGNAL TOWER). - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-33.tif",
+  "creator": "Lowe, Jet, creator",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:INTERIOR_OF_EAST_STORAGE_ROOM_(FORMERLY_FIRST_FLOOR_OF_SIGNAL_TOWER)._-_Baltimore_and_Ohio_Railroad,_Harpers_Ferry_Station,_Potomac_Street,_Harpers_Ferry,_Jefferson_County,_WV_HAER_WV-86-33.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-17.jpg": {
+  "title": "File:INTERIOR VIEW OF SECOND FLOOR ROOM LOOKING EAST. - Dugway Proving Ground, German-Japanese Village, German Village, South of Stark Road, in WWII Incendiary Test Area, Dugway, HAER UTAH,23-DUG,2A-10.tif",
+  "creator": "Freeman, Joe C., creator",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:INTERIOR_VIEW_OF_SECOND_FLOOR_ROOM_LOOKING_EAST._-_Dugway_Proving_Ground,_German-Japanese_Village,_German_Village,_South_of_Stark_Road,_in_WWII_Incendiary_Test_Area,_Dugway,_HAER_UTAH,23-DUG,2A-10.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-19.jpg": {
+  "title": "File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg",
+  "creator": "Richard Parminter Cuff Details on Google Art Project",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Richard_Parminter_Cuff_-_Sitting_Room,_7_Owen%27s_Row,_Islington_-_Google_Art_Project.jpg",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-21.jpg": {
+  "title": "File:SECOND FLOOR - STORAGE ROOM, ADJACENT TO SOUTHEAST ROOM - Blandfield, U.S. Route 17 and State Route 624, Caret, Essex County, VA HABS VA,29-CAR.V,1-75.tif",
+  "creator": "",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:SECOND_FLOOR_-_STORAGE_ROOM,_ADJACENT_TO_SOUTHEAST_ROOM_-_Blandfield,_U.S._Route_17_and_State_Route_624,_Caret,_Essex_County,_VA_HABS_VA,29-CAR.V,1-75.tif",
+  "query": "study room interior design",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-23.jpg": {
+  "title": "File:Second Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10610.tiff",
+  "creator": "Bedford Lemere &amp; Co",
+  "license": "public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Second_Class_Smoking_Room_on_the_%27Balmoral_Castle%27_(1910)_RMG_G10610.tiff",
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
