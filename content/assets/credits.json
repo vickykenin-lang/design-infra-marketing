@@ -1,1 +1,110 @@
-{}
+{
+ "living-1.jpg": {
+  "title": "File:Balanced Modern Bedroom Design with Neutral Tones and Layered Lighting.jpg",
+  "creator": "SPL Interiors1",
+  "license": "cc by 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Balanced_Modern_Bedroom_Design_with_Neutral_Tones_and_Layered_Lighting.jpg",
+  "query": "modern living room interior design",
+  "room": "living",
+  "provider": "wikimedia"
+ },
+ "living-3.jpg": {
+  "title": "File:Bookshelf, Living Room, Paul Schweiker House and Studio, Meacham Road, Schaumburg, IL.jpg",
+  "creator": "w_lemay",
+  "license": "cc by-sa 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bookshelf,_Living_Room,_Paul_Schweiker_House_and_Studio,_Meacham_Road,_Schaumburg,_IL.jpg",
+  "query": "modern living room interior design",
+  "room": "living",
+  "provider": "wikimedia"
+ },
+ "living-5.jpg": {
+  "title": "File:Living Room, Paul Schweiker House and Studio, Meacham Road, Schaumburg, IL.jpg",
+  "creator": "w_lemay",
+  "license": "cc by-sa 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Living_Room,_Paul_Schweiker_House_and_Studio,_Meacham_Road,_Schaumburg,_IL.jpg",
+  "query": "modern living room interior design",
+  "room": "living",
+  "provider": "wikimedia"
+ },
+ "living-7.jpg": {
+  "title": "File:Living Room, Paul Schweiker House and Studio, Meacham Road, Schaumburg, IL - 54209382262.jpg",
+  "creator": "w_lemay",
+  "license": "cc by-sa 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Living_Room,_Paul_Schweiker_House_and_Studio,_Meacham_Road,_Schaumburg,_IL_-_54209382262.jpg",
+  "query": "modern living room interior design",
+  "room": "living",
+  "provider": "wikimedia"
+ },
+ "kitchen-1.jpg": {
+  "title": "File:Miggla logo.png",
+  "creator": "Kumarsanddeep",
+  "license": "cc by 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Miggla_logo.png",
+  "query": "modular kitchen interior",
+  "room": "kitchen",
+  "provider": "wikimedia"
+ },
+ "kitchen-3.jpg": {
+  "title": "File:Modular Kitchen.jpg",
+  "creator": "Riverview Homes, Inc.",
+  "license": "cc by-sa 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Modular_Kitchen.jpg",
+  "query": "modular kitchen interior",
+  "room": "kitchen",
+  "provider": "wikimedia"
+ },
+ "kitchen-5.jpg": {
+  "title": "File:Modular Kitchen Design - Picker Online.jpg",
+  "creator": "Pixabay",
+  "license": "cc0",
+  "source": "https://commons.wikimedia.org/wiki/File:Modular_Kitchen_Design_-_Picker_Online.jpg",
+  "query": "modular kitchen interior",
+  "room": "kitchen",
+  "provider": "wikimedia"
+ },
+ "bedroom-1.jpg": {
+  "title": "File:2017 Smog nad Nową Rudą.jpg",
+  "creator": "Jacek Halicki",
+  "license": "cc by-sa 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2017_Smog_nad_Now%C4%85_Rud%C4%85.jpg",
+  "query": "bedroom interior design",
+  "room": "bedroom",
+  "provider": "wikimedia"
+ },
+ "bedroom-3.jpg": {
+  "title": "File:3D Design of a Bedroom created with 3D online Planoplan software.jpg",
+  "creator": "Dely25897",
+  "license": "cc by-sa 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:3D_Design_of_a_Bedroom_created_with_3D_online_Planoplan_software.jpg",
+  "query": "bedroom interior design",
+  "room": "bedroom",
+  "provider": "wikimedia"
+ },
+ "bedroom-5.jpg": {
+  "title": "File:Balanced Modern Bedroom Design with Neutral Tones and Layered Lighting.jpg",
+  "creator": "SPL Interiors1",
+  "license": "cc by 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Balanced_Modern_Bedroom_Design_with_Neutral_Tones_and_Layered_Lighting.jpg",
+  "query": "bedroom interior design",
+  "room": "bedroom",
+  "provider": "wikimedia"
+ },
+ "office-1.jpg": {
+  "title": "File:Adarga (Nymphaea alba), Ciudad Ho Chi Minh, Vietnam, 2013-08-14, DD 01.jpg",
+  "creator": "Diego Delso",
+  "license": "cc by-sa 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Adarga_(Nymphaea_alba),_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_01.jpg",
+  "query": "home office interior",
+  "room": "office",
+  "provider": "wikimedia"
+ },
+ "office-3.jpg": {
+  "title": "File:Badger outside the Home Office says End the badger cull.jpg",
+  "creator": "Colin McLaughlin",
+  "license": "cc0",
+  "source": "https://commons.wikimedia.org/wiki/File:Badger_outside_the_Home_Office_says_End_the_badger_cull.jpg",
+  "query": "home office interior",
+  "room": "office",
+  "provider": "wikimedia"
+ }
+}
