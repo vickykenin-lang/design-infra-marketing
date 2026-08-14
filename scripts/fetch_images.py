@@ -1,73 +1,126 @@
 #!/usr/bin/env python3
-"""AURA — Image Researcher: finds license-safe real interior photos via Openverse.
-Runs inside GitHub Actions (open internet). Saves images + license credits.
-Usage: python scripts/fetch_images.py "modern living room" bedroom kitchen
-Output: content/assets/<slug>-N.jpg + content/assets/credits.json
+"""AURA — Image Researcher v2: license-safe real interior photos.
+Primary source: Wikimedia Commons (reliable direct downloads, clear licenses).
+Fallback: Openverse API thumbnails.
+Writes: content/assets/<room>-N.jpg, credits.json, fetch_log.txt (for remote debugging).
+Runs inside GitHub Actions (open internet).
 """
-import json, os, re, sys, urllib.parse, urllib.request
+import json, os, sys, urllib.parse, urllib.request
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "content", "assets")
 os.makedirs(OUT, exist_ok=True)
 CREDITS_PATH = os.path.join(OUT, "credits.json")
+LOG_PATH = os.path.join(OUT, "fetch_log.txt")
 credits = {}
 if os.path.exists(CREDITS_PATH):
-    credits = json.load(open(CREDITS_PATH))
+    try:
+        credits = json.load(open(CREDITS_PATH))
+    except Exception:
+        credits = {}
+LOG = []
 
-HEADERS = {"User-Agent": "DesignInfra-AURA/1.0 (marketing automation; contact via GitHub)"}
+def log(msg):
+    print(msg)
+    LOG.append(str(msg))
 
-def fetch(query, room="living", count=4):
-    slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")
-    url = ("https://api.openverse.org/v1/images/?" + urllib.parse.urlencode({
-        "q": query, "license": "cc0,pdm,by", "category": "photograph",
-        "aspect_ratio": "tall,square", "size": "large", "page_size": 20}))
+HEADERS = {"User-Agent": "DesignInfraAURA/2.0 (https://github.com/vickykenin-lang/design-infra-marketing; marketing bot) python-urllib"}
+OK_LICENSES = ("cc0", "cc by", "cc-by", "pd", "public domain", "no restrictions")
+
+def http_json(url):
     req = urllib.request.Request(url, headers=HEADERS)
-    results = json.load(urllib.request.urlopen(req, timeout=30)).get("results", [])
+    return json.load(urllib.request.urlopen(req, timeout=30))
+
+def download(url, path, min_bytes=30_000):
+    req = urllib.request.Request(url, headers=HEADERS)
+    data = urllib.request.urlopen(req, timeout=60).read()
+    if len(data) < min_bytes:
+        raise ValueError(f"too small ({len(data)} bytes)")
+    open(path, "wb").write(data)
+    return len(data)
+
+def wikimedia(query, room, count):
+    """Search Wikimedia Commons for freely-licensed photos, download width~1200 versions."""
     saved = 0
+    url = ("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
+        "action": "query", "format": "json", "generator": "search",
+        "gsrsearch": f"filetype:bitmap {query}", "gsrnamespace": 6, "gsrlimit": 25,
+        "prop": "imageinfo", "iiprop": "url|extmetadata|size",
+        "iiurlwidth": 1280}))
+    try:
+        pages = http_json(url).get("query", {}).get("pages", {})
+    except Exception as e:
+        log(f"[wikimedia] search failed for '{query}': {e}")
+        return 0
+    for p in pages.values():
+        if saved >= count:
+            break
+        try:
+            ii = p["imageinfo"][0]
+            meta = ii.get("extmetadata", {})
+            lic = (meta.get("LicenseShortName", {}).get("value") or "").lower()
+            if not any(ok in lic for ok in OK_LICENSES):
+                continue
+            if ii.get("width", 0) < 900 or ii.get("height", 0) < 700:
+                continue
+            name = f"{room}-{sum(1 for c in credits.values() if c.get('room')==room)+saved+1}.jpg"
+            n = download(ii.get("thumburl") or ii["url"], os.path.join(OUT, name))
+            artist = meta.get("Artist", {}).get("value", "")
+            # strip html tags from artist
+            import re as _re
+            artist = _re.sub(r"<[^>]+>", "", artist)[:60].strip()
+            credits[name] = {"title": p.get("title", ""), "creator": artist,
+                             "license": lic, "source": ii.get("descriptionurl"),
+                             "query": query, "room": room, "provider": "wikimedia"}
+            saved += 1
+            log(f"[wikimedia] saved {name} ({n//1024}KB) lic='{lic}' by '{artist}'")
+        except Exception as e:
+            log(f"[wikimedia] skip: {e}")
+    return saved
+
+def openverse(query, room, count):
+    """Fallback: Openverse cached thumbnails (always downloadable, ~600-800px)."""
+    saved = 0
+    url = ("https://api.openverse.org/v1/images/?" + urllib.parse.urlencode({
+        "q": query, "license": "cc0,pdm,by", "category": "photograph", "page_size": 20}))
+    try:
+        results = http_json(url).get("results", [])
+    except Exception as e:
+        log(f"[openverse] search failed for '{query}': {e}")
+        return 0
     for r in results:
         if saved >= count:
             break
         try:
-            img_url = r.get("url") or ""
-            if not img_url:
+            thumb = r.get("thumbnail")
+            if not thumb:
                 continue
-            name = f"{slug}-{saved+1}.jpg"
-            path = os.path.join(OUT, name)
-            data = urllib.request.urlopen(
-                urllib.request.Request(img_url, headers=HEADERS), timeout=60).read()
-            if len(data) < 40_000:  # skip tiny/broken images
-                continue
-            open(path, "wb").write(data)
-            credits[name] = {
-                "title": r.get("title"), "creator": r.get("creator"),
-                "license": r.get("license"), "license_url": r.get("license_url"),
-                "source": r.get("foreign_landing_url"), "query": query, "room": room}
+            name = f"{room}-ov-{sum(1 for c in credits.values() if c.get('room')==room)+saved+1}.jpg"
+            n = download(thumb, os.path.join(OUT, name), min_bytes=15_000)
+            credits[name] = {"title": r.get("title"), "creator": r.get("creator"),
+                             "license": r.get("license"), "source": r.get("foreign_landing_url"),
+                             "query": query, "room": room, "provider": "openverse"}
             saved += 1
-            print("saved", name, "|", r.get("license"), "|", r.get("creator"))
+            log(f"[openverse] saved {name} ({n//1024}KB) lic='{r.get('license')}'")
         except Exception as e:
-            print("skip:", e, file=sys.stderr)
+            log(f"[openverse] skip: {e}")
     return saved
 
-DEFAULT_QUERIES = [
-    ("modern living room interior India", "living"),
-    ("modular kitchen interior design", "kitchen"),
-    ("cozy bedroom interior design warm", "bedroom"),
-    ("home office interior design", "office"),
+JOBS = [
+    ("modern living room interior design", "living", 4),
+    ("modular kitchen interior", "kitchen", 3),
+    ("bedroom interior design", "bedroom", 3),
+    ("home office interior", "office", 2),
 ]
 
 if __name__ == "__main__":
-    # CLI usage: python fetch_images.py "query1" "query2" ...  -> all tagged "living"
-    # (weekly workflow calls with no args and uses DEFAULT_QUERIES with proper room tags)
-    if len(sys.argv) > 1:
-        def infer_room(q):
-            ql = q.lower()
-            for room in ("kitchen", "bedroom", "office", "bathroom", "balcony"):
-                if room in ql:
-                    return room
-            return "living"
-        jobs = [(q, infer_room(q)) for q in sys.argv[1:]]
-    else:
-        jobs = DEFAULT_QUERIES
-    total = sum(fetch(q, room=r) for q, r in jobs)
+    total = 0
+    for query, room, count in JOBS:
+        got = wikimedia(query, room, count)
+        if got < count:
+            got += openverse(query, room, count - got)
+        log(f"== {room}: {got}/{count} from '{query}'")
+        total += got
     json.dump(credits, open(CREDITS_PATH, "w"), indent=1, ensure_ascii=False)
-    print(f"total saved: {total}")
-    # CC-BY images MUST show credit on the post; renderer reads credits.json for that.
+    open(LOG_PATH, "w").write("\n".join(LOG) + "\n")
+    log(f"TOTAL saved this run: {total}; pool now {len(credits)}")
+    # CC BY images must show a credit chip on the card; renderer handles via credits.json.
