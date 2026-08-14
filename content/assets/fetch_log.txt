@@ -27,7 +27,7 @@
 == kitchen: 0/8 from 'kitchen interior design cabinets'
 [wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
 [wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — The image is a hand-drawn 2D floor plan diagram rather than a real photograph of a bedroom.
+[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — The image is a hand-drawn floor plan diagram rather than a real photograph of a bedroom.
 [wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
 == bedroom: 0/8 from 'bedroom interior design wardrobe'
 [wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
@@ -66,7 +66,7 @@
 [wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff
 [wikimedia] reject duplicate (already in pool): File:INTERIOR OF EAST STORAGE ROOM (FORMERLY FIRST FLOOR OF SIGNAL TOWER). - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-33.tif
 [wikimedia] reject duplicate (already in pool): File:INTERIOR VIEW OF SECOND FLOOR ROOM LOOKING EAST. - Dugway Proving Ground, German-Japanese Village, German Village, South of Stark Road, in WWII Incendiary Test Area, Dugway, HAER UTAH,23-DUG,2A-10.tif
-[wikimedia] reject by Gemini vision check: File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg — The image is a watercolor painting of a drawing room, not a real photograph of an office.
+[wikimedia] reject by Gemini vision check: File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg — The image is a watercolor painting of a historical parlor rather than a photograph of an office.
 [wikimedia] reject duplicate (already in pool): File:SECOND FLOOR - STORAGE ROOM, ADJACENT TO SOUTHEAST ROOM - Blandfield, U.S. Route 17 and State Route 624, Caret, Essex County, VA HABS VA,29-CAR.V,1-75.tif
 [wikimedia] reject duplicate (already in pool): File:Second Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10610.tiff
 [wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1870,1008.600).jpg
