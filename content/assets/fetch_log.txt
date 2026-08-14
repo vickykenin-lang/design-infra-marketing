@@ -1,16 +1,75 @@
-[wikimedia] saved living-1.jpg (294KB) lic='cc by 4.0' by 'SPL Interiors1'
-[wikimedia] saved living-3.jpg (435KB) lic='cc by-sa 2.0' by 'w_lemay'
-[wikimedia] saved living-5.jpg (436KB) lic='cc by-sa 2.0' by 'w_lemay'
-[wikimedia] saved living-7.jpg (743KB) lic='cc by-sa 2.0' by 'w_lemay'
-== living: 4/4 from 'modern living room interior design'
-[wikimedia] saved kitchen-1.jpg (72KB) lic='cc by 4.0' by 'Kumarsanddeep'
-[wikimedia] saved kitchen-3.jpg (258KB) lic='cc by-sa 3.0' by 'Riverview Homes, Inc.'
-[wikimedia] saved kitchen-5.jpg (206KB) lic='cc0' by 'Pixabay'
-== kitchen: 3/3 from 'modular kitchen interior'
-[wikimedia] saved bedroom-1.jpg (258KB) lic='cc by-sa 4.0' by 'Jacek Halicki'
-[wikimedia] saved bedroom-3.jpg (177KB) lic='cc by-sa 4.0' by 'Dely25897'
-[wikimedia] saved bedroom-5.jpg (294KB) lic='cc by 4.0' by 'SPL Interiors1'
-== bedroom: 3/3 from 'bedroom interior design'
-[wikimedia] saved office-1.jpg (164KB) lic='cc by-sa 3.0' by 'Diego Delso'
-[wikimedia] saved office-3.jpg (361KB) lic='cc0' by 'Colin McLaughlin'
-== office: 2/2 from 'home office interior'
+[wikimedia] saved living-1.jpg (2032KB) lic='cc by 4.0' by 'Ajuytourism2026' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved living-3.jpg (1966KB) lic='cc0' by 'Estate Lookup Interiors' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved living-ov-3.jpg (22KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject (no-interior-hint): Coffee Table
+[openverse] saved living-ov-5.jpg (24KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+== living: 4/10 from 'modern living room interior design sofa'
+[wikimedia] saved living-5.jpg (308KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved living-7.jpg (467KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved living-9.jpg (1669KB) lic='cc0' by 'Estate Lookup Interiors' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
+== living: 3/10 from 'living room interior design India'
+[wikimedia] reject (bad-keyword): File:Miggla logo.png
+[wikimedia] reject duplicate (already in pool): File:Modular Kitchen Design - Picker Online.jpg
+== kitchen: 0/8 from 'modular kitchen interior design'
+[wikimedia] reject (bad-keyword): File:Interior, kitchen - Pope-Leighey House, 9000 Richmond Highway (moved from Falls Church, VA), Mount Vernon, Fairfax County, VA HABS VA,30-FALCH,2-23.tif
+[wikimedia] saved kitchen-2.jpg (200KB) lic='public domain' by '' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject (bad-keyword): File:KITCHEN, LOOKING TOWARD DOOR TO DINING ROOM - Mr. and Mrs. Charles Collier House, 6080 Leesburg Pike, Falls Church, Falls Church, VA HABS VA,30-FALCH.V,3-13.tif
+[wikimedia] saved kitchen-4.jpg (148KB) lic='public domain' by '' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved kitchen-ov-4.jpg (39KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
+[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
+[openverse] saved kitchen-ov-6.jpg (58KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved kitchen-ov-8.jpg (25KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved kitchen-ov-10.jpg (36KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved kitchen-ov-12.jpg (21KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] saved kitchen-ov-14.jpg (34KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+== kitchen: 8/8 from 'kitchen interior design cabinets'
+[wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
+[wikimedia] saved bedroom-2.jpg (411KB) lic='no restrictions' by 'Internet Archive Book Images' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved bedroom-4.jpg (142KB) lic='cc0' by 'JianfaTsai' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
+== bedroom: 2/8 from 'bedroom interior design wardrobe'
+[wikimedia] saved bedroom-4.jpg (363KB) lic='public domain' by 'Arvind Acharya' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
+== bedroom: 1/8 from 'bedroom interior design India'
+[wikimedia] reject (no-interior-hint): File:Building with assurance (1921) (14740809366).jpg
+[openverse] reject (no-interior-hint): multimedia desk
+[openverse] saved office-ov-1.jpg (66KB) lic='by' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject (no-interior-hint): Detention cell
+[openverse] saved office-ov-3.jpg (18KB) lic='cc0' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[openverse] reject duplicate (already in pool): Home Office
+[openverse] reject duplicate (already in pool): Home Office
+[openverse] reject duplicate (already in pool): Home Office
+[openverse] reject duplicate (already in pool): Home Office
+[openverse] reject (no-interior-hint): Creative Corner Workspace
+== office: 2/6 from 'home office room interior design desk'
+[wikimedia] saved office-3.jpg (239KB) lic='public domain' by 'Boucher, Jack E.
+Related names:
+
+De Sibour, J H
+Wichfeldabe' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-5.jpg (696KB) lic='public domain' by 'Print made by: Thomas Rowlandson
+
+Published by: William Hum' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-7.jpg (511KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-9.jpg (514KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-11.jpg (510KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+[wikimedia] saved office-13.jpg (524KB) lic='public domain' by 'Farrar, Jonathan
+Related names:
+
+Kelham, George W
+Garnsey,' vision='gemini check failed, allowing through: HTTP Error 404: Not Found'
+== office: 6/6 from 'study room interior design'
