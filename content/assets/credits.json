@@ -1,13 +1,4 @@
 {
- "living-1.jpg": {
-  "title": "File:Balanced Modern Bedroom Design with Neutral Tones and Layered Lighting.jpg",
-  "creator": "SPL Interiors1",
-  "license": "cc by 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Balanced_Modern_Bedroom_Design_with_Neutral_Tones_and_Layered_Lighting.jpg",
-  "query": "modern living room interior design",
-  "room": "living",
-  "provider": "wikimedia"
- },
  "kitchen-5.jpg": {
   "title": "File:Modular Kitchen Design - Picker Online.jpg",
   "creator": "Pixabay",
@@ -24,15 +15,6 @@
   "source": "https://commons.wikimedia.org/wiki/File:Balanced_Modern_Bedroom_Design_with_Neutral_Tones_and_Layered_Lighting.jpg",
   "query": "bedroom interior design",
   "room": "bedroom",
-  "provider": "wikimedia"
- },
- "office-3.jpg": {
-  "title": "File:Badger outside the Home Office says End the badger cull.jpg",
-  "creator": "Colin McLaughlin",
-  "license": "cc0",
-  "source": "https://commons.wikimedia.org/wiki/File:Badger_outside_the_Home_Office_says_End_the_badger_cull.jpg",
-  "query": "home office interior",
-  "room": "office",
   "provider": "wikimedia"
  }
 }

@@ -185,7 +185,7 @@
     <p class="note" data-en="Tapping the kill switch opens a one-tap GitHub form. Publishing stops at the very next run." data-hi="किल स्विच दबाने पर GitHub का एक-टैप फ़ॉर्म खुलता है। अगले ही रन से पोस्टिंग रुक जाती है।"></p>
   </div>
 
-  <footer>Design Infra · AURA v0.3 · <span data-en="Zero cost, runs in the cloud" data-hi="ज़ीरो लागत, क्लाउड में चलता है"></span></footer>
+  <footer>Design Infra · AURA v0.5 · <span data-en="Zero cost, runs in the cloud" data-hi="ज़ीरो लागत, क्लाउड में चलता है"></span></footer>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -246,7 +246,7 @@ function setLang(l){
 
 async function load(){
   const bust='?t='+Date.now();
-  for(const f of ['progress','status','messages','approvals']){
+  for(const f of ['progress','status','messages','approvals','qa_report','customer_report']){
     try{const r=await fetch('data/'+f+'.json'+bust);if(r.ok)DATA[f]=await r.json();}catch(e){}
   }
   try{const r=await fetch('content/calendar.json'+bust);if(r.ok)DATA.cal=await r.json();}catch(e){}
@@ -302,6 +302,8 @@ function render(){
     const todayStr=new Date(Date.now()+330*60000).toISOString().slice(0,10);
     const upcoming=DATA.cal.days.filter(d=>d.date>=todayStr).slice(0,7);
     if(upcoming.length){
+      const qa=DATA.qa_report||{};
+      const cust=DATA.customer_report||{};
       ab.innerHTML=upcoming.map(d=>{
         const st=ap[d.date];
         const chip=st==='approved'?'<span class="pill green">✓ '+(LANG==='hi'?'मंज़ूर':'Approved')+'</span>'
@@ -310,8 +312,23 @@ function render(){
         const okU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('APPROVE '+d.date);
         const noU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('REJECT '+d.date)+'&body='+encodeURIComponent(LANG==='hi'?'वजह (छोटी सी लिख दें):\n':'Reason (short):\n');
         const btns=st?'':'<a class="abtn ok" target="_blank" href="'+okU+'">✅ '+(LANG==='hi'?'मंज़ूर':'Approve')+'</a><a class="abtn no" target="_blank" href="'+noU+'">❌ '+(LANG==='hi'?'नामंज़ूर':'Reject')+'</a>';
+        const qv=qa[d.date];
+        let qaBadge='';
+        if(qv&&qv.verdict&&qv.verdict!=='skipped'&&qv.verdict!=='error'){
+          const qcls=qv.verdict==='pass'?'green':(qv.verdict==='revise'?'amber':'red');
+          const qlbl=LANG==='hi'?'AI समीक्षा (Gemini)':'AI review (Gemini)';
+          const notes=(LANG==='hi'?qv.marketing_notes:qv.marketing_notes)||qv.note||'';
+          qaBadge='<div class="pill '+qcls+'" style="margin-top:6px;display:block;white-space:normal;line-height:1.4">🎨 '+qlbl+' ('+(qv.score||'-')+'/10): '+notes+'</div>';
+        }
+        const cv=cust[d.date];
+        let custBadge='';
+        if(cv&&!cv.skipped&&!cv.error){
+          const ccls=cv.would_stop_scrolling&&cv.would_trust_the_brand?'green':'amber';
+          const clbl=LANG==='hi'?'ग्राहक की नज़र से (Kimi)':'Customer reaction (Kimi)';
+          custBadge='<div class="pill '+ccls+'" style="margin-top:6px;display:block;white-space:normal;line-height:1.4">👤 '+clbl+' ('+(cv.score||'-')+'/10): '+(cv.gut_reaction||'')+'</div>';
+        }
         return '<div class="appr"><a href="content/queue/'+d.date+'-ig.png" target="_blank"><img loading="lazy" src="content/queue/'+d.date+'-ig.png" alt=""></a>'+
-          '<div class="ainfo"><div class="ad">'+d.date+' · 7:00 pm</div><div class="ah">'+(d.ig&&d.ig.hook_en||'')+'</div>'+chip+'<div style="margin-top:8px">'+btns+'</div></div></div>';
+          '<div class="ainfo"><div class="ad">'+d.date+' · 7:00 pm</div><div class="ah">'+(d.ig&&d.ig.hook_en||'')+'</div>'+chip+qaBadge+custBadge+'<div style="margin-top:8px">'+btns+'</div></div></div>';
       }).join('');
     } else {
       ab.innerHTML='<div class="empty">'+(LANG==='hi'?'अभी कोई आने वाला पोस्ट नहीं।':'No upcoming posts.')+'</div>';
