@@ -1,1 +1,4 @@
-{"kill_switch": false, "kill_reason": null}
+{
+ "kill_switch": false,
+ "kill_reason": null
+}

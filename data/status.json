@@ -1,17 +1,39 @@
 {
-  "updated": "2026-08-14",
-  "overall": "green",
-  "overall_note_en": "Day 1 build in progress. No automation running yet.",
-  "overall_note_hi": "दिन 1 का निर्माण जारी। अभी कोई ऑटोमेशन नहीं चल रहा।",
-  "kill_switch": false,
-  "actions_minutes_used": 0,
-  "actions_minutes_budget": 2000,
-  "components": [
-    {"name": "Dashboard", "status": "green"},
-    {"name": "Content engine", "status": "pending"},
-    {"name": "Publisher (Instagram)", "status": "pending"},
-    {"name": "Publisher (Pinterest)", "status": "pending"},
-    {"name": "Lead Manager", "status": "pending"},
-    {"name": "Analyst", "status": "pending"}
-  ]
+ "updated": "2026-08-14T16:03+05:30",
+ "overall": "green",
+ "overall_note_en": "Day 1 build in progress. No automation running yet.",
+ "overall_note_hi": "दिन 1 का निर्माण जारी। अभी कोई ऑटोमेशन नहीं चल रहा।",
+ "kill_switch": false,
+ "actions_minutes_used": 0,
+ "actions_minutes_budget": 2000,
+ "components": [
+  {
+   "name": "Dashboard",
+   "status": "green"
+  },
+  {
+   "name": "Content engine",
+   "status": "pending"
+  },
+  {
+   "name": "Publisher (Instagram)",
+   "status": "pending"
+  },
+  {
+   "name": "Publisher (Pinterest)",
+   "status": "pending"
+  },
+  {
+   "name": "Lead Manager",
+   "status": "pending"
+  },
+  {
+   "name": "Analyst",
+   "status": "pending"
+  }
+ ],
+ "stats": {
+  "posts": 0,
+  "scheduled": 7
+ }
 }
