@@ -21,15 +21,15 @@ for (const [file, meta] of Object.entries(credits)) {
   const room = meta.room || 'living';
   (photosByRoom[room] ||= []).push({ file, ...meta });
 }
-const usedPhotos = new Set(); // avoid repeating the same photo across a batch
+// deterministic per-day pick: same photo for IG+Pin of a day, different across days
 const mime = f => ({ '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' }[extname(f).toLowerCase()] || 'image/jpeg');
 
-function pickPhoto(tag) {
-  const pool = (photosByRoom[tag] || photosByRoom.living || []);
-  const fresh = pool.filter(p => !usedPhotos.has(p.file));
-  const chosen = (fresh.length ? fresh : pool)[0];
-  if (!chosen) return null;
-  usedPhotos.add(chosen.file);
+function pickPhoto(tag, seed) {
+  const pool = (photosByRoom[tag] || photosByRoom.living || []).slice().sort((a, b) => a.file.localeCompare(b.file));
+  if (!pool.length) return null;
+  let h = 0;
+  for (const ch of String(seed || '')) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const chosen = pool[h % pool.length];
   try {
     const data = readFileSync(join(ASSETS_DIR, chosen.file));
     return { dataUri: `data:${mime(chosen.file)};base64,${data.toString('base64')}`, ...chosen };
@@ -37,7 +37,7 @@ function pickPhoto(tag) {
     return null;
   }
 }
-const needsCredit = lic => lic && /^by/i.test(lic); // CC BY / CC BY-SA require attribution; CC0/PDM don't
+const needsCredit = lic => lic && /by/i.test(lic); // any CC BY variant requires attribution; CC0/PDM don't
 
 const C = {
   ivory: '#faf7f2', ink: '#1f2937', ink2: '#6b7280',
@@ -79,8 +79,8 @@ function shell(inner, { w, h, dark = false }) {
 }
 
 // Returns { media: <img> or <svg> sized exactly w×h, credit: attribution chip html or '' }
-function sceneMedia(tag, w, h, fallbackStyle) {
-  const photo = pickPhoto(tag);
+function sceneMedia(tag, w, h, fallbackStyle, seed) {
+  const photo = pickPhoto(tag, seed);
   if (photo) {
     const credit = needsCredit(photo.license)
       ? `<span class="credit" style="left:20px;bottom:20px">📷 ${esc(photo.creator || 'Unknown')} · CC BY</span>` : '';
@@ -94,7 +94,7 @@ function sceneMedia(tag, w, h, fallbackStyle) {
 function heroCard(d, { w, h, dark, scene, badge }) {
   const sceneH = Math.round(h * 0.52);
   const hookSize = d.ig.hook_en.length > 38 ? 62 : 76;
-  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, scene);
+  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, scene, d.date);
   return shell(`
     <div class="scene">${media}
       ${badge ? `<span class="badge" style="right:40px;top:${sceneH - 64}px;background:#ffffffe6;color:${C.terra}">${badge}</span>` : ''}
@@ -111,7 +111,7 @@ function beforeAfterCard(d, { w, h, dark }) {
   const half = Math.round(h * 0.335);
   // BEFORE stays illustrated (we don't fake a "messy" real photo — honesty over drama).
   // AFTER uses a real photo when the researcher found one for this room, else falls back to illustration.
-  const after = sceneMedia(d.photo_tag || 'living', w, half, 'warm');
+  const after = sceneMedia(d.photo_tag || 'living', w, half, 'warm', d.date);
   return shell(`
     <div class="scene">${roomScene(w, half, 'plain')}
       <span class="badge" style="left:40px;bottom:26px;background:#1f2937d9;color:#fff">BEFORE</span></div>
@@ -127,7 +127,7 @@ function beforeAfterCard(d, { w, h, dark }) {
 
 function listCard(d, { w, h, dark, items, rows }) {
   const sceneH = Math.round(h * 0.30);
-  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, 'warm');
+  const { media, credit } = sceneMedia(d.photo_tag || 'living', w, sceneH, 'warm', d.date);
   const body = items
     ? items.map((t, i) => `<div style="display:flex;gap:18px;align-items:center;margin-bottom:21px">
         <div style="min-width:50px;height:50px;border-radius:50%;background:${C.amber}26;color:${C.terra};font-weight:800;font-size:23px;display:flex;align-items:center;justify-content:center">${i + 1}</div>

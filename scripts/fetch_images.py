@@ -24,7 +24,14 @@ def log(msg):
     LOG.append(str(msg))
 
 HEADERS = {"User-Agent": "DesignInfraAURA/2.0 (https://github.com/vickykenin-lang/design-infra-marketing; marketing bot) python-urllib"}
-OK_LICENSES = ("cc0", "cc by", "cc-by", "pd", "public domain", "no restrictions")
+OK_LICENSES = ("cc0", "pd", "public domain", "no restrictions")
+def license_ok(lic):
+    l = lic.lower()
+    if any(ok in l for ok in OK_LICENSES):
+        return True
+    # plain CC BY (attribution) is fine; exclude BY-SA/BY-NC/BY-ND variants
+    return ("cc by" in l or "cc-by" in l) and not any(x in l for x in ("sa", "nc", "nd"))
+BAD_TITLE = ("logo", "icon", "poster", "diagram", "plan", "drawing", "graphic", "map", "chart", "screenshot")
 
 def http_json(url):
     req = urllib.request.Request(url, headers=HEADERS)
@@ -58,12 +65,16 @@ def wikimedia(query, room, count):
             ii = p["imageinfo"][0]
             meta = ii.get("extmetadata", {})
             lic = (meta.get("LicenseShortName", {}).get("value") or "").lower()
-            if not any(ok in lic for ok in OK_LICENSES):
+            if not license_ok(lic):
                 continue
             if ii.get("width", 0) < 900 or ii.get("height", 0) < 700:
                 continue
+            title_l = p.get("title", "").lower()
+            if any(b in title_l for b in BAD_TITLE):
+                log(f"[wikimedia] reject by title: {p.get('title')}")
+                continue
             name = f"{room}-{sum(1 for c in credits.values() if c.get('room')==room)+saved+1}.jpg"
-            n = download(ii.get("thumburl") or ii["url"], os.path.join(OUT, name))
+            n = download(ii.get("thumburl") or ii["url"], os.path.join(OUT, name), min_bytes=130_000)
             artist = meta.get("Artist", {}).get("value", "")
             # strip html tags from artist
             import re as _re
@@ -106,9 +117,9 @@ def openverse(query, room, count):
     return saved
 
 JOBS = [
-    ("modern living room interior design", "living", 4),
-    ("modular kitchen interior", "kitchen", 3),
-    ("bedroom interior design", "bedroom", 3),
+    ("modern living room interior design", "living", 6),
+    ("modular kitchen interior", "kitchen", 4),
+    ("bedroom interior design", "bedroom", 4),
     ("home office interior", "office", 2),
 ]
 
