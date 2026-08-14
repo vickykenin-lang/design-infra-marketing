@@ -100,6 +100,15 @@
   .empty .ico{font-size:26px;display:block;margin-bottom:6px;opacity:.7}
   .note{font-size:12px;color:var(--ink-3);margin-top:10px}
   footer{text-align:center;font-size:12px;color:var(--ink-3);margin-top:24px}
+  .appr{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+  .appr:last-child{border-bottom:0}
+  .appr img{width:84px;height:105px;object-fit:cover;border-radius:10px;flex-shrink:0;border:1px solid var(--line)}
+  .appr .ainfo{flex:1;min-width:0}
+  .appr .ad{font-size:12px;color:var(--ink-3)}
+  .appr .ah{font-size:14.5px;font-weight:700;line-height:1.3;margin:2px 0 8px}
+  .abtn{display:inline-flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:9px;text-decoration:none;margin-right:6px}
+  .abtn.ok{background:var(--good-bg);color:var(--good)}
+  .abtn.no{background:var(--bad-bg);color:var(--bad)}
   .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:13.5px;transition:transform .35s;z-index:50;max-width:90vw;text-align:center}
   .toast.show{transform:translateX(-50%) translateY(0)}
 </style>
@@ -156,8 +165,9 @@
   </div>
 
   <div class="card">
-    <h2>📸 <span data-en="Today's activity" data-hi="आज की गतिविधि"></span></h2>
-    <div class="empty"><span class="ico">🎨</span><span data-en="No posts yet — the content engine arrives on Day 3–4." data-hi="अभी कोई पोस्ट नहीं — कंटेंट इंजन दिन 3–4 पर आएगा।"></span></div>
+    <h2>📸 <span data-en="Post approvals — your tap decides" data-hi="पोस्ट मंज़ूरी — आपका एक टैप फ़ैसला करेगा"></span></h2>
+    <p class="note" style="margin:0 0 12px" data-en="Nothing publishes without your approval. Tap ✅ or ❌ — a one-tap GitHub form opens; your decision takes effect within minutes." data-hi="आपकी मंज़ूरी के बिना कुछ नहीं छपेगा। ✅ या ❌ दबाइए — GitHub का एक-टैप फ़ॉर्म खुलेगा; फ़ैसला कुछ मिनटों में लागू हो जाएगा।"></p>
+    <div id="approvalBox"><div class="empty">…</div></div>
   </div>
 
   <div class="card">
@@ -175,7 +185,7 @@
     <p class="note" data-en="Tapping the kill switch opens a one-tap GitHub form. Publishing stops at the very next run." data-hi="किल स्विच दबाने पर GitHub का एक-टैप फ़ॉर्म खुलता है। अगले ही रन से पोस्टिंग रुक जाती है।"></p>
   </div>
 
-  <footer>Design Infra · AURA v0.2 · <span data-en="Zero cost, runs in the cloud" data-hi="ज़ीरो लागत, क्लाउड में चलता है"></span></footer>
+  <footer>Design Infra · AURA v0.3 · <span data-en="Zero cost, runs in the cloud" data-hi="ज़ीरो लागत, क्लाउड में चलता है"></span></footer>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -236,9 +246,10 @@ function setLang(l){
 
 async function load(){
   const bust='?t='+Date.now();
-  for(const f of ['progress','status','messages']){
+  for(const f of ['progress','status','messages','approvals']){
     try{const r=await fetch('data/'+f+'.json'+bust);if(r.ok)DATA[f]=await r.json();}catch(e){}
   }
+  try{const r=await fetch('content/calendar.json'+bust);if(r.ok)DATA.cal=await r.json();}catch(e){}
   render();
 }
 
@@ -283,6 +294,28 @@ function render(){
     setTimeout(()=>{document.getElementById('meterFill').style.width=prog+'%';},150);
     const dayNow=(p.plan.find(d=>d.status==='in_progress')||{}).day||Math.min(7,done+1);
     document.getElementById('sysline').textContent=LANG==='hi'?('सिस्टम: निर्माण जारी (दिन '+dayNow+'/7)'):('System: building (Day '+dayNow+' of 7)');
+  }
+  // approvals panel
+  const ab=document.getElementById('approvalBox');
+  if(DATA.cal&&DATA.cal.days){
+    const ap=DATA.approvals||{};
+    const todayStr=new Date(Date.now()+330*60000).toISOString().slice(0,10);
+    const upcoming=DATA.cal.days.filter(d=>d.date>=todayStr).slice(0,7);
+    if(upcoming.length){
+      ab.innerHTML=upcoming.map(d=>{
+        const st=ap[d.date];
+        const chip=st==='approved'?'<span class="pill green">✓ '+(LANG==='hi'?'मंज़ूर':'Approved')+'</span>'
+                 :st==='rejected'?'<span class="pill red">✖ '+(LANG==='hi'?'नामंज़ूर':'Rejected')+'</span>'
+                 :'<span class="pill amber">⏳ '+(LANG==='hi'?'आपके फ़ैसले का इंतज़ार':'Awaiting your decision')+'</span>';
+        const okU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('APPROVE '+d.date);
+        const noU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('REJECT '+d.date)+'&body='+encodeURIComponent(LANG==='hi'?'वजह (छोटी सी लिख दें):\n':'Reason (short):\n');
+        const btns=st?'':'<a class="abtn ok" target="_blank" href="'+okU+'">✅ '+(LANG==='hi'?'मंज़ूर':'Approve')+'</a><a class="abtn no" target="_blank" href="'+noU+'">❌ '+(LANG==='hi'?'नामंज़ूर':'Reject')+'</a>';
+        return '<div class="appr"><a href="content/queue/'+d.date+'-ig.png" target="_blank"><img loading="lazy" src="content/queue/'+d.date+'-ig.png" alt=""></a>'+
+          '<div class="ainfo"><div class="ad">'+d.date+' · 7:00 pm</div><div class="ah">'+(d.ig&&d.ig.hook_en||'')+'</div>'+chip+'<div style="margin-top:8px">'+btns+'</div></div></div>';
+      }).join('');
+    } else {
+      ab.innerHTML='<div class="empty">'+(LANG==='hi'?'अभी कोई आने वाला पोस्ट नहीं।':'No upcoming posts.')+'</div>';
+    }
   }
   const wl=document.getElementById('writeLink');
   wl.href='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('MESSAGE TO AURA')+'&labels=owner-message&body='+encodeURIComponent(LANG==='hi'?'यहाँ अपना संदेश लिखें:\n\n':'Write your message here:\n\n');

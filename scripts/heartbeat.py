@@ -30,6 +30,8 @@ def jsave(p, obj):
 
 control = jload("data/control.json", {"kill_switch": False})
 inbox = jload("data/inbox.json", {"messages": []})
+approvals = jload("data/approvals.json", {})
+OWNER = "vickykenin-lang"
 now = datetime.now(IST).isoformat(timespec="minutes")
 
 issues = gh(f"repos/{REPO}/issues?state=open&per_page=50")
@@ -44,6 +46,15 @@ for i in issues:
            {"body": "🔴 Kill switch ACTIVATED — all publishing paused. / किल स्विच चालू — सारी पोस्टिंग रुकी। Resume: close this issue and comment RESUME, or ask AURA."})
         gh(f"repos/{REPO}/issues/{i['number']}", {"state": "closed"}, "PATCH")
         print("kill switch activated via issue", i["number"])
+    elif (title.startswith("APPROVE 20") or title.startswith("REJECT 20")) and i["user"]["login"] == OWNER:
+        action, date = title.split()[0], title.split()[1]
+        approvals[date] = "approved" if action == "APPROVE" else "rejected"
+        note = f"Reason: {body[:300]}" if (action == "REJECT" and body.strip()) else ""
+        gh(f"repos/{REPO}/issues/{i['number']}/comments",
+           {"body": ("✅ Approved — will publish at 19:00 IST. / मंज़ूर — शाम 7 बजे छपेगा।" if action == "APPROVE"
+                     else "❌ Rejected — will NOT publish. AURA will rework it. / नामंज़ूर — नहीं छपेगा, AURA इसे सुधारेगी।") + ("\n" + note if note else "")})
+        gh(f"repos/{REPO}/issues/{i['number']}", {"state": "closed"}, "PATCH")
+        print(f"approval: {date} -> {approvals[date]}")
     elif "owner-message" in labels or "MESSAGE TO AURA" in title:
         inbox["messages"].append({"at": now, "from": i["user"]["login"],
                                   "issue": i["number"], "text": body[:2000]})
@@ -67,4 +78,5 @@ stats["scheduled"] = sum(1 for d in cal.get("days", []) if d["date"] >= today)
 jsave("data/status.json", status)
 jsave("data/control.json", control)
 jsave("data/inbox.json", inbox)
+jsave("data/approvals.json", approvals)
 print("heartbeat done:", json.dumps(stats))

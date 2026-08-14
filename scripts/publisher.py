@@ -30,6 +30,11 @@ control = jload("data/control.json", {"kill_switch": False})
 if control.get("kill_switch"):
     print("KILL SWITCH ON — publishing paused."); sys.exit(0)
 
+# OWNER APPROVAL GATE: a post publishes only after Vickey approves it on the dashboard.
+approvals = jload("data/approvals.json", {})
+if approvals.get(today) != "approved":
+    print(f"{today}: not approved yet (status={approvals.get(today, 'pending')}) — holding."); sys.exit(0)
+
 published = jload("content/published.json", {})
 cal = jload("content/calendar.json", {"days": []})
 day = next((d for d in cal["days"] if d["date"] == today), None)
