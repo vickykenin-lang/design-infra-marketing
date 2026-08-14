@@ -13,7 +13,7 @@ current model names in order and remember whichever one actually worked for
 the rest of this process — so ONE stale name in the list no longer breaks
 the whole pipeline.
 """
-import base64, json, os, urllib.error, urllib.request
+import base64, json, os, time, urllib.error, urllib.request
 
 _env_model = os.environ.get("GEMINI_MODEL", "").strip()
 MODEL_CANDIDATES = [m for m in [
@@ -55,28 +55,44 @@ def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=60):
         "generationConfig": {"temperature": 0.2, "maxOutputTokens": 2048},
     }).encode()
 
-    models_to_try = [_working_model] if _working_model else MODEL_CANDIDATES
+    # Try the cached working model first (fast path), but if IT starts failing
+    # (e.g. temporarily overloaded), fall back to the full candidate list instead
+    # of giving up — don't let one model's bad day take down the whole run.
+    if _working_model:
+        models_to_try = [_working_model] + [m for m in MODEL_CANDIDATES if m != _working_model]
+    else:
+        models_to_try = MODEL_CANDIDATES
     last_err = None
     for model in models_to_try:
         req = urllib.request.Request(
             f"{_endpoint(model)}?key={API_KEY}", data=body, method="POST",
             headers={"Content-Type": "application/json"})
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                data = json.load(r)
-            _working_model = model  # remember it, skip the retry list next call
-            return data["candidates"][0]["content"]["parts"][0]["text"]
-        except urllib.error.HTTPError as e:
-            # urllib's default str(e) is just "HTTP Error 404: Not Found" — the actual
-            # reason (bad key, wrong/retired model, API not enabled, etc.) is in the body.
+        # 429 (rate limited) / 503 ("high demand, try again later") are transient —
+        # a couple of short retries clears most of them without burning a whole
+        # candidate-model slot on what is really just a temporary Google-side hiccup.
+        status_code = None
+        for attempt in range(3):
             try:
-                detail = e.read().decode(errors="replace")[:300]
-            except Exception:
-                detail = "(could not read error body)"
-            last_err = RuntimeError(f"HTTP {e.code} from Gemini (model={model}): {detail}")
-            if e.code == 404:
-                continue  # this model name is dead/unavailable — try the next candidate
-            raise last_err
+                with urllib.request.urlopen(req, timeout=timeout) as r:
+                    data = json.load(r)
+                _working_model = model  # remember it, skip the retry list next call
+                return data["candidates"][0]["content"]["parts"][0]["text"]
+            except urllib.error.HTTPError as e:
+                status_code = e.code
+                # urllib's default str(e) is just "HTTP Error 404: Not Found" — the
+                # actual reason (bad key, retired model, overloaded, ...) is in the body.
+                try:
+                    detail = e.read().decode(errors="replace")[:300]
+                except Exception:
+                    detail = "(could not read error body)"
+                last_err = RuntimeError(f"HTTP {e.code} from Gemini (model={model}): {detail}")
+                if status_code in (429, 503) and attempt < 2:
+                    time.sleep(3 * (attempt + 1))  # 3s, then 6s, then give up on this model
+                    continue
+                break
+        if status_code in (404, 429, 503):
+            continue  # dead/unavailable/overloaded model name — try the next candidate
+        raise last_err  # anything else (bad key, bad request, ...) won't fix itself by switching models
     raise last_err
 
 
