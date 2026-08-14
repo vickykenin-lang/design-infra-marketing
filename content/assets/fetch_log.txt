@@ -27,15 +27,12 @@
 == kitchen: 0/8 from 'kitchen interior design cabinets'
 [wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
 [wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] saved bedroom-4.jpg (142KB) lic='cc0' by 'JianfaTsai' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
+[wikimedia] reject duplicate (already in pool): File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png
 [wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
-== bedroom: 1/8 from 'bedroom interior design wardrobe'
-[wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
+== bedroom: 0/8 from 'bedroom interior design wardrobe'
+[wikimedia] saved bedroom-4.jpg (363KB) lic='public domain' by 'Arvind Acharya' vision='This is a genuine vintage photograph of a furnished bedroom.'
 [wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== bedroom: 0/8 from 'bedroom interior design India'
+== bedroom: 1/8 from 'bedroom interior design India'
 [wikimedia] reject (no-interior-hint): File:Building with assurance (1921) (14740809366).jpg
 [openverse] reject (no-interior-hint): multimedia desk
 [openverse] reject duplicate (already in pool): standing desk in den / kitchen
@@ -56,14 +53,7 @@
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, south section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-15.tif
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-14.tif
 [wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-16.tif
-[wikimedia] saved office-19.jpg (489KB) lic='public domain' by 'Farrar, Jonathan
-Related names:
-
-Kelham, George W
-Garnsey,' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
+[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif
 [wikimedia] reject (bad-keyword): File:Drawing, An Interior, 1837–40 (CH 18708251).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297).jpg
 [wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297-2).jpg
@@ -76,31 +66,17 @@ Garnsey,' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
 [wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff
 [wikimedia] reject duplicate (already in pool): File:INTERIOR OF EAST STORAGE ROOM (FORMERLY FIRST FLOOR OF SIGNAL TOWER). - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-33.tif
 [wikimedia] reject duplicate (already in pool): File:INTERIOR VIEW OF SECOND FLOOR ROOM LOOKING EAST. - Dugway Proving Ground, German-Japanese Village, German Village, South of Stark Road, in WWII Incendiary Test Area, Dugway, HAER UTAH,23-DUG,2A-10.tif
-[wikimedia] reject duplicate (already in pool): File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg
+[wikimedia] reject by Gemini vision check: File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg — The image is a watercolor illustration of a drawing room rather than a real photograph of an office.
 [wikimedia] reject duplicate (already in pool): File:SECOND FLOOR - STORAGE ROOM, ADJACENT TO SOUTHEAST ROOM - Blandfield, U.S. Route 17 and State Route 624, Caret, Essex County, VA HABS VA,29-CAR.V,1-75.tif
 [wikimedia] reject duplicate (already in pool): File:Second Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10610.tiff
-[wikimedia] saved office-20.jpg (568KB) lic='public domain' by 'Print made by: George Scharf
-
-Printed by: Charles Joseph Hu' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
-[wikimedia] saved office-22.jpg (477KB) lic='public domain' by 'Print made by: George Scharf
-
-Printed by: Charles Joseph Hu' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
-[wikimedia] saved office-24.jpg (241KB) lic='public domain' by 'Bedford Lemere &amp; Co' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
-[wikimedia] saved office-26.jpg (172KB) lic='public domain' by 'Lowe, Jet, creator' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
-[wikimedia] saved office-28.jpg (152KB) lic='public domain' by 'Lowe, Jet, creator' vision='gemini check failed, allowing through: HTTP 404 from Gemini: {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-t'
-== office: 6/6 from 'study room interior design'
+[wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1870,1008.600).jpg
+[wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1927,1126.1.11.2).jpg
+[wikimedia] reject duplicate (already in pool): File:Third Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10614.tiff
+[wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT NORTH AND EAST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-24.tif
+[wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT SOUTH AND WEST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-26.tif
+[openverse] reject (no-interior-hint): Johannes Vermeer’s The Music Lesson (ca. 1662–1665) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (no-interior-hint): Johannes Vermeer’s Girl Interrupted at Her Music (ca. 1660–1661) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (no-interior-hint): Johannes Vermeer’s The Astronomer (ca. 1668) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (no-interior-hint): Johannes Vermeer’s The Geographer (1669) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (no-interior-hint): Creative Corner Workspace
+== office: 0/6 from 'study room interior design'
