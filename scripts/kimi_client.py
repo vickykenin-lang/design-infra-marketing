@@ -54,4 +54,12 @@ def ask_json(prompt, timeout=45):
         txt = txt.strip("`")
         if txt.lower().startswith("json"):
             txt = txt[4:]
-    return json.loads(txt.strip())
+    txt = txt.strip()
+    try:
+        # strict=False: tolerate literal newlines inside string values instead of \n
+        return json.loads(txt, strict=False)
+    except json.JSONDecodeError:
+        start, end = txt.find("{"), txt.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            return json.loads(txt[start:end + 1], strict=False)
+        raise

@@ -36,7 +36,7 @@ def _endpoint(model):
     return f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
-def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=45):
+def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=60):
     """Send a text (+ optional image) prompt to Gemini, return the raw text reply.
     Raises on any failure — callers decide how to fail open."""
     global _working_model
@@ -47,7 +47,12 @@ def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=45):
         parts.append({"inline_data": {"mime_type": mime, "data": base64.b64encode(image_bytes).decode()}})
     body = json.dumps({
         "contents": [{"parts": parts}],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 700},
+        # 700 was too small for a full JSON verdict (design_notes + marketing_notes +
+        # issues[] + fix_suggestion) — replies were getting cut off mid-string, which
+        # then failed JSON parsing downstream ("Unterminated string ..."). Also bumped
+        # the per-call timeout since gemini-3.x vision calls run a bit slower than the
+        # old 2.0-flash did.
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 2048},
     }).encode()
 
     models_to_try = [_working_model] if _working_model else MODEL_CANDIDATES
@@ -75,11 +80,23 @@ def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=45):
     raise last_err
 
 
-def ask_json(prompt, image_bytes=None, mime="image/jpeg", timeout=45):
+def ask_json(prompt, image_bytes=None, mime="image/jpeg", timeout=60):
     """Same as ask(), but strips markdown fences and parses JSON. Raises on failure."""
     txt = ask(prompt, image_bytes, mime, timeout).strip()
     if txt.startswith("```"):
         txt = txt.strip("`")
         if txt.lower().startswith("json"):
             txt = txt[4:]
-    return json.loads(txt.strip())
+    txt = txt.strip()
+    try:
+        # strict=False lets literal newlines/control characters inside string values
+        # through — Gemini sometimes writes a real newline instead of an escaped \n
+        # even when asked for compact JSON, which a strict parser rejects outright.
+        return json.loads(txt, strict=False)
+    except json.JSONDecodeError:
+        # Fall back to the substring between the first { and the last } — handles
+        # cases where the model added stray text before/after the JSON object.
+        start, end = txt.find("{"), txt.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            return json.loads(txt[start:end + 1], strict=False)
+        raise
