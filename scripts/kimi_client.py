@@ -14,7 +14,7 @@ international Moonshot AI platform; set it to https://api.moonshot.cn/v1 in the
 secret's sibling env var if the account was created on the China platform instead.
 Fails open (raises, caller decides) if key missing or call errors.
 """
-import json, os, urllib.request
+import json, os, urllib.error, urllib.request
 
 API_KEY = os.environ.get("KIMI_API_KEY", "")
 API_BASE = os.environ.get("KIMI_API_BASE", "https://api.moonshot.ai/v1")
@@ -36,8 +36,15 @@ def ask(prompt, timeout=45):
     req = urllib.request.Request(
         f"{API_BASE}/chat/completions", data=body, method="POST",
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {API_KEY}"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        data = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            data = json.load(r)
+    except urllib.error.HTTPError as e:
+        try:
+            detail = e.read().decode(errors="replace")[:300]
+        except Exception:
+            detail = "(could not read error body)"
+        raise RuntimeError(f"HTTP {e.code} from Kimi: {detail}") from e
     return data["choices"][0]["message"]["content"]
 
 

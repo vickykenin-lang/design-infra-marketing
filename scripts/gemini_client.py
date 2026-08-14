@@ -6,7 +6,7 @@ Needs GEMINI_API_KEY as an env var / GitHub Secret. If it's missing or a
 call fails, callers must fail OPEN (don't block the pipeline) but log loudly
 so a human notices in fetch_log.txt / qa_report.json.
 """
-import base64, json, os, urllib.request
+import base64, json, os, urllib.error, urllib.request
 
 MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -32,8 +32,17 @@ def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=45):
     req = urllib.request.Request(
         f"{ENDPOINT}?key={API_KEY}", data=body, method="POST",
         headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        data = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            data = json.load(r)
+    except urllib.error.HTTPError as e:
+        # urllib's default str(e) is just "HTTP Error 404: Not Found" — the actual
+        # reason (bad key, wrong model, API not enabled, etc.) is in the response body.
+        try:
+            detail = e.read().decode(errors="replace")[:300]
+        except Exception:
+            detail = "(could not read error body)"
+        raise RuntimeError(f"HTTP {e.code} from Gemini: {detail}") from e
     return data["candidates"][0]["content"]["parts"][0]["text"]
 
 
