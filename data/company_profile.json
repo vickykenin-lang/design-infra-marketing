@@ -1,0 +1,26 @@
+{
+  "company_name": "Design Infra",
+  "base_city": "Delhi NCR",
+  "service_area": "Pan-India metro cities (Delhi NCR primary; Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Kolkata, Ahmedabad as expansion targets)",
+  "services": {
+    "core_offering": "Turnkey interior projects only (complete end-to-end execution)",
+    "includes": [
+      "Full home interiors (turnkey)",
+      "Modular kitchen (as part of turnkey scope)",
+      "Office / commercial interiors (turnkey)",
+      "Renovation (full-scope turnkey)"
+    ],
+    "note": "Company does NOT take small standalone jobs, but marketing content will promote every small element (kitchens, wardrobes, false ceilings, lighting etc.) as entry points into turnkey conversations."
+  },
+  "price_positioning": "Mid to premium",
+  "lead_handling": "Every lead goes to the design team for approval before commitment — AURA captures, scores and suggests replies; humans decide.",
+  "differentiators_chosen_by_AURA": [
+    "One team, zero headache: design + execution + handover under one roof (true turnkey), so the client deals with one contract, not ten contractors",
+    "Delhi NCR craftsmanship, pan-India metro delivery",
+    "Transparent, milestone-based process: client approves at every stage before work moves ahead",
+    "Design-first approach: every project starts with the design team, not a salesperson"
+  ],
+  "language_preference": "Hindi (owner communication); content bilingual English + Hindi/Hinglish as fits audience",
+  "created": "2026-08-14",
+  "created_by": "AURA (AI CEO of Sales & Marketing)"
+}

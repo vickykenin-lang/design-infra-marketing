@@ -1,0 +1,12 @@
+{
+  "updated": "2026-08-14",
+  "plan": [
+    {"day": 1, "title_en": "Foundation — repo, dashboard, company profile, API keys", "title_hi": "नींव — रिपॉज़िटरी, डैशबोर्ड, कंपनी प्रोफ़ाइल, API keys", "status": "done", "detail_en": "Repo live, dashboard live, Gemini key in Secrets.", "detail_hi": "रिपॉज़िटरी लाइव, डैशबोर्ड लाइव, Gemini key तिजोरी में।"},
+    {"day": 2, "title_en": "Brand + Strategy — voice, pillars, first content calendar", "title_hi": "ब्रांड + रणनीति — आवाज़, कंटेंट पिलर, पहला कैलेंडर", "status": "done", "detail_en": "Brand book v1 approved; week-1 calendar ready.", "detail_hi": "ब्रांड बुक v1 मंज़ूर; हफ़्ते-1 का कैलेंडर तैयार।"},
+    {"day": 3, "title_en": "Content engine — Copywriter + Visual Designer", "title_hi": "कंटेंट इंजन — कॉपीराइटर + विज़ुअल डिज़ाइनर", "status": "done", "detail_en": "14 posts rendered (illustrated v2 style); image researcher built for real photos.", "detail_hi": "14 पोस्ट तैयार (illustrated v2); असली फ़ोटो के लिए Image Researcher बना।"},
+    {"day": 4, "title_en": "Publishing engine — auto-posting via GitHub Actions", "title_hi": "पब्लिशिंग इंजन — GitHub Actions से ऑटो-पोस्टिंग", "status": "in_progress", "detail_en": "Workflows built. Next: Instagram Business + Pinterest API connection.", "detail_hi": "Workflows बन गए। आगे: Instagram Business + Pinterest API कनेक्शन।"},
+    {"day": 5, "title_en": "Leads + Analytics — capture page, scoring, daily report", "title_hi": "लीड्स + एनालिटिक्स — कैप्चर पेज, स्कोरिंग, डेली रिपोर्ट", "status": "pending", "detail_en": "", "detail_hi": ""},
+    {"day": 6, "title_en": "Communication + Voice — bilingual panel, kill switch test", "title_hi": "संवाद + आवाज़ — द्विभाषी पैनल, किल स्विच टेस्ट", "status": "pending", "detail_en": "", "detail_hi": ""},
+    {"day": 7, "title_en": "Full dress rehearsal + handover guide", "title_hi": "फ़ुल रिहर्सल + हैंडओवर गाइड", "status": "pending", "detail_en": "", "detail_hi": ""}
+  ]
+}
