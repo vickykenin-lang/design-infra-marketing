@@ -2,36 +2,58 @@
  "2026-08-15": {
   "verdict": "error",
   "score": 0,
-  "note": "gemini review failed: Expecting value: line 4 column 18 (char 56)"
+  "note": "gemini review failed: HTTP 503 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
  },
  "2026-08-16": {
   "verdict": "error",
   "score": 0,
-  "note": "gemini review failed: The read operation timed out"
+  "note": "gemini review failed: HTTP 503 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
  },
  "2026-08-17": {
-  "verdict": "error",
-  "score": 0,
-  "note": "gemini review failed: Unterminated string starting at: line 4 column 19 (char 57)"
+  "verdict": "revise",
+  "score": 5,
+  "design_notes": "While the five design mistakes listed are highly accurate for Indian kitchens, the background image of blurry, basic ceramic mugs on a shelf completely fails to showcase premium modular kitchen design, materials, or finishes.",
+  "marketing_notes": "The hook is highly clickable and addresses a major financial pain point, but the visual execution lacks scroll-stopping power because there is no actual kitchen shown to build trust or aspiration.",
+  "issues": [
+   "Background image is a generic, blurry stock photo of mugs instead of a premium modular kitchen.",
+   "The graphic looks cheap and templated, which dilutes the 'premium turnkey' brand positioning of Design Infra.",
+   "Using pure Hindi text for the list items on the image limits its effectiveness for a pan-India audience."
+  ],
+  "fix_suggestion": "Replace the background with a high-resolution, aspirational photo of a real modular kitchen designed by Design Infra. Translate the five points on the image into English or Hinglish to support the pan-India expansion, keeping the Hindi copy for the caption."
  },
  "2026-08-18": {
-  "verdict": "error",
-  "score": 0,
-  "note": "gemini review failed: Invalid control character at: line 1 column 65 (char 64)"
+  "verdict": "reject",
+  "score": 3,
+  "design_notes": "The featured living room image contains a highly visible watermark from another brand ('ESTATE LOOKUP INTERIORS'), which is unacceptable for a premium design firm. Furthermore, listing wardrobe costs for '3 bedrooms' (3 बेडरूम) under a '2BHK' budget breakdown is a basic planning error.",
+  "marketing_notes": "Budget transparency is a highly engaging hook, but the competitor's watermark completely destroys brand trust and makes us look like we are plagiarizing content. The logical mismatch between 2BHK and 3 bedrooms will invite call-outs in the comments, hurting our authority.",
+  "issues": [
+   "Competitor watermark 'ESTATE LOOKUP INTERIORS' is clearly visible on the top right of the image.",
+   "Mismatched specifications: The post is for a '2BHK' but the wardrobe line item specifies '3 बेडरूम' (3 bedrooms).",
+   "Using an external brand's project image dilutes Design Infra's positioning as a premium turnkey executor."
+  ],
+  "fix_suggestion": "Replace the header image with an authentic, high-quality 2BHK project designed by Design Infra, ensuring no external watermarks are present. Correct the second line item text from 'वॉर्डरोब (3 बेडरूम)' to 'वॉर्डरोब (2 बेडरूम)' to match the 2BHK hook."
  },
  "2026-08-19": {
-  "verdict": "error",
-  "score": 0,
-  "note": "gemini review failed: Unterminated string starting at: line 4 column 17 (char 51)"
+  "verdict": "revise",
+  "score": 4,
+  "design_notes": "The featured room is a cold, glossy contemporary space with chrome accents and white leather, which is the exact opposite of Japandi's warm, organic, matte wood-toned, and minimalist aesthetic. There is also no 'Indian warmth' visible here, making the design claim highly inaccurate.",
+  "marketing_notes": "Using a generic, outdated stock photo that completely misrepresents the advertised trend destroys brand authority and trust with premium Delhi NCR clients who expect authentic expertise. The layout is clean, but the visual-text mismatch will cause high scroll-past rates.",
+  "issues": [
+   "The image shows a cold, glossy contemporary room with chrome and leather, which is not Japandi style.",
+   "The visual lacks any 'Indian warmth' or organic elements mentioned in the subtext.",
+   "The photo looks like a generic, dated stock image rather than a premium turnkey project.",
+   "The Hindi font used in the subtext looks like a default system font, lowering the premium feel."
+  ],
+  "fix_suggestion": "Replace the image with an actual Japandi-inspired living room featuring light natural oak wood, textured boucle or linen fabrics, earthy neutral tones, matte ceramics, and subtle Indian accents (like a handwoven rug or brass elements) to align with the copy."
  },
  "2026-08-20": {
   "verdict": "error",
   "score": 0,
-  "note": "gemini review failed: Unterminated string starting at: line 1 column 51 (char 50)"
+  "note": "gemini review failed: HTTP 503 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
  },
  "2026-08-21": {
   "verdict": "error",
   "score": 0,
-  "note": "gemini review failed: Unterminated string starting at: line 4 column 3 (char 41)"
+  "note": "gemini review failed: HTTP 503 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
  }
 }
