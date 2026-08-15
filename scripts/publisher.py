@@ -71,9 +71,9 @@ if IG_ID and IG_TOK and not log.get("instagram"):
     try:
         img_url = f"{RAW}/content/queue/{today}-ig.png"
         caption = f'{day["ig"]["hook_en"]}\n\n{day["ig"]["caption_hi"]}\n\n{day["ig"]["hashtags"]}'
-        c = api(f"https://graph.facebook.com/v21.0/{IG_ID}/media",
+        c = api(f"https://graph.instagram.com/v21.0/{IG_ID}/media",
                 {"image_url": img_url, "caption": caption, "access_token": IG_TOK})
-        r = api(f"https://graph.facebook.com/v21.0/{IG_ID}/media_publish",
+        r = api(f"https://graph.instagram.com/v21.0/{IG_ID}/media_publish",
                 {"creation_id": c["id"], "access_token": IG_TOK})
         log["instagram"] = {"id": r.get("id"), "at": datetime.now(IST).isoformat()}
         print("instagram published:", r.get("id"))
