@@ -13,7 +13,7 @@ Repo state:
   content/published.json  log of published posts
   content/calendar.json   the schedule; images in content/queue/
 """
-import json, os, sys, urllib.parse, urllib.request, urllib.error
+import json, os, sys, time, urllib.parse, urllib.request, urllib.error
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
@@ -49,6 +49,11 @@ def api(url, data=None, method=None):
     body = urllib.parse.urlencode(data).encode() if data else None
     return json.load(urllib.request.urlopen(req, body, timeout=60))
 
+def api_get(url, params):
+    q = urllib.parse.urlencode(params)
+    req = urllib.request.Request(f"{url}?{q}", method="GET")
+    return json.load(urllib.request.urlopen(req, timeout=60))
+
 def post_json(url, payload, headers):
     req = urllib.request.Request(url, json.dumps(payload).encode(),
                                  {"Content-Type": "application/json", **headers})
@@ -73,6 +78,16 @@ if IG_ID and IG_TOK and not log.get("instagram"):
         caption = f'{day["ig"]["hook_en"]}\n\n{day["ig"]["caption_hi"]}\n\n{day["ig"]["hashtags"]}'
         c = api(f"https://graph.instagram.com/v21.0/{IG_ID}/media",
                 {"image_url": img_url, "caption": caption, "access_token": IG_TOK})
+        # Instagram needs a few seconds to download/process the image before
+        # media_publish will accept the creation_id — poll status_code first.
+        for _ in range(10):
+            st = api_get(f"https://graph.instagram.com/v21.0/{c['id']}",
+                         {"fields": "status_code", "access_token": IG_TOK})
+            if st.get("status_code") == "FINISHED":
+                break
+            if st.get("status_code") == "ERROR":
+                raise RuntimeError(f"media processing failed: {st}")
+            time.sleep(5)
         r = api(f"https://graph.instagram.com/v21.0/{IG_ID}/media_publish",
                 {"creation_id": c["id"], "access_token": IG_TOK})
         log["instagram"] = {"id": r.get("id"), "at": datetime.now(IST).isoformat()}
