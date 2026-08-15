@@ -13,7 +13,7 @@ Repo state:
   content/published.json  log of published posts
   content/calendar.json   the schedule; images in content/queue/
 """
-import json, os, sys, urllib.parse, urllib.request
+import json, os, sys, urllib.parse, urllib.request, urllib.error
 from datetime import datetime, timezone, timedelta
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
@@ -54,6 +54,15 @@ def post_json(url, payload, headers):
                                  {"Content-Type": "application/json", **headers})
     return json.load(urllib.request.urlopen(req, timeout=60))
 
+def err_detail(e):
+    """Extract the response body from an HTTPError so we can see the real reason."""
+    if isinstance(e, urllib.error.HTTPError):
+        try:
+            return e.read().decode("utf-8", "replace")
+        except Exception:
+            return ""
+    return ""
+
 log = published.setdefault(today, {})
 
 # ---------- Instagram (feed photo via Graph API) ----------
@@ -69,7 +78,7 @@ if IG_ID and IG_TOK and not log.get("instagram"):
         log["instagram"] = {"id": r.get("id"), "at": datetime.now(IST).isoformat()}
         print("instagram published:", r.get("id"))
     except Exception as e:
-        print("instagram failed:", e, file=sys.stderr)
+        print("instagram failed:", e, "|", err_detail(e), file=sys.stderr)
 elif not (IG_ID and IG_TOK):
     print("instagram: tokens not set — skipping")
 
@@ -88,7 +97,7 @@ if PIN_TOK and PIN_BOARD and not log.get("pinterest"):
         log["pinterest"] = {"id": r.get("id"), "at": datetime.now(IST).isoformat()}
         print("pinterest published:", r.get("id"))
     except Exception as e:
-        print("pinterest failed:", e, file=sys.stderr)
+        print("pinterest failed:", e, "|", err_detail(e), file=sys.stderr)
 elif not (PIN_TOK and PIN_BOARD):
     print("pinterest: tokens not set — skipping")
 
