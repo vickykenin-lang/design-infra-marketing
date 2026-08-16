@@ -1,3 +1,49 @@
 {
- "leads": []
+ "leads": [
+  {
+   "at": "2026-08-17T00:27+05:30",
+   "issue": 31,
+   "logged_by": "vickykenin-lang",
+   "name": "Test Rehearsal Lead",
+   "phone": "9811122233",
+   "city": "Delhi",
+   "project_type": "Full home turnkey",
+   "budget_inr": 1200000,
+   "message": "Day 7 dress-rehearsal test lead -- ready to start this month, please ignore for real follow-up.",
+   "score": 100,
+   "priority": "HOT",
+   "breakdown": [
+    {
+     "factor": "City fit",
+     "points": 25,
+     "max": 25,
+     "reason": "'Delhi' is Design Infra's primary base (Delhi NCR)"
+    },
+    {
+     "factor": "Project type fit",
+     "points": 25,
+     "max": 25,
+     "reason": "mentions turnkey/full-scope project -- matches Design Infra's actual offering"
+    },
+    {
+     "factor": "Budget fit",
+     "points": 25,
+     "max": 25,
+     "reason": "₹1,200,000 clears the mid-to-premium turnkey floor (~₹8L)"
+    },
+    {
+     "factor": "Contactability",
+     "points": 15,
+     "max": 15,
+     "reason": "name and a phone number both given"
+    },
+    {
+     "factor": "Intent signal",
+     "points": 10,
+     "max": 10,
+     "reason": "message contains timeline/urgency language"
+    }
+   ]
+  }
+ ]
 }
