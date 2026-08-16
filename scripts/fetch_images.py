@@ -15,7 +15,7 @@ v4 changes (after owner feedback: "same image repeats, need more variety"):
   - positive-signal check: title must actually look like an interior/room photo.
   - bigger per-room pools so a week's worth of posts doesn't reuse one photo.
 """
-import json, os, sys, urllib.parse, urllib.request
+import json, os, re, sys, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(__file__))
 import gemini_client
 
@@ -51,40 +51,105 @@ BAD_TITLE = (
     "celebrity", "actor", "actress", "car ", "vehicle", "truck", "aircraft", "airport", "street view",
     "exterior", "facade", "church", "temple", "mosque", "cathedral", "stadium", "monument", "statue",
     "coat of arms", "emblem", "signage", "sign board",
+    # v5 additions (post-mortem on the "ancestral house" / "American homes and gardens (1907)"
+    # incidents — Aug 2026): archival, heritage-tourism and antique-record photography that a
+    # bare "interior/room/house" keyword match was letting straight through.
+    "ancestral", "heritage", "tourism", "tourist attraction", "historical", "history museum",
+    "archive", "archival", "museum", "vintage", "antique", "sepia", "period room", "period photograph",
+    "old photograph", "colonial", "manor house", "castle", "palace", "fort ", "fortress", "shrine",
+    "monastery", "abbey", "world's fair", "exposition", "watercolour", "watercolor", "sketch of",
+    "engraving", "etching", "lithograph", "postcard", "google art project", "habs ", "haer ",
+    "national register of historic places", "listed building", "gun & rifle", "gunmaker",
 )
-# at least one of these should appear so we don't accept a random photo that merely
-# matched the search keywords in an unrelated caption
-GOOD_HINT = (
-    "interior", "room", "kitchen", "bedroom", "living", "sofa", "furniture", "decor", "décor",
-    "design", "home", "apartment", "flat", "house", "wardrobe", "cabinet", "lighting", "ceiling",
-    "renovation", "modular", "office", "study", "dining", "cozy", "cosy",
+# Wikimedia-specific archival record naming conventions (HABS/HAER survey scans, Flickr-Commons
+# bulk book-plate uploads like "American homes and gardens (1907) (<flickrid>).jpg") — these carry
+# no descriptive room words at all, just a publication name + a pre-1970 year in parentheses.
+BAD_TITLE_PATTERNS = (
+    re.compile(r"\b1[6-8]\d{2}\b"),          # any 1600s-1800s year
+    re.compile(r"\b19[0-4]\d\b"),            # 1900-1949
+    re.compile(r"\bhabs\b|\bhaer\b", re.I),  # Historic American Buildings/Engineering Record
 )
-def title_ok(title_l):
-    if any(b in title_l for b in BAD_TITLE):
-        return False, "bad-keyword"
-    if not any(g in title_l for g in GOOD_HINT):
-        return False, "no-interior-hint"
-    return True, ""
+# Two tiers: a STRONG hint names an actual room/furnishing type and is trustworthy on its own.
+# A WEAK hint (home, house, design, decor...) is common in unrelated titles too (tourism listings,
+# real-estate ads, magazine names like "American Homes and Gardens") so it is only accepted when
+# at least two distinct weak hints appear together, or alongside a strong hint.
+STRONG_HINT = (
+    "interior design", "living room", "bedroom", "kitchen", "modular kitchen", "sofa", "wardrobe",
+    "cabinet", "dining room", "study room", "home office", "furniture", "cozy", "cosy",
+)
+WEAK_HINT = (
+    "interior", "room", "decor", "décor", "design", "home", "apartment", "flat", "house",
+    "lighting", "ceiling", "renovation", "modular", "office", "study", "dining",
+)
+def _has_word(text_l, word):
+    """Substring match for multi-word phrases, but a whole-word regex match for single tokens —
+    a naive `word in text` check let 'home' match inside 'homes and gardens' and would let 'design'
+    match inside e.g. 'designation'. This is what actually let the archival magazine-plate photos
+    and the tourism 'Ancestral House' photo through the old filter."""
+    if " " in word:
+        return word in text_l
+    return re.search(r"\b" + re.escape(word) + r"\b", text_l) is not None
 
-VISION_PROMPT_TMPL = """You are a strict photo-authenticity checker for an interior design marketing team.
+def title_ok(title_l, extra_text_l=""):
+    """extra_text_l should fold in Wikimedia Categories/ImageDescription/ObjectName when available —
+    those catch off-topic content (tourism, heritage, historical archives) that a generic file
+    title alone doesn't mention."""
+    text = title_l + " " + (extra_text_l or "")
+    if any(b in text for b in BAD_TITLE):
+        return False, "bad-keyword"
+    if any(p.search(text) for p in BAD_TITLE_PATTERNS):
+        return False, "bad-keyword-archival"
+    if any(_has_word(text, g) for g in STRONG_HINT):
+        return True, ""
+    weak_hits = sum(1 for g in WEAK_HINT if _has_word(text, g))
+    if weak_hits >= 2:
+        return True, ""
+    return False, "no-interior-hint"
+
+VISION_PROMPT_TMPL = """You are a strict photo-authenticity checker for an interior design marketing team
+targeting modern Indian residential clients (Delhi NCR and other metros).
 Look at this photo. It was searched for under the room category "{room}".
-Answer ONLY with compact JSON, no markdown fences: {{"is_real_interior_photo": true/false, "matches_room": true/false, "has_watermark_or_logo": true/false, "reason": "<one short sentence>"}}
-Rules: is_real_interior_photo must be false for illustrations, renders that look fake/AI-generated-looking, animals, people as the main subject, protests, exteriors, or anything that is not a genuine photograph of a furnished indoor room. matches_room must be false if the room shown clearly isn't a {room} (e.g. a bedroom photo when room is "living")."""
+Answer ONLY with compact JSON, no markdown fences: {{"is_real_interior_photo": true/false, "matches_room": true/false, "is_modern_photo": true/false, "has_watermark_or_logo": true/false, "reason": "<one short sentence>"}}
+Rules:
+- is_real_interior_photo must be false for illustrations, renders that look fake/AI-generated-looking, animals,
+  people as the main subject, protests, exteriors, paintings/sketches/engravings, or anything that is not a
+  genuine photograph of a furnished indoor room.
+- matches_room must be false if the room shown clearly isn't a {room} (e.g. a bedroom photo when room is "living").
+- is_modern_photo must be false for black-and-white / sepia / archival-looking photos, antique or heritage-house
+  interiors, museum period rooms, tourist/heritage-site photography, or anything that looks like a scan from an
+  old book, magazine, or postcard rather than a contemporary photo of a livable modern home. It must also be
+  false if the photo is noticeably blurry, out of focus, or too low-quality to represent premium interior work.
+- If the image contains dense unrelated body text (e.g. an article/caption baked into the photo itself), treat
+  that as a strong signal this is not a clean interior photo and set is_real_interior_photo to false."""
 
 def vision_check(path, room):
     """Stage-A QA: ask Gemini to actually look at the downloaded photo (title-matching
-    alone let a badger photo through once). Fails OPEN (returns True) if Gemini is
-    unavailable or errors, so the pipeline still works without a key — the keyword
-    filter above is the fallback safety net in that case."""
+    alone let a badger photo through once, and separately let an "Ancestral House" tourism
+    photo and 1900s-magazine archival scans through — see BAD_TITLE_PATTERNS above).
+
+    IMPORTANT: this only fails OPEN (returns True, i.e. lets the image through unchecked) when
+    Gemini is not configured at all (no API key) — that is a documented, visible tradeoff, logged
+    loudly below. If Gemini IS configured but a specific call errors (rate limit, transient network
+    issue, retired model, malformed JSON reply), we now fail CLOSED and reject the image instead of
+    silently approving it. The old behavior — fail open on *any* exception, including per-call
+    errors mid-run — is what most plausibly let living-1.jpg through: the keyword filter alone is
+    not trustworthy enough (see title_ok) to be the sole gate for images it merely couldn't out and
+    out disqualify. A rejected-by-error image will simply be attempted again next weekly run
+    against a different search result, which is a safe default; letting an unverified image publish
+    is not."""
     if not gemini_client.available():
-        return True, "gemini not configured — relying on keyword filter only"
+        return True, "gemini not configured — relying on keyword filter only (UNVERIFIED, logged loudly)"
     try:
         img = open(path, "rb").read()
         verdict = gemini_client.ask_json(VISION_PROMPT_TMPL.format(room=room), image_bytes=img, mime="image/jpeg")
-        ok = bool(verdict.get("is_real_interior_photo")) and bool(verdict.get("matches_room")) and not verdict.get("has_watermark_or_logo")
+        ok = (bool(verdict.get("is_real_interior_photo"))
+              and bool(verdict.get("matches_room"))
+              and bool(verdict.get("is_modern_photo", True))
+              and not verdict.get("has_watermark_or_logo"))
         return ok, verdict.get("reason", "")
     except Exception as e:
-        return True, f"gemini check failed, allowing through: {e}"
+        # Fail CLOSED: an errored vision check must not silently become an approval.
+        return False, f"gemini check errored — rejecting rather than allowing unverified: {e}"
 
 def http_json(url):
     req = urllib.request.Request(url, headers=HEADERS)
@@ -126,7 +191,16 @@ def wikimedia(query, room, count):
             if title in SEEN_TITLES:
                 log(f"[wikimedia] reject duplicate (already in pool): {title}")
                 continue
-            ok, reason = title_ok(title.lower())
+            # Fold in Categories/ObjectName/ImageDescription — the file *title* alone often has
+            # no useful words at all (e.g. "American homes and gardens (1907) (<flickrid>).jpg"),
+            # but Commons categories reliably say things like "Ancestral houses in the Philippines"
+            # or "Tourist attractions in ...", which is exactly the off-topic signal we need.
+            extra_bits = []
+            for f in ("Categories", "ObjectName", "ImageDescription"):
+                v = (meta.get(f, {}) or {}).get("value") or ""
+                extra_bits.append(re.sub(r"<[^>]+>", " ", v))
+            extra_text = " ".join(extra_bits).lower()
+            ok, reason = title_ok(title.lower(), extra_text)
             if not ok:
                 log(f"[wikimedia] reject ({reason}): {title}")
                 continue
@@ -140,8 +214,7 @@ def wikimedia(query, room, count):
                 continue
             artist = meta.get("Artist", {}).get("value", "")
             # strip html tags from artist
-            import re as _re
-            artist = _re.sub(r"<[^>]+>", "", artist)[:60].strip()
+            artist = re.sub(r"<[^>]+>", "", artist)[:60].strip()
             credits[name] = {"title": title, "creator": artist,
                              "license": lic, "source": ii.get("descriptionurl"),
                              "query": query, "room": room, "provider": "wikimedia"}
