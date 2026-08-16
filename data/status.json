@@ -1,8 +1,8 @@
 {
- "updated": "2026-08-17T00:14+05:30",
+ "updated": "2026-08-17T00:18+05:30",
  "overall": "green",
- "overall_note_en": "Publishing live — 1 Instagram post(s) out, 5 more scheduled this week. Day 6 kill-switch test passed 2026-08-17: triggered via issue #30, dashboard correctly showed paused, then resumed.",
- "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते 5 और शेड्यूल हैं। दिन 6 किल-स्विच टेस्ट 2026-08-17 को सफल: इशू #30 से चालू किया गया, डैशबोर्ड ने सही ढंग से रुका हुआ दिखाया, फिर फिर से शुरू किया गया।",
+ "overall_note_en": "Publishing live — 1 Instagram post(s) out, 5 more scheduled this week. Image-relevance filter bug fixed 2026-08-16 (Dr. Victor audit).",
+ "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते 5 और शेड्यूल हैं। इमेज-रिलेवेंस फ़िल्टर की गड़बड़ी 2026-08-16 को ठीक कर दी गई (Dr. Victor ऑडिट)।",
  "kill_switch": false,
  "actions_minutes_used": 0,
  "actions_minutes_budget": 2000,
