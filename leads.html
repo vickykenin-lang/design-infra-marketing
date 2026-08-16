@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b45309">
+<title>Design Infra — Free Consultation / मुफ़्त सलाह</title>
+<meta name="description" content="Tell us about your interior project and we'll get in touch. Turnkey home & office interiors, Delhi NCR and pan-India metros.">
+<style>
+  :root{--bg:#faf7f2;--surface:#fff;--ink:#1f2937;--ink-2:#6b7280;--line:#e8e2d8;--accent:#b45309;--accent-2:#d97706;--radius:16px;--shadow:0 1px 3px rgba(31,41,55,.06),0 8px 24px rgba(31,41,55,.05)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Segoe UI','Noto Sans Devanagari',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:520px;margin:0 auto;padding:20px}
+  .hero{border-radius:var(--radius);padding:22px;color:#fff;background:linear-gradient(135deg,#1c1917 0%,#44403c 55%,#78350f 130%);box-shadow:var(--shadow);margin-bottom:18px}
+  .hero .eyebrow{font-size:12px;opacity:.85;letter-spacing:.08em;text-transform:uppercase}
+  .hero h1{font-size:22px;font-weight:800;margin-top:4px}
+  .hero p{font-size:13.5px;opacity:.9;margin-top:8px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+  label{display:block;font-size:13px;font-weight:700;color:var(--ink-2);margin:12px 0 5px}
+  label:first-of-type{margin-top:0}
+  input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:15px;font-family:inherit;background:var(--bg);color:var(--ink)}
+  textarea{resize:vertical;min-height:70px}
+  .req{color:var(--accent)}
+  .btn{display:block;width:100%;border:0;background:var(--accent);color:#fff;border-radius:12px;padding:14px;font-size:15.5px;font-weight:700;cursor:pointer;margin-top:16px;text-decoration:none;text-align:center}
+  .btn:active{transform:scale(.98)}
+  .btn.secondary{background:var(--surface);color:var(--accent);border:1.5px solid var(--accent);margin-top:10px}
+  .note{font-size:12px;color:var(--ink-2);margin-top:10px;text-align:center}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;width:fit-content;margin:0 auto 14px}
+  .lang button{border:0;background:var(--surface);padding:7px 16px;font-size:13px;cursor:pointer;color:var(--ink-2)}
+  .lang button.on{background:var(--ink);color:var(--bg);font-weight:700}
+  #resultBox{display:none}
+  #resultBox.show{display:block}
+  #formBox.hide{display:none}
+  footer{text-align:center;font-size:12px;color:var(--ink-2);padding:20px 0}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lang"><button id="btnHi" onclick="setLang('hi')">हिंदी</button><button id="btnEn" onclick="setLang('en')">EN</button></div>
+  <div class="hero">
+    <div class="eyebrow" data-en="Design Infra" data-hi="डिज़ाइन इंफ़्रा"></div>
+    <h1 data-en="Get a free consultation" data-hi="मुफ़्त सलाह पाइए"></h1>
+    <p data-en="Turnkey home &amp; office interiors — one team, one contract, milestone-based transparency. Tell us a bit about your project and we'll reach out." data-hi="टर्नकी होम और ऑफ़िस इंटीरियर — एक टीम, एक कॉन्ट्रैक्ट, हर स्टेज पर पारदर्शिता। अपने प्रोजेक्ट के बारे में थोड़ा बताइए, हम आपसे संपर्क करेंगे।"></p>
+  </div>
+
+  <div class="card" id="formBox">
+    <label data-en="Your name *" data-hi="आपका नाम *"></label>
+    <input type="text" id="f_name" required>
+
+    <label data-en="Phone number *" data-hi="फ़ोन नंबर *"></label>
+    <input type="tel" id="f_phone" required placeholder="+91">
+
+    <label data-en="City *" data-hi="शहर *"></label>
+    <select id="f_city">
+      <option>Delhi NCR</option><option>Mumbai</option><option>Bengaluru</option>
+      <option>Hyderabad</option><option>Pune</option><option>Chennai</option>
+      <option>Kolkata</option><option>Ahmedabad</option>
+      <option data-en="Other" data-hi="अन्य">Other</option>
+    </select>
+
+    <label data-en="What are you looking for?" data-hi="आप क्या ढूँढ रहे हैं?"></label>
+    <select id="f_project">
+      <option data-en="Full home interior (turnkey)" data-hi="पूरे घर का इंटीरियर (टर्नकी)">Full home interior (turnkey)</option>
+      <option data-en="Office / commercial interior" data-hi="ऑफ़िस / कमर्शियल इंटीरियर">Office / commercial interior</option>
+      <option data-en="Full renovation" data-hi="पूरी रेनोवेशन">Full renovation</option>
+      <option data-en="Just one room / element (e.g. kitchen, wardrobe)" data-hi="सिर्फ़ एक कमरा / हिस्सा (जैसे किचन, वॉर्डरोब)">Just one room / element (e.g. kitchen, wardrobe)</option>
+      <option data-en="Not sure yet" data-hi="अभी तय नहीं है">Not sure yet</option>
+    </select>
+
+    <label data-en="Approximate budget (optional)" data-hi="अनुमानित बजट (वैकल्पिक)"></label>
+    <select id="f_budget">
+      <option value="" data-en="Prefer not to say" data-hi="बताना नहीं चाहते">Prefer not to say</option>
+      <option value="500000" data-en="Under ₹8 lakh" data-hi="₹8 लाख से कम">Under ₹8 lakh</option>
+      <option value="1000000" data-en="₹8–15 lakh" data-hi="₹8–15 लाख">₹8–15 lakh</option>
+      <option value="2000000" data-en="₹15–25 lakh" data-hi="₹15–25 लाख">₹15–25 lakh</option>
+      <option value="3000000" data-en="₹25 lakh+" data-hi="₹25 लाख+">₹25 lakh+</option>
+    </select>
+
+    <label data-en="Anything else? (timeline, rooms, etc.)" data-hi="और कुछ बताना चाहेंगे? (समय, कमरे, आदि)"></label>
+    <textarea id="f_message"></textarea>
+
+    <button class="btn" onclick="submitLead()" data-en="Send inquiry" data-hi="पूछताछ भेजें"></button>
+    <p class="note" data-en="We'll open WhatsApp or email with your details filled in — just hit send there." data-hi="हम WhatsApp या ईमेल खोलेंगे, आपकी जानकारी पहले से भरी होगी — बस वहाँ भेज दीजिए।"></p>
+  </div>
+
+  <div class="card" id="resultBox">
+    <p data-en="Thanks! Choose how you'd like to send this:" data-hi="धन्यवाद! बताइए कैसे भेजना चाहेंगे:" style="font-weight:700;margin-bottom:6px"></p>
+    <a class="btn" id="waLink" target="_blank" data-en="📱 Send via WhatsApp" data-hi="📱 WhatsApp से भेजें"></a>
+    <a class="btn secondary" id="mailLink" data-en="✉️ Send via Email" data-hi="✉️ ईमेल से भेजें"></a>
+    <p class="note" data-en="If neither opens automatically, your details are also shown below to copy." data-hi="अगर दोनों में से कुछ अपने-आप न खुले, तो नीचे आपकी जानकारी कॉपी करने के लिए दी गई है।"></p>
+    <pre id="rawText" style="white-space:pre-wrap;font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:10px;color:var(--ink-2)"></pre>
+  </div>
+
+  <footer>
+    Design Infra ·
+    <span data-en="Your info is used only to respond to your inquiry." data-hi="आपकी जानकारी सिर्फ़ आपकी पूछताछ का जवाब देने के लिए इस्तेमाल होगी।"></span>
+    <a href="privacy.html" data-en="Privacy Policy" data-hi="प्राइवेसी पॉलिसी"></a>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — Vicky must fill these in with Design Infra's real
+   business WhatsApp number and inquiry email before this page
+   goes live in bio links. See data/AURA_SETUP_CHECKLIST.md.
+   Placeholders below are deliberately obvious, not fabricated
+   real contact details.
+   ============================================================ */
+const BUSINESS_WHATSAPP = "91XXXXXXXXXX"; // e.g. "919812345678" — no + or spaces
+const BUSINESS_EMAIL = "leads@designinfra.in"; // placeholder — confirm real inbox with Vicky
+
+let LANG = localStorage.getItem('aura_lang') || 'hi';
+function setLang(l){
+  LANG = l; localStorage.setItem('aura_lang', l);
+  document.getElementById('btnHi').classList.toggle('on', l==='hi');
+  document.getElementById('btnEn').classList.toggle('on', l==='en');
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    if(el.tagName==='OPTION'){ el.textContent = el.dataset[l] || el.dataset.en; }
+    else { el.innerHTML = el.dataset[l] || el.dataset.en; }
+  });
+}
+setLang(LANG);
+
+function submitLead(){
+  const name = document.getElementById('f_name').value.trim();
+  const phone = document.getElementById('f_phone').value.trim();
+  if(!name || !phone){
+    alert(LANG==='hi' ? 'कृपया नाम और फ़ोन नंबर भरें।' : 'Please fill in your name and phone number.');
+    return;
+  }
+  const city = document.getElementById('f_city').value;
+  const projectSel = document.getElementById('f_project');
+  const project = projectSel.options[projectSel.selectedIndex].dataset.en || projectSel.value;
+  const budgetSel = document.getElementById('f_budget');
+  const budgetLabel = budgetSel.options[budgetSel.selectedIndex].dataset.en || budgetSel.options[budgetSel.selectedIndex].text;
+  const budgetVal = budgetSel.value;
+  const message = document.getElementById('f_message').value.trim();
+
+  const lines = [
+    `Name: ${name}`,
+    `Phone: ${phone}`,
+    `City: ${city}`,
+    `Project type: ${project}`,
+    `Budget (INR): ${budgetVal}`,
+    `Message: ${message}${message ? ' ' : ''}[Budget bracket: ${budgetLabel}]`,
+  ];
+  const text = lines.join('\n');
+
+  document.getElementById('formBox').classList.add('hide');
+  document.getElementById('resultBox').classList.add('show');
+  document.getElementById('rawText').textContent = text;
+
+  const waText = (LANG==='hi'
+    ? `नमस्ते, मुझे इंटीरियर प्रोजेक्ट के बारे में पूछताछ करनी है।\n\n${text}`
+    : `Hi, I'd like to enquire about an interior project.\n\n${text}`);
+  document.getElementById('waLink').href = `https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent(waText)}`;
+
+  const subject = encodeURIComponent(`Interior project inquiry — ${name}`);
+  const mailBody = encodeURIComponent(text);
+  document.getElementById('mailLink').href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${mailBody}`;
+
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>
