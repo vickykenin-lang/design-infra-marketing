@@ -1,4 +1,5 @@
 {
- "kill_switch": true,
- "kill_reason": "Issue #30 by vickykenin-lang at 2026-08-17T00:06+05:30"
+ "kill_switch": false,
+ "kill_reason": null,
+ "last_test": "Issue #30 (2026-08-17T00:06+05:30): kill switch fired correctly, dashboard showed 'Paused (kill switch)' live -- confirmed by Vicky and Dr. Victor. Manually resumed by Dr. Victor at 2026-08-17T00:14+05:30 per the documented resume process (heartbeat.py does not auto-resume by design)."
 }
