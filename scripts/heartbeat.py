@@ -69,12 +69,45 @@ status = jload("data/status.json", {})
 status["updated"] = now
 status["kill_switch"] = control.get("kill_switch", False)
 published = jload("content/published.json", {})
-n_posts = sum(1 for d in published.values() for k in d if k in ("instagram", "pinterest"))
+n_ig = sum(1 for d in published.values() if "instagram" in d)
+n_pin = sum(1 for d in published.values() if "pinterest" in d)
+n_posts = n_ig + n_pin
 stats = status.setdefault("stats", {})
 stats["posts"] = n_posts
 cal = jload("content/calendar.json", {"days": []})
 today = datetime.now(IST).strftime("%Y-%m-%d")
 stats["scheduled"] = sum(1 for d in cal.get("days", []) if d["date"] >= today)
+
+# Component statuses and the overall narrative were previously hardcoded from Day 1
+# and never revisited, so the dashboard kept saying "no automation running yet" and
+# "Publisher (Instagram): pending" even after real posts went out (caught in Dr.
+# Victor's 2026-08-16 audit). Derive them from actual data on every heartbeat instead.
+credits = jload("content/assets/credits.json", {})
+component_status = {
+    "Dashboard": "green",
+    "Content engine": "green" if credits else "pending",
+    "Publisher (Instagram)": "green" if n_ig > 0 else "pending",
+    "Publisher (Pinterest)": "green" if n_pin > 0 else "pending",
+    "Lead Manager": "pending",   # Day 5 build not started yet
+    "Analyst": "pending",        # Day 5 build not started yet
+}
+for c in status.get("components", []):
+    if c.get("name") in component_status:
+        c["status"] = component_status[c["name"]]
+
+if n_posts > 0:
+    status["overall_note_en"] = (
+        f"Publishing live — {n_ig} Instagram post(s) out, {stats['scheduled']} more scheduled this week. "
+        "Image-relevance filter bug fixed 2026-08-16 (Dr. Victor audit)."
+    )
+    status["overall_note_hi"] = (
+        f"पब्लिशिंग लाइव — {n_ig} इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते {stats['scheduled']} और शेड्यूल हैं। "
+        "इमेज-रिलेवेंस फ़िल्टर की गड़बड़ी 2026-08-16 को ठीक कर दी गई (Dr. Victor ऑडिट)।"
+    )
+else:
+    status["overall_note_en"] = "Day 1 build in progress. No automation running yet."
+    status["overall_note_hi"] = "दिन 1 का निर्माण जारी। अभी कोई ऑटोमेशन नहीं चल रहा।"
+
 jsave("data/status.json", status)
 jsave("data/control.json", control)
 jsave("data/inbox.json", inbox)
