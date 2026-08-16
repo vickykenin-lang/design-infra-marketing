@@ -1,19 +1,11 @@
 {
  "updated": "2026-08-17T00:27+05:30",
  "today": "2026-08-17",
- "leads_today": 1,
- "leads_this_week": 1,
- "leads_total": 1,
- "avg_score_this_week": 100.0,
- "hot_leads_awaiting_followup": [
-  {
-   "issue": 31,
-   "name": "Test Rehearsal Lead",
-   "city": "Delhi",
-   "score": 100,
-   "at": "2026-08-17T00:27+05:30"
-  }
- ],
- "note_en": "1 lead(s) today, 1 this week, avg score 100.0/100.",
- "note_hi": "आज 1 लीड, इस हफ़्ते 1, औसत स्कोर 100.0/100।"
+ "leads_today": 0,
+ "leads_this_week": 0,
+ "leads_total": 0,
+ "avg_score_this_week": 0,
+ "hot_leads_awaiting_followup": [],
+ "note_en": "No leads yet. Pipeline verified working via a live test (issue #31, removed after confirming end-to-end) -- ready for real leads once Vicky adds real contact details to leads.html.",
+ "note_hi": "अभी तक कोई असली लीड नहीं। पाइपलाइन एक लाइव टेस्ट (issue #31, पुष्टि के बाद हटाया गया) से सत्यापित हो चुकी है -- असली लीड्स के लिए तैयार, बस leads.html में असली संपर्क विवरण डालना बाकी है।"
 }
