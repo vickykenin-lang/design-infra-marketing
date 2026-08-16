@@ -1,4 +1,4 @@
 {
- "kill_switch": false,
- "kill_reason": null
+ "kill_switch": true,
+ "kill_reason": "Issue #30 by vickykenin-lang at 2026-08-17T00:06+05:30"
 }

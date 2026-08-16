@@ -1,9 +1,9 @@
 {
- "updated": "2026-08-16T23:55+05:30",
+ "updated": "2026-08-17T00:06+05:30",
  "overall": "green",
- "overall_note_en": "Publishing live — 1 Instagram post(s) out, 6 more scheduled this week. Day 5 (Leads + Analytics) shipped 2026-08-16: capture page, scoring and dashboard reporting are live; needs Vicky to add real WhatsApp/email contact details before sharing the link publicly.",
- "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते 6 और शेड्यूल हैं। दिन 5 (लीड्स + एनालिटिक्स) 2026-08-16 को तैयार: कैप्चर पेज, स्कोरिंग और डैशबोर्ड रिपोर्टिंग लाइव हैं; लिंक सार्वजनिक करने से पहले विकी को असली WhatsApp/ईमेल जानकारी डालनी है।",
- "kill_switch": false,
+ "overall_note_en": "Publishing live — 1 Instagram post(s) out, 5 more scheduled this week. Image-relevance filter bug fixed 2026-08-16 (Dr. Victor audit).",
+ "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते 5 और शेड्यूल हैं। इमेज-रिलेवेंस फ़िल्टर की गड़बड़ी 2026-08-16 को ठीक कर दी गई (Dr. Victor ऑडिट)।",
+ "kill_switch": true,
  "actions_minutes_used": 0,
  "actions_minutes_budget": 2000,
  "components": [
@@ -34,7 +34,7 @@
  ],
  "stats": {
   "posts": 1,
-  "scheduled": 6,
+  "scheduled": 5,
   "leads": 0
  }
 }
