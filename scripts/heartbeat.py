@@ -122,7 +122,21 @@ stats = status.setdefault("stats", {})
 stats["posts"] = n_posts
 cal = jload("content/calendar.json", {"days": []})
 today = datetime.now(IST).strftime("%Y-%m-%d")
-stats["scheduled"] = sum(1 for d in cal.get("days", []) if d["date"] >= today)
+future_days = [d["date"] for d in cal.get("days", []) if d["date"] >= today]
+# "scheduled" used to count every future calendar day regardless of approval
+# status, which silently included days stuck on "rejected" (e.g. leftover
+# test issues from a dress rehearsal) as if they were healthy and about to
+# publish. Split it honestly instead: approved-and-will-publish vs
+# pending-and-needs-your-review vs rejected-and-will-not-publish -- so the
+# dashboard surfaces exactly what Vicky asked for: a visible review queue,
+# not a number that hides whether anything is actually blocked
+# (Dr. Victor, 2026-08-17, per Vicky: "approval should be in queue").
+approved_days = [d for d in future_days if approvals.get(d) == "approved"]
+rejected_days = [d for d in future_days if approvals.get(d) == "rejected"]
+pending_days = [d for d in future_days if d not in approvals]
+stats["scheduled"] = len(approved_days)
+stats["pending_review"] = len(pending_days)
+stats["rejected"] = len(rejected_days)
 
 # Component statuses and the overall narrative were previously hardcoded from Day 1
 # and never revisited, so the dashboard kept saying "no automation running yet" and
@@ -179,13 +193,15 @@ daily_report = {
 }
 
 if n_posts > 0:
+    pending_note_en = f" {stats['pending_review']} awaiting your review." if stats["pending_review"] else ""
+    pending_note_hi = f" {stats['pending_review']} आपकी समीक्षा का इंतज़ार कर रही हैं।" if stats["pending_review"] else ""
     status["overall_note_en"] = (
-        f"Publishing live — {n_ig} Instagram post(s) out, {stats['scheduled']} more scheduled this week. "
-        "Image-relevance filter bug fixed 2026-08-16 (Dr. Victor audit)."
+        f"Publishing live — {n_ig} Instagram post(s) out, {stats['scheduled']} approved and scheduled.{pending_note_en} "
+        "Calendar auto-refills weekly so the queue never runs dry (Dr. Victor, 2026-08-17)."
     )
     status["overall_note_hi"] = (
-        f"पब्लिशिंग लाइव — {n_ig} इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते {stats['scheduled']} और शेड्यूल हैं। "
-        "इमेज-रिलेवेंस फ़िल्टर की गड़बड़ी 2026-08-16 को ठीक कर दी गई (Dr. Victor ऑडिट)।"
+        f"पब्लिशिंग लाइव — {n_ig} इंस्टाग्राम पोस्ट हो चुकी हैं, {stats['scheduled']} मंज़ूर और शेड्यूल हैं।{pending_note_hi} "
+        "कैलेंडर हर हफ़्ते अपने-आप भर जाता है ताकि कतार कभी खाली न हो (Dr. Victor, 2026-08-17)।"
     )
 else:
     status["overall_note_en"] = "Day 1 build in progress. No automation running yet."
