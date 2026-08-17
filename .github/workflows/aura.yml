@@ -1,7 +1,7 @@
 name: AURA
 on:
   schedule:
-    - cron: '15 */3 * * *'   # heartbeat: every 3h
+    - cron: '*/5 * * * *'    # heartbeat: every 5 minutes (changed from 3h per Vicky, 2026-08-17)
     - cron: '30 13 * * *'    # publish: 19:00 IST
     - cron: '45 13 * * *'    # publish retry
     - cron: '0 6 * * 5'      # weekly content: Friday
@@ -43,7 +43,7 @@ jobs:
   heartbeat:
     if: |
       github.event_name == 'issues' ||
-      github.event.schedule == '15 */3 * * *' ||
+      github.event.schedule == '*/5 * * * *' ||
       (github.event_name == 'workflow_dispatch' && (inputs.job == 'heartbeat' || inputs.job == 'all'))
     runs-on: ubuntu-latest
     steps:
