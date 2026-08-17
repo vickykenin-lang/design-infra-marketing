@@ -10,7 +10,7 @@
 [wikimedia] reject (bad-keyword): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
 == living: 0/10 from 'living room interior design India'
 [wikimedia] reject (bad-keyword): File:Miggla logo.png
-[wikimedia] reject by Gemini vision check: File:Modern Furniture and Interior Design for Home and Office.jpg — The image is a promotional marketing flyer showing an office workspace render with prominent logos and text, not a real kitchen photograph.
+[wikimedia] reject by Gemini vision check: File:Modern Furniture and Interior Design for Home and Office.jpg — The image is a promotional advertisement banner for office workspaces with text and logos, not a photo of a kitchen.
 [wikimedia] reject duplicate (already in pool): File:Modular Kitchen Design - Picker Online.jpg
 == kitchen: 0/8 from 'modular kitchen interior design'
 [wikimedia] reject (bad-keyword): File:Interior, kitchen - Pope-Leighey House, 9000 Richmond Highway (moved from Falls Church, VA), Mount Vernon, Fairfax County, VA HABS VA,30-FALCH,2-23.tif
@@ -28,7 +28,7 @@
 == kitchen: 0/8 from 'kitchen interior design cabinets'
 [wikimedia] reject (bad-keyword): File:Architect and engineer (1922) (14595095638).jpg
 [wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — The image is a hand-drawn 2D floor plan diagram rather than a real photograph of a bedroom interior.
+[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — This is a hand-drawn floor plan sketch rather than a genuine photograph of an interior room.
 [wikimedia] reject (bad-keyword): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
 == bedroom: 0/8 from 'bedroom interior design wardrobe'
 [wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
