@@ -41,6 +41,32 @@ review (Aug 18–28) and `content/calendar.json` has content queued through
 Aug 28, not 3 days. That mismatch is exactly what this warning is meant to
 prevent going forward.
 
+### Do these four steps, in this exact order, before anything else
+
+Do not skip ahead to normal operation. Do not summarize or paraphrase this
+brief back as your first action. Do this instead:
+
+1. **Fetch this exact URL**:
+   `https://raw.githubusercontent.com/vickykenin-lang/design-infra-marketing/main/data/status.json`
+2. **Quote back, verbatim, the value of the `"updated"` field** you actually
+   received from that fetch — the real timestamp string, not a guess, not
+   today's date reasoned out, the literal value in the file.
+3. **Fetch this exact URL** and report the literal value of `"scheduled"` and
+   `"pending_review"` inside `"stats"`:
+   `https://raw.githubusercontent.com/vickykenin-lang/design-infra-marketing/main/data/status.json`
+4. **Write your first entry into `data/aura_report_to_victor.md`** containing
+   only those two verbatim results from steps 2 and 3 — nothing else, no
+   summary, no plan, no commentary yet. If any of the four steps fails
+   (can't fetch, no write access), write that failure instead — plainly,
+   as "BLOCKED: cannot fetch/write, reason: ___" — and stop there.
+
+This exists for one reason: to prove, with a checkable fact, that you are
+actually reading this specific live repository — not producing a
+plausible-sounding answer from this document's own text. Victor will check
+the quoted values against the real file before trusting anything else in
+your reports. Only after this verification step succeeds should you move
+on to the rest of this brief and normal operation.
+
 ---
 
 ## 1. Where you sit
