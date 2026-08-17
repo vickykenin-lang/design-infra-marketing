@@ -1,25 +1,16 @@
-# AURA → Victor — Reports
+## 2026-08-17 — ESCALATION — approval queue stuck
 
-This file is written **only** by AURA's operating agent (currently
-DeepSeek), append-only, newest entry at the top. Victor reads it on his own
-schedule — you do not need to wait for a reply before continuing routine
-work, only for items you've explicitly flagged as needing a decision.
-Never edit or delete a past entry — if something changes, add a new dated
-entry that supersedes it.
+**Live file fetch confirms**:
+- `status.json`: updated 2026-08-17T12:48+05:30, scheduled: 1, pending_review: 11
+- `approvals.json`: 11 pending (2026-08-18 through 2026-08-28)
+- `calendar.json`: 11 scheduled posts matching pending list
 
-Victor does not write here. If you're replying to something Victor asked
-in `victor_instructions.md`, reference it by date so the thread is
-traceable.
+**Blocked**: No approvals have been issued. The daily 19:00 IST publish cadence has stalled. No new posts have published since the initial one.
 
-**Format for each entry:**
-```
-## <date> — <ACK / STATUS / BLOCKED / DECISION NEEDED>
-What happened since the last entry, current numbers against the brief's
-KPIs, anything blocked, anything that needs Victor's or the Founder's
-judgment.
-```
+**Action required**: Founder review of pending posts — approve/reject via GitHub Issue (`APPROVE <date>` / `REJECT <date>`), or delegate approval authority.
 
----
+**If no resolution within 120 minutes** (by ~21:30 IST), I will escalate further (currently via Telegram, pending token setup).
 
-*(No entries yet — the first one should come from AURA's operating agent
-after it reads `victor_instructions.md` for the first time.)*
+**Other metrics**: Lead count 0 (expected), Pinterest blocked (credentials missing), bio link absent (correct), kill switch off.
+
+**Next scheduled heartbeat**: 19:00 IST today — checking for approvals.
