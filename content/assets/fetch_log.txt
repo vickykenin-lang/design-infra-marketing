@@ -7,9 +7,10 @@
 [wikimedia] reject duplicate (already in pool): File:American homes and gardens (1907) (17970714579).jpg
 [wikimedia] reject duplicate (already in pool): File:American homes and gardens (1909) (17536680823).jpg
 [wikimedia] reject duplicate (already in pool): File:Luxury Living Room Interior Design in Kolkata by Estate Lookup Interiors.png
-[wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
+[wikimedia] reject (bad-keyword): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
 == living: 0/10 from 'living room interior design India'
 [wikimedia] reject (bad-keyword): File:Miggla logo.png
+[wikimedia] reject by Gemini vision check: File:Modern Furniture and Interior Design for Home and Office.jpg — The image is a promotional marketing flyer showing an office workspace render with prominent logos and text, not a real kitchen photograph.
 [wikimedia] reject duplicate (already in pool): File:Modular Kitchen Design - Picker Online.jpg
 == kitchen: 0/8 from 'modular kitchen interior design'
 [wikimedia] reject (bad-keyword): File:Interior, kitchen - Pope-Leighey House, 9000 Richmond Highway (moved from Falls Church, VA), Mount Vernon, Fairfax County, VA HABS VA,30-FALCH,2-23.tif
@@ -25,15 +26,15 @@
 [openverse] reject duplicate (already in pool): Modern kitchen interior design featuring light colors and minimalist style with sleek cabinets and elegant countertops
 [openverse] reject duplicate (already in pool): View From Dining Area
 == kitchen: 0/8 from 'kitchen interior design cabinets'
-[wikimedia] reject (no-interior-hint): File:Architect and engineer (1922) (14595095638).jpg
+[wikimedia] reject (bad-keyword): File:Architect and engineer (1922) (14595095638).jpg
 [wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — The image is a hand-drawn floor plan diagram rather than a real photograph of a bedroom.
-[wikimedia] reject (no-interior-hint): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
+[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — The image is a hand-drawn 2D floor plan diagram rather than a real photograph of a bedroom interior.
+[wikimedia] reject (bad-keyword): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
 == bedroom: 0/8 from 'bedroom interior design wardrobe'
 [wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
-[wikimedia] reject (no-interior-hint): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
+[wikimedia] reject (bad-keyword): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
 == bedroom: 0/8 from 'bedroom interior design India'
-[wikimedia] reject (no-interior-hint): File:Building with assurance (1921) (14740809366).jpg
+[wikimedia] reject (bad-keyword): File:Building with assurance (1921) (14740809366).jpg
 [openverse] reject (no-interior-hint): multimedia desk
 [openverse] reject duplicate (already in pool): standing desk in den / kitchen
 [openverse] reject (no-interior-hint): Detention cell
@@ -66,7 +67,7 @@
 [wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff
 [wikimedia] reject duplicate (already in pool): File:INTERIOR OF EAST STORAGE ROOM (FORMERLY FIRST FLOOR OF SIGNAL TOWER). - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-33.tif
 [wikimedia] reject duplicate (already in pool): File:INTERIOR VIEW OF SECOND FLOOR ROOM LOOKING EAST. - Dugway Proving Ground, German-Japanese Village, German Village, South of Stark Road, in WWII Incendiary Test Area, Dugway, HAER UTAH,23-DUG,2A-10.tif
-[wikimedia] reject by Gemini vision check: File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg — The image is a watercolor painting of a historical parlor rather than a photograph of an office.
+[wikimedia] reject (bad-keyword): File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg
 [wikimedia] reject duplicate (already in pool): File:SECOND FLOOR - STORAGE ROOM, ADJACENT TO SOUTHEAST ROOM - Blandfield, U.S. Route 17 and State Route 624, Caret, Essex County, VA HABS VA,29-CAR.V,1-75.tif
 [wikimedia] reject duplicate (already in pool): File:Second Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10610.tiff
 [wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1870,1008.600).jpg
@@ -74,9 +75,9 @@
 [wikimedia] reject duplicate (already in pool): File:Third Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10614.tiff
 [wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT NORTH AND EAST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-24.tif
 [wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT SOUTH AND WEST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-26.tif
-[openverse] reject (no-interior-hint): Johannes Vermeer’s The Music Lesson (ca. 1662–1665) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (no-interior-hint): Johannes Vermeer’s Girl Interrupted at Her Music (ca. 1660–1661) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (no-interior-hint): Johannes Vermeer’s The Astronomer (ca. 1668) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (no-interior-hint): Johannes Vermeer’s The Geographer (1669) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Music Lesson (ca. 1662–1665) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (bad-keyword-archival): Johannes Vermeer’s Girl Interrupted at Her Music (ca. 1660–1661) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Astronomer (ca. 1668) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
+[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Geographer (1669) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
 [openverse] reject (no-interior-hint): Creative Corner Workspace
 == office: 0/6 from 'study room interior design'
