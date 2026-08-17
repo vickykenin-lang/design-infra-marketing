@@ -1,7 +1,7 @@
 {
- "updated": "2026-08-17T23:48+05:30",
- "today": "2026-08-17",
- "leads_today": 1,
+ "updated": "2026-08-18T00:35+05:30",
+ "today": "2026-08-18",
+ "leads_today": 0,
  "leads_this_week": 1,
  "leads_total": 1,
  "avg_score_this_week": 100.0,
@@ -14,6 +14,6 @@
    "at": "2026-08-17T00:27+05:30"
   }
  ],
- "note_en": "1 lead(s) today, 1 this week, avg score 100.0/100.",
- "note_hi": "आज 1 लीड, इस हफ़्ते 1, औसत स्कोर 100.0/100।"
+ "note_en": "0 lead(s) today, 1 this week, avg score 100.0/100.",
+ "note_hi": "आज 0 लीड, इस हफ़्ते 1, औसत स्कोर 100.0/100।"
 }
