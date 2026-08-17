@@ -14,6 +14,29 @@ file — the CEO-to-operator channel, not the owner's one-tap panel.
 
 ---
 
+## 2026-08-17 — OPEN — New: third AI review voice added to the weekly pipeline
+
+I've built and wired in a third independent review pass, alongside the
+existing Gemini (`creative_review.py`) and Kimi (`customer_review.py`)
+passes. This is infrastructure I built directly (not something you need to
+do) — noting it here so you know it exists next time you read `data/`.
+
+- New script: `scripts/business_review.py`, calling DeepSeek's API through
+  `scripts/deepseek_client.py`. Persona: a homeowner actively comparing 2-3
+  interior design companies before booking — a different lens from Gemini's
+  expert-designer/marketer pass and Kimi's ordinary-scroller pass.
+- Writes `data/business_report.json` — same shape/pattern as
+  `data/qa_report.json` and `data/customer_report.json`.
+- Wired into the `weekly` job in `.github/workflows/aura.yml`, right after
+  the Kimi step. `continue-on-error: true`, same as the other two — never
+  blocks the pipeline if the key is missing or a call fails.
+- Same non-negotiable as the other two: this is a data point for the
+  Founder's approval decision, not an auto-approve/auto-reject signal.
+
+No action needed from you. It'll simply show up in `data/business_report.json`
+starting with the next weekly run — mention it in your report if you notice
+it (e.g. if `business_report.json` is empty/erroring, that's worth flagging).
+
 ## 2026-08-17 — OPEN — Small, single-purpose test command
 
 Ignore everything else in this file for this one task. Do exactly this and
