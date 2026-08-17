@@ -90,8 +90,27 @@ def ask(prompt, image_bytes=None, mime="image/jpeg", timeout=60):
                     time.sleep(3 * (attempt + 1))  # 3s, then 6s, then give up on this model
                     continue
                 break
-        if status_code in (404, 429, 503):
-            continue  # dead/unavailable/overloaded model name — try the next candidate
+            except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+                # Network-level failure (read timeout, connection reset, DNS hiccup) —
+                # there is no HTTP status here at all, so the 429/503 check above never
+                # fires for this class of error. Root-caused 2026-08-17 (Dr. Victor):
+                # a single weekly run makes ~30+ back-to-back Gemini calls (7 for new
+                # captions, ~14 for image vetting, 14 for the review itself) and several
+                # days came back "error, score 0" in creative_review.py even though the
+                # 429/503 retry above was already in place — because most of those
+                # failures were plain timeouts under load, not explicit rate-limit
+                # responses, and timeouts were previously NOT retried at all. Same
+                # backoff treatment as 429/503 fixes it.
+                last_err = RuntimeError(f"Network error from Gemini (model={model}): {e}")
+                if attempt < 2:
+                    time.sleep(3 * (attempt + 1))
+                    continue
+                break
+        if status_code in (404, 429, 503) or status_code is None:
+            # status_code is None here means every attempt hit the network-error
+            # branch above (never got as far as an HTTP response) — worth trying
+            # the next candidate model too, same as a dead/overloaded model name.
+            continue
         raise last_err  # anything else (bad key, bad request, ...) won't fix itself by switching models
     raise last_err
 
