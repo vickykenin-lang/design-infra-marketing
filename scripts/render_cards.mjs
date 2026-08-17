@@ -79,11 +79,19 @@ function shell(inner, { w, h, dark = false }) {
 }
 
 // Returns { media: <img> or <svg> sized exactly w×h, credit: attribution chip html or '' }
+// AI-generated concept photos (scripts/fetch_images.py's Cloudflare Workers AI fallback,
+// credits.json entry has ai_generated:true) ALWAYS get their own distinct badge here —
+// per brand/BRAND.md's "honest Concept visualisation labels on AI concept images" rule,
+// they must never look identical to a real CC BY-credited photo on the card.
 function sceneMedia(tag, w, h, fallbackStyle, seed) {
   const photo = pickPhoto(tag, seed);
   if (photo) {
-    const credit = needsCredit(photo.license)
-      ? `<span class="credit" style="left:20px;bottom:20px">📷 ${esc(photo.creator || 'Unknown')} · CC BY</span>` : '';
+    let credit = '';
+    if (photo.ai_generated) {
+      credit = `<span class="credit" style="left:20px;bottom:20px">🎨 Concept visualisation (AI)</span>`;
+    } else if (needsCredit(photo.license)) {
+      credit = `<span class="credit" style="left:20px;bottom:20px">📷 ${esc(photo.creator || 'Unknown')} · CC BY</span>`;
+    }
     const media = `<div style="width:${w}px;height:${h}px;overflow:hidden">` +
       `<img src="${photo.dataUri}" style="width:100%;height:100%;object-fit:cover;display:block"></div>`;
     return { media, credit };

@@ -2,6 +2,11 @@
 """AURA — Image Researcher v4: license-safe real interior photos.
 Primary source: Wikimedia Commons (reliable direct downloads, clear licenses).
 Fallback: Openverse API thumbnails.
+Third fallback (v5, 2026-08-17): a small number of AI concept images via
+Cloudflare Workers AI, only for rooms where real photos are still thin after
+the two sources above — see ai_concept_fill() below. Always saved with
+"ai_generated": true in credits.json so render_cards.mjs shows an honest
+"Concept visualisation (AI)" badge, never passed off as a real project photo.
 Writes: content/assets/<room>-N.jpg, credits.json, fetch_log.txt (for remote debugging).
 Runs inside GitHub Actions (open internet).
 
@@ -18,6 +23,7 @@ v4 changes (after owner feedback: "same image repeats, need more variety"):
 import json, os, re, sys, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(__file__))
 import gemini_client
+import cloudflare_image_client
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "content", "assets")
 os.makedirs(OUT, exist_ok=True)
@@ -268,6 +274,58 @@ def openverse(query, room, count):
             log(f"[openverse] skip: {e}")
     return saved
 
+# Room -> generation prompt. Kept deliberately plain/documentary in style (not
+# "artistic render") so the output reads as a plausible photo, not obvious CGI —
+# but it is ALWAYS labeled "Concept visualisation (AI)" on the card regardless
+# (see render_cards.mjs sceneMedia()), so the styling choice here is about
+# quality/brand-fit, not about disguising that it's AI-generated.
+AI_PROMPT_BY_ROOM = {
+    "living": "A warm, modern Indian living room interior, tasteful mid-premium furnishing, "
+              "natural daylight, professional interior photography style, no people, no text, no watermark",
+    "kitchen": "A modern Indian modular kitchen interior, clean cabinetry, warm ambient lighting, "
+               "professional interior photography style, no people, no text, no watermark",
+    "bedroom": "A cozy modern Indian bedroom interior, warm tones, tasteful mid-premium furnishing, "
+               "professional interior photography style, no people, no text, no watermark",
+    "office": "A modern Indian home office / study room interior, clean desk setup, warm natural light, "
+              "professional interior photography style, no people, no text, no watermark",
+    "bathroom": "A modern Indian bathroom interior, clean tasteful tiling and fixtures, warm lighting, "
+                "professional interior photography style, no people, no text, no watermark",
+}
+
+def ai_concept_fill(room, count):
+    """Generate a small number of AI concept images via Cloudflare Workers AI, only
+    called when Wikimedia+Openverse together left a room's pool thin (see
+    MIN_POOL_PER_ROOM below). Every image saved here carries "ai_generated": true
+    in credits.json — render_cards.mjs uses that flag to show a distinct on-card
+    "Concept visualisation (AI)" badge, never the same "📷 CC BY" credit chip real
+    photos get. Fails open: if Cloudflare isn't configured or a call errors, this
+    just returns 0 and the room falls back to the existing local SVG illustration,
+    exactly like before this function existed."""
+    if not cloudflare_image_client.available():
+        log(f"[cloudflare-ai] CLOUDFLARE_ACCOUNT_ID/CLOUDFLARE_API_TOKEN not set — "
+            f"skipping AI concept fill for {room} ({count} short of the minimum pool); "
+            f"local SVG illustration will be used instead, same as before")
+        return 0
+    prompt = AI_PROMPT_BY_ROOM.get(room, AI_PROMPT_BY_ROOM["living"])
+    saved = 0
+    for _ in range(count):
+        try:
+            img_bytes = cloudflare_image_client.generate(prompt)
+            existing = sum(1 for c in credits.values() if c.get("room") == room)
+            name = f"{room}-ai-{existing + 1}.jpg"
+            path = os.path.join(OUT, name)
+            open(path, "wb").write(img_bytes)
+            credits[name] = {"title": f"AI concept visualisation — {room}", "creator": "",
+                             "license": "", "source": "", "query": prompt, "room": room,
+                             "provider": "cloudflare-ai", "ai_generated": True}
+            saved += 1
+            log(f"[cloudflare-ai] generated {name} for room={room}")
+        except Exception as e:
+            log(f"[cloudflare-ai] generation failed for room={room}: {e} — stopping this room's fill "
+                f"rather than retrying in a tight loop against a possibly-down API")
+            break
+    return saved
+
 JOBS = [
     ("modern living room interior design sofa", "living", 10),
     ("living room interior design India", "living", 10),
@@ -279,14 +337,32 @@ JOBS = [
     ("study room interior design", "office", 6),
 ]
 
+# After real-photo sourcing across all JOBS, top up any room whose real pool is
+# still thin (Wikimedia/Openverse coverage varies a lot by room — "office" tends
+# to be the weakest) with a handful of AI concept images. Deliberately small and
+# capped: real, licensed photos stay the strong default source; AI is a
+# supplement for gaps, not a replacement.
+MIN_POOL_PER_ROOM = 4
+
 if __name__ == "__main__":
     total = 0
+    rooms_seen = []
     for query, room, count in JOBS:
         got = wikimedia(query, room, count)
         if got < count:
             got += openverse(query, room, count - got)
         log(f"== {room}: {got}/{count} from '{query}'")
         total += got
+        if room not in rooms_seen:
+            rooms_seen.append(room)
+
+    for room in rooms_seen:
+        have = sum(1 for c in credits.values() if c.get("room") == room)
+        shortfall = max(0, MIN_POOL_PER_ROOM - have)
+        if shortfall:
+            ai_saved = ai_concept_fill(room, shortfall)
+            total += ai_saved
+
     json.dump(credits, open(CREDITS_PATH, "w"), indent=1, ensure_ascii=False)
     open(LOG_PATH, "w").write("\n".join(LOG) + "\n")
     log(f"TOTAL saved this run: {total}; pool now {len(credits)}")
