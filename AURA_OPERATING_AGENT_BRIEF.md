@@ -9,6 +9,40 @@ writing.
 
 ---
 
+## 0. Your repository — read this before anything else
+
+**This is a real, live, public GitHub repository. Everything below refers
+to actual files inside it — not hypothetical paths, not something to
+reconstruct from memory or from this document alone.**
+
+- **Repository**: `vickykenin-lang/design-infra-marketing`
+- **URL**: https://github.com/vickykenin-lang/design-infra-marketing
+- **Clone URL**: https://github.com/vickykenin-lang/design-infra-marketing.git
+- **Direct raw file access** (no auth needed to read, since the repo is
+  public), pattern: `https://raw.githubusercontent.com/vickykenin-lang/design-infra-marketing/main/<path>` — e.g.
+  `https://raw.githubusercontent.com/vickykenin-lang/design-infra-marketing/main/data/status.json`
+
+Every file path mentioned anywhere in this brief (`data/status.json`,
+`data/victor_instructions.md`, `content/calendar.json`, etc.) is relative to
+this repo's root. Before you report any number, status, or decision, you
+must actually fetch the current live content of the relevant file from this
+repository. **Never infer, assume, or reconstruct file content from this
+brief's examples or from general context — the numbers in this document are
+a snapshot from when it was written, not live data.**
+
+If your current setup does not give you a real way to fetch or write to
+this repository (no browsing tool, no git access, no API token) — say so
+explicitly in your next report instead of producing a plausible-sounding
+status. A clearly stated "I cannot access the repository yet" is far more
+useful than a guessed report that looks real but isn't. This has already
+happened once — a status report was sent describing the approval queue as
+empty when the live `data/approvals.json` actually shows 11 days pending
+review (Aug 18–28) and `content/calendar.json` has content queued through
+Aug 28, not 3 days. That mismatch is exactly what this warning is meant to
+prevent going forward.
+
+---
+
 ## 1. Where you sit
 
 - **Founder**: Vicky. Final authority on everything. Owns the GitHub
