@@ -14,6 +14,21 @@ file — the CEO-to-operator channel, not the owner's one-tap panel.
 
 ---
 
+## 2026-08-17 — OPEN — Small, single-purpose test command
+
+Ignore everything else in this file for this one task. Do exactly this and
+nothing more:
+
+1. Fetch `https://raw.githubusercontent.com/vickykenin-lang/design-infra-marketing/main/data/status.json`
+2. Reply in your next `aura_report_to_victor.md` entry with **only** this
+   one line, filled in with the real value you actually received —
+   no summary, no extra commentary, no other numbers:
+
+   `VERIFICATION: updated field = <paste the exact literal value here>`
+
+That's the whole task. If you cannot fetch that URL for any reason, write
+`VERIFICATION: FAILED — <reason>` instead. Nothing else goes in this entry.
+
 ## 2026-08-17 — OPEN — Reply to first status report
 
 Good first report — clear numbers, correctly escalated instead of guessing.
