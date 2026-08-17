@@ -1,8 +1,8 @@
 {
- "updated": "2026-08-17T07:26+05:30",
+ "updated": "2026-08-17T09:35+05:30",
  "overall": "green",
- "overall_note_en": "Publishing live — 1 Instagram post(s) out, 5 more scheduled this week. Image-relevance filter bug fixed 2026-08-16 (Dr. Victor audit).",
- "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, इस हफ़्ते 5 और शेड्यूल हैं। इमेज-रिलेवेंस फ़िल्टर की गड़बड़ी 2026-08-16 को ठीक कर दी गई (Dr. Victor ऑडिट)।",
+ "overall_note_en": "Publishing live — 1 Instagram post(s) out, 1 approved and scheduled. 11 awaiting your review. Calendar auto-refills weekly so the queue never runs dry (Dr. Victor, 2026-08-17).",
+ "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, 1 मंज़ूर और शेड्यूल हैं। 11 आपकी समीक्षा का इंतज़ार कर रही हैं। कैलेंडर हर हफ़्ते अपने-आप भर जाता है ताकि कतार कभी खाली न हो (Dr. Victor, 2026-08-17)।",
  "kill_switch": false,
  "actions_minutes_used": 0,
  "actions_minutes_budget": 2000,
@@ -34,7 +34,9 @@
  ],
  "stats": {
   "posts": 1,
-  "scheduled": 5,
-  "leads": 1
+  "scheduled": 1,
+  "leads": 1,
+  "pending_review": 11,
+  "rejected": 0
  }
 }
