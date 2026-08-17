@@ -306,9 +306,12 @@ function render(){
   if(DATA.cal&&DATA.cal.days){
     const ap=DATA.approvals||{};
     const todayStr=new Date(Date.now()+330*60000).toISOString().slice(0,10);
-    const upcoming=DATA.cal.days.filter(d=>d.date>=todayStr).slice(0,7);
+    const qa=DATA.qa_report||{};
+    const upcoming=DATA.cal.days.filter(d=>d.date>=todayStr).filter(d=>{
+      const qv=qa[d.date];
+      return !(qv&&qv.verdict==='reject');
+    }).slice(0,7);
     if(upcoming.length){
-      const qa=DATA.qa_report||{};
       const cust=DATA.customer_report||{};
       ab.innerHTML=upcoming.map(d=>{
         const st=ap[d.date];
