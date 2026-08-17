@@ -1,8 +1,8 @@
 {
- "updated": "2026-08-17T18:51+05:30",
+ "updated": "2026-08-17T18:52+05:30",
  "overall": "green",
- "overall_note_en": "Publishing live — 1 Instagram post(s) out, 1 approved and scheduled. 10 awaiting your review. Calendar auto-refills weekly so the queue never runs dry (Dr. Victor, 2026-08-17).",
- "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, 1 मंज़ूर और शेड्यूल हैं। 10 आपकी समीक्षा का इंतज़ार कर रही हैं। कैलेंडर हर हफ़्ते अपने-आप भर जाता है ताकि कतार कभी खाली न हो (Dr. Victor, 2026-08-17)।",
+ "overall_note_en": "Publishing live — 1 Instagram post(s) out, 1 approved and scheduled. 9 awaiting your review. Calendar auto-refills weekly so the queue never runs dry (Dr. Victor, 2026-08-17).",
+ "overall_note_hi": "पब्लिशिंग लाइव — 1 इंस्टाग्राम पोस्ट हो चुकी हैं, 1 मंज़ूर और शेड्यूल हैं। 9 आपकी समीक्षा का इंतज़ार कर रही हैं। कैलेंडर हर हफ़्ते अपने-आप भर जाता है ताकि कतार कभी खाली न हो (Dr. Victor, 2026-08-17)।",
  "kill_switch": false,
  "actions_minutes_used": 0,
  "actions_minutes_budget": 2000,
@@ -36,7 +36,7 @@
   "posts": 1,
   "scheduled": 1,
   "leads": 1,
-  "pending_review": 10,
-  "rejected": 1
+  "pending_review": 9,
+  "rejected": 2
  }
 }
