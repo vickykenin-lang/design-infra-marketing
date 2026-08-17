@@ -2,5 +2,6 @@
  "_note": "AURA publishes a day's post only when its value here is 'approved'. Owner approves via dashboard buttons (GitHub issues). Absent = pending, awaiting your decision (shown that way on the dashboard).",
  "2026-08-15": "approved",
  "2026-08-16": "rejected",
- "2026-08-17": "approved"
+ "2026-08-17": "approved",
+ "2026-08-23": "rejected"
 }
