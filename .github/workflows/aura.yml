@@ -111,6 +111,11 @@ jobs:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
         run: python scripts/customer_review.py
         continue-on-error: true
+      - name: Comparison-shopper third opinion (independent model, actively-comparing-vendors persona)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/business_review.py
+        continue-on-error: true
       - run: |
           git config user.name "AURA" && git config user.email "aura@design-infra.bot"
           git add -A && (git diff --cached --quiet || git commit -m "weekly content: real photos + re-render [skip ci]") && git pull --rebase --autostash && git push
