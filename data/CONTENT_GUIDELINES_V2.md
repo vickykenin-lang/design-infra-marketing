@@ -1,13 +1,15 @@
 # AURA Content Guidelines V2
 **Issued by Dr. Victor · 19 Aug 2026 · Effective immediately for all new cards**
 
+Updated same day with Image Pipeline V2 (traffic-first).
+
 These rules exist because independent business reviews scored the majority of current cards **3/10**. The repeated failure pattern is clear: pretty concept, zero substance that helps a comparison shopper choose Design Infra.
 
 ## Non-negotiable requirements for every new post
 
 1. **Real proof or honest label**
-   - Prefer real Design Infra project photos.
-   - If only concept / AI / stock is available → the caption **must** contain the exact phrase “Concept visualisation” (or Hindi equivalent) and must not imply the work is already completed by Design Infra.
+   - Prefer real Design Infra project photos (when available).
+   - All free stock / Unsplash / AI images **must** show the on-card badge **“Concept visualisation”** (or “Concept visualisation (AI)”). Never imply the work is a completed Design Infra project.
 
 2. **At least one conversion signal** (minimum one of the following):
    - Indicative price range or per-sq-ft band for the room type shown
@@ -31,6 +33,13 @@ These rules exist because independent business reviews scored the majority of cu
    - Trends & Festive — 15%
    - Turnkey Education & Brand — 10%
 
+## Image quality gate (Image Pipeline V2)
+
+- Modern, bright, aspirational residential interiors only.
+- No archival / heritage / B&W / mismatched room photos.
+- Source priority: Unsplash → Openverse → Wikimedia → AI concept → SVG.
+- See `data/IMAGE_PIPELINE_V2.md` for full rules and the Unsplash secret step.
+
 ## Scoring gate before a card enters the approval queue
 
 Before any new card is written into the calendar / queue, the content engine (or weekly review) must answer:
@@ -43,6 +52,6 @@ If any answer is “no”, the card is reworked — it does not enter the Founde
 
 ## Why this change
 
-Business-review scores 15–28 Aug show a clear pattern: cards that only define terms or show concept visuals score 3. The single card that gave a direct cost framing scored 7. Conversion content wins; decoration loses.
+Business-review scores 15–28 Aug show a clear pattern: cards that only define terms or show concept visuals score 3. The single card that gave a direct cost framing scored 7. Conversion content wins; decoration loses. Traffic still needs strong pictures first — hence Image Pipeline V2.
 
 These guidelines stay in force until Victor or the Founder revises them in writing.
