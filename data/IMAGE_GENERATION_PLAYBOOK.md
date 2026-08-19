@@ -1,5 +1,5 @@
 # AURA — Image Generation Playbook
-**Issued by Dr. Victor · 19 Aug 2026 · Effective immediately**
+**Issued by Dr. Victor · Updated 19 Aug 2026 (pipeline v6)**
 
 ## Rule change (locked)
 
@@ -11,16 +11,17 @@ The rigid **zero-cost only** rule for content assets is **archived**.
 - Any new account, credit card, or paid API key still requires Founder approval.
 - Real Design Infra project photos remain the highest priority and will replace AI concepts as soon as supplied.
 
-## Why the change
+## Live pipeline (scripts/fetch_images.py v6)
 
-Free Wikimedia / Openverse pool is producing mismatched, archival, non-Indian, low-trust images (QA scores mostly 1–4/10). This is actively blocking conversion. Continuing the old rule while real leads = 0 is no longer rational.
+| Priority | Source | Notes |
+|----------|--------|--------|
+| 0 | `content/assets/real/` | Founder-supplied project photos → `real_project=True` |
+| 1 | Unsplash | If `UNSPLASH_ACCESS_KEY` GitHub secret is set |
+| 2 | Openverse + Wikimedia | Strict keyword + Gemini vision filter |
+| 3 | Cloudflare Workers AI (Flux) | India mid-premium prompts; always labeled concept |
+| 4 | SVG fallback | In `render_cards.mjs` if pool still empty |
 
-## Approved sources (priority order)
-
-1. **Real Design Infra project photos** (Founder supply) — highest conversion.
-2. **Gemini image generation** (already in stack) — primary AI source now.
-3. Free-tier tools (Spacely AI, RoomGPT, etc.) for testing and volume.
-4. Controlled low-cost tools only after Founder approval of account/spend.
+Every non-real image is flagged `concept: true` so cards show **Concept visualisation**.
 
 ## Mandatory rules for every AI / concept image
 
@@ -30,16 +31,16 @@ Free Wikimedia / Openverse pool is producing mismatched, archival, non-Indian, l
 4. At least one conversion signal still required (price range, timeline, inclusion, warranty, or process) — see CONTENT_GUIDELINES_V2.md.
 5. Quality gate before queue: Would a comparison shopper shortlist Design Infra after seeing only this image + caption? If no → rework.
 
-## Gemini prompt template (use this structure)
+## How to add real project photos (highest impact)
 
-```
-Photorealistic interior of a modern mid-premium [room type] in a Delhi NCR apartment,
-warm oak and marble finishes, soft natural light, clean contemporary Indian aesthetic,
-no clutter, high-end but livable, 4k, architectural photography style.
-Concept visualisation only.
-```
+1. Put files in `content/assets/real/` (see README there).
+2. Name preferably `living-1.jpg`, `kitchen-1.jpg`, etc.
+3. Next weekly run (or manual `workflow_dispatch` job = weekly) will register them.
 
-Room types to prioritise: living room, modular kitchen, master bedroom, bathroom, home office.
+## Optional upgrade
+
+- Add GitHub secret `UNSPLASH_ACCESS_KEY` for better free modern stock.
+- Cloudflare secrets already wired for AI concept fill.
 
 ## Quality gate checklist (before any card enters approval queue)
 
@@ -50,9 +51,3 @@ Room types to prioritise: living room, modular kitchen, master bedroom, bathroom
 - [ ] Would a serious homeowner shortlist after seeing this?
 
 If any box fails → do not enter the Founder’s approval queue.
-
-## Next steps
-
-- Content engine and weekly review must follow this playbook.
-- Founder: supply real project photos as soon as available — they override all AI concepts.
-- Any paid tool account request goes to Victor → Founder for explicit go-ahead.
