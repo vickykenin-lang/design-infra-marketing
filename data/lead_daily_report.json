@@ -1,9 +1,10 @@
 {
- "updated": "2026-08-19T12:41+05:30",
+ "updated": "2026-08-19T13:26+05:30",
  "today": "2026-08-19",
  "leads_today": 0,
  "leads_this_week": 1,
  "leads_total": 1,
+ "real_leads": 0,
  "avg_score_this_week": 100.0,
  "hot_leads_awaiting_followup": [
   {
