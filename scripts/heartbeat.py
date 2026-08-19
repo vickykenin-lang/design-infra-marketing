@@ -168,12 +168,25 @@ week_leads = [l for l in leads["leads"] if l["at"][:10] >= week_ago]
 hot_leads = sorted([l for l in leads["leads"] if l["priority"] == "HOT"], key=lambda l: -l["score"])
 avg_score_week = round(sum(l["score"] for l in week_leads) / len(week_leads), 1) if week_leads else 0
 stats["leads"] = len(leads["leads"])
+
+# --- Metric honesty (Dr. Victor, 2026-08-19) ---
+# Real leads only — exclude dress-rehearsal / test leads
+real_leads = [
+    l for l in leads["leads"]
+    if "test" not in (l.get("name") or "").lower()
+    and "rehearsal" not in (l.get("message") or "").lower()
+    and "test lead" not in (l.get("message") or "").lower()
+]
+real_lead_count = len(real_leads)
+stats["real_leads"] = real_lead_count
+
 daily_report = {
     "updated": now,
     "today": today,
     "leads_today": len(today_leads),
     "leads_this_week": len(week_leads),
     "leads_total": len(leads["leads"]),
+    "real_leads": real_lead_count,
     "avg_score_this_week": avg_score_week,
     "hot_leads_awaiting_followup": [
         {"issue": l["issue"], "name": l.get("name") or "(no name given)", "city": l.get("city", ""),
@@ -192,20 +205,42 @@ daily_report = {
     ),
 }
 
-if n_posts > 0:
+# Overall status driven by real business metric, not process colour
+if real_lead_count == 0:
+    status["overall"] = "red"
+    status["overall_note_en"] = (
+        f"BUSINESS RED — 0 real qualified leads. "
+        f"Process is running ({n_ig} IG posts published, {stats['pending_review']} awaiting review) "
+        f"but the only metric that matters is still zero. "
+        f"Founder inputs still required: real WhatsApp/email in leads.html, project photos, GBP status."
+    )
+    status["overall_note_hi"] = (
+        f"बिज़नेस रेड — 0 असली क्वालीफाइड लीड। "
+        f"प्रोसेस चल रहा है ({n_ig} IG पोस्ट, {stats['pending_review']} समीक्षा में) "
+        f"लेकिन असली मेट्रिक अभी भी शून्य है।"
+    )
+elif real_lead_count < 3:
+    status["overall"] = "yellow"
+    status["overall_note_en"] = (
+        f"Early traction — {real_lead_count} real qualified lead(s). "
+        f"Keep publishing quality content and close the remaining founder inputs."
+    )
+    status["overall_note_hi"] = (
+        f"शुरुआती ट्रैक्शन — {real_lead_count} असली क्वालीफाइड लीड। "
+        f"क्वालिटी कंटेंट जारी रखें।"
+    )
+else:
+    status["overall"] = "green"
     pending_note_en = f" {stats['pending_review']} awaiting your review." if stats["pending_review"] else ""
     pending_note_hi = f" {stats['pending_review']} आपकी समीक्षा का इंतज़ार कर रही हैं।" if stats["pending_review"] else ""
     status["overall_note_en"] = (
         f"Publishing live — {n_ig} Instagram post(s) out, {stats['scheduled']} approved and scheduled.{pending_note_en} "
-        "Calendar auto-refills weekly so the queue never runs dry (Dr. Victor, 2026-08-17)."
+        f"{real_lead_count} real qualified leads."
     )
     status["overall_note_hi"] = (
-        f"पब्लिशिंग लाइव — {n_ig} इंस्टाग्राम पोस्ट हो चुकी हैं, {stats['scheduled']} मंज़ूर और शेड्यूल हैं।{pending_note_hi} "
-        "कैलेंडर हर हफ़्ते अपने-आप भर जाता है ताकि कतार कभी खाली न हो (Dr. Victor, 2026-08-17)।"
+        f"पब्लिशिंग लाइव — {n_ig} इंस्टाग्राम पोस्ट, {stats['scheduled']} मंज़ूर।{pending_note_hi} "
+        f"{real_lead_count} असली क्वालीफाइड लीड।"
     )
-else:
-    status["overall_note_en"] = "Day 1 build in progress. No automation running yet."
-    status["overall_note_hi"] = "दिन 1 का निर्माण जारी। अभी कोई ऑटोमेशन नहीं चल रहा।"
 
 jsave("data/status.json", status)
 jsave("data/control.json", control)
