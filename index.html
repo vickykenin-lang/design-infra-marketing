@@ -25,7 +25,6 @@
   body{font-family:-apple-system,'Segoe UI','Noto Sans Devanagari',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;padding-bottom:56px;transition:background .4s,color .4s}
   .wrap{max-width:680px;margin:0 auto;padding:16px}
 
-  /* header */
   header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .gbar{height:3px;background:linear-gradient(90deg,#b45309,#d97706,#f59e0b,#d97706,#b45309);background-size:300% 100%;animation:flow 6s linear infinite}
   @keyframes flow{0%{background-position:0 0}100%{background-position:300% 0}}
@@ -39,7 +38,6 @@
   .lang button{border:0;background:transparent;padding:7px 12px;font-size:13px;cursor:pointer;color:var(--ink-2);transition:all .25s}
   .lang button.on{background:var(--ink);color:var(--bg);font-weight:700}
 
-  /* hero strip */
   .hero{margin-top:14px;border-radius:var(--radius);padding:18px;color:#fff;background:linear-gradient(135deg,#1c1917 0%,#44403c 55%,#78350f 130%);box-shadow:var(--shadow);position:relative;overflow:hidden}
   .hero::after{content:'';position:absolute;top:-60%;right:-20%;width:70%;height:220%;background:radial-gradient(closest-side,rgba(245,158,11,.28),transparent);animation:glow 5s ease-in-out infinite alternate}
   @keyframes glow{from{opacity:.5;transform:translateX(0)}to{opacity:1;transform:translateX(-14px)}}
@@ -49,14 +47,12 @@
   .hero .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:6px;animation:pulse 1.6s infinite}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.55)}50%{box-shadow:0 0 0 7px rgba(74,222,128,0)}}
 
-  /* stat tiles */
   .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
   .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center;box-shadow:var(--shadow)}
   .tile b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent)}
   .tile span{font-size:11px;color:var(--ink-2);display:block;margin-top:2px;line-height:1.3}
   @media(max-width:420px){.tile b{font-size:19px}}
 
-  /* cards */
   .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-top:14px;box-shadow:var(--shadow);opacity:0;transform:translateY(14px);animation:rise .5s forwards}
   .card:nth-of-type(2){animation-delay:.06s}.card:nth-of-type(3){animation-delay:.12s}.card:nth-of-type(4){animation-delay:.18s}.card:nth-of-type(5){animation-delay:.24s}.card:nth-of-type(6){animation-delay:.3s}
   @keyframes rise{to{opacity:1;transform:none}}
@@ -77,7 +73,6 @@
   .btn.danger{background:#b91c1c;border-color:#b91c1c;color:#fff;font-weight:700}
   .btn.speaking{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
 
-  /* timeline */
   .meter{height:9px;background:var(--pend-bg);border-radius:999px;overflow:hidden;margin-top:6px;position:relative}
   .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
   .meter i::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:shine 2.2s infinite}
@@ -118,7 +113,7 @@
   <div class="gbar"></div>
   <div class="hrow">
     <div class="logo">DI</div>
-    <div class="htxt"><h1>Design Infra</h1><p data-en="AURA — AI CEO, Sales &amp; Marketing" data-hi="AURA — AI CEO, सेल्स और मार्केटिंग"></p></div>
+    <div class="htxt"><h1>Design Infra</h1><p data-en="AURA — AI CEO, Sales & Marketing" data-hi="AURA — AI CEO, सेल्स और मार्केटिंग"></p></div>
     <button class="hbtn" id="themeBtn" title="Theme">🌙</button>
     <div class="lang"><button id="btnHi" onclick="setLang('hi')">हिंदी</button><button id="btnEn" onclick="setLang('en')">EN</button></div>
   </div>
@@ -165,8 +160,8 @@
   </div>
 
   <div class="card">
-    <h2>📸 <span data-en="Post approvals — your tap decides" data-hi="पोस्ट मंज़ूरी — आपका एक टैप फ़ैसला करेगा"></span></h2>
-    <p class="note" style="margin:0 0 12px" data-en="Nothing publishes without your approval. Tap ✅ or ❌ — a one-tap GitHub form opens; your decision takes effect within minutes." data-hi="आपकी मंज़ूरी के बिना कुछ नहीं छपेगा। ✅ या ❌ दबाइए — GitHub का एक-टैप फ़ॉर्म खुलेगा; फ़ैसला कुछ मिनटों में लागू हो जाएगा।"></p>
+    <h2>📸 <span data-en="Post approvals — quality gate (≥7 only)" data-hi="पोस्ट मंज़ूरी — क्वालिटी गेट (≥7 ही)"></span></h2>
+    <p class="note" style="margin:0 0 12px" data-en="Only approved posts or cards with business score ≥ 7 are shown. Rejected cards never appear. Nothing publishes without your approval." data-hi="सिर्फ़ मंज़ूर पोस्ट या ≥7 स्कोर वाले कार्ड दिखते हैं। नामंज़ूर कार्ड कभी नहीं दिखते। आपकी मंज़ूरी के बिना कुछ नहीं छपेगा।"></p>
     <div id="approvalBox"><div class="empty">…</div></div>
   </div>
 
@@ -191,7 +186,7 @@
     <p class="note" data-en="Tapping the kill switch opens a one-tap GitHub form. Publishing stops at the very next run." data-hi="किल स्विच दबाने पर GitHub का एक-टैप फ़ॉर्म खुलता है। अगले ही रन से पोस्टिंग रुक जाती है।"></p>
   </div>
 
-  <footer>Design Infra · AURA v0.5 · <span data-en="Zero cost, runs in the cloud" data-hi="ज़ीरो लागत, क्लाउड में चलता है"></span></footer>
+  <footer>Design Infra · AURA v0.6 · <span data-en="Quality gate: approved or score ≥ 7 only" data-hi="क्वालिटी गेट: सिर्फ़ मंज़ूर या ≥7"></span></footer>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -210,18 +205,16 @@ progress:{"updated":"2026-08-14","plan":[
  {"day":6,"title_en":"Communication + Voice — bilingual panel, kill switch test","title_hi":"संवाद + आवाज़ — द्विभाषी पैनल, किल स्विच टेस्ट","status":"pending","detail_en":"","detail_hi":""},
  {"day":7,"title_en":"Full dress rehearsal + handover guide","title_hi":"फ़ुल रिहर्सल + हैंडओवर गाइड","status":"pending","detail_en":"","detail_hi":""}]},
 status:{"updated":"2026-08-14","overall":"green","overall_note_en":"Day 1 build in progress. No automation running yet.","overall_note_hi":"दिन 1 का निर्माण जारी। अभी कोई ऑटोमेशन नहीं चल रहा।","kill_switch":false,"actions_minutes_used":0,"actions_minutes_budget":2000,"stats":{"posts":0,"scheduled":0,"leads":0,"reach":0},"components":[{"name":"Dashboard","status":"green"},{"name":"Content engine","status":"pending"},{"name":"Publisher (Instagram)","status":"pending"},{"name":"Publisher (Pinterest)","status":"pending"},{"name":"Lead Manager","status":"pending"},{"name":"Analyst","status":"pending"}]},
-messages:{"updated":"2026-08-14","messages":[{"date":"2026-08-14","from":"AURA","en":"Namaste Vickey! Your marketing system's foundation is ready. This dashboard is your window into everything — progress, posts, leads and my decisions. Today I captured Design Infra's profile and set our four brand differentiators. Next: free AI API keys, then Instagram and Pinterest connections.","hi":"नमस्ते विकी जी! आपके मार्केटिंग सिस्टम की नींव तैयार है। यह डैशबोर्ड आपकी खिड़की है — प्रगति, पोस्ट, लीड्स और मेरे फ़ैसले, सब यहीं दिखेंगे। आज मैंने Design Infra की प्रोफ़ाइल दर्ज की और ब्रांड की 4 ख़ास बातें तय कीं। आगे: मुफ़्त AI API keys, फिर Instagram और Pinterest कनेक्शन।"}]}
+messages:{"updated":"2026-08-14","messages":[{"date":"2026-08-14","from":"AURA","en":"Namaste Vickey! Your marketing system's foundation is ready.","hi":"नमस्ते विकी जी! आपके मार्केटिंग सिस्टम की नींव तैयार है।"}]}
 };
 let DATA={progress:INLINE.progress,status:INLINE.status,messages:INLINE.messages};
 
 function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2600);}
 
-/* theme */
 function setTheme(t){document.body.classList.toggle('dark',t==='dark');localStorage.setItem('aura_theme',t);document.getElementById('themeBtn').textContent=t==='dark'?'☀️':'🌙';}
 document.getElementById('themeBtn').onclick=()=>setTheme(document.body.classList.contains('dark')?'light':'dark');
 setTheme(localStorage.getItem('aura_theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
 
-/* clock + greeting */
 function tick(){
   const n=new Date();
   const opts={hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true};
@@ -232,7 +225,6 @@ function tick(){
 }
 setInterval(tick,1000);
 
-/* count-up tiles */
 function countUp(){
   document.querySelectorAll('.cnt').forEach(el=>{
     const target=+el.dataset.v||0,cur=+el.textContent||0;
@@ -252,11 +244,22 @@ function setLang(l){
 
 async function load(){
   const bust='?t='+Date.now();
-  for(const f of ['progress','status','messages','approvals','qa_report','customer_report','leads','lead_daily_report']){
+  for(const f of ['progress','status','messages','approvals','qa_report','customer_report','business_report','leads','lead_daily_report']){
     try{const r=await fetch('data/'+f+'.json'+bust);if(r.ok)DATA[f]=await r.json();}catch(e){}
   }
   try{const r=await fetch('content/calendar.json'+bust);if(r.ok)DATA.cal=await r.json();}catch(e){}
   render();
+}
+
+/** LOCKED RULE (Victor 2026-08-19): dashboard never shows rejected cards.
+ *  Show only: approved OR business_report score >= 7. */
+function isDashboardEligible(date, ap, biz){
+  const st = ap[date];
+  if (st === 'rejected') return false;
+  if (st === 'approved') return true;
+  const score = biz && biz[date] && typeof biz[date].score === 'number' ? biz[date].score : null;
+  if (score !== null && score >= 7) return true;
+  return false;
 }
 
 function render(){
@@ -301,26 +304,27 @@ function render(){
     const dayNow=(p.plan.find(d=>d.status==='in_progress')||{}).day||Math.min(7,done+1);
     document.getElementById('sysline').textContent=LANG==='hi'?('सिस्टम: निर्माण जारी (दिन '+dayNow+'/7)'):('System: building (Day '+dayNow+' of 7)');
   }
-  // approvals panel
+  // approvals panel — RULE: never show rejected; only approved or score >= 7
   const ab=document.getElementById('approvalBox');
   if(DATA.cal&&DATA.cal.days){
     const ap=DATA.approvals||{};
+    const biz=DATA.business_report||{};
     const todayStr=new Date(Date.now()+330*60000).toISOString().slice(0,10);
     const qa=DATA.qa_report||{};
-    const upcoming=DATA.cal.days.filter(d=>d.date>=todayStr).filter(d=>{
-      const qv=qa[d.date];
-      return !(qv&&qv.verdict==='reject');
-    }).slice(0,7);
+    const upcoming=DATA.cal.days
+      .filter(d=>d.date>=todayStr || ap[d.date]==='approved')
+      .filter(d=>isDashboardEligible(d.date, ap, biz))
+      .slice(0,7);
     if(upcoming.length){
       const cust=DATA.customer_report||{};
       ab.innerHTML=upcoming.map(d=>{
         const st=ap[d.date];
-        const chip=st==='approved'?'<span class="pill green">✓ '+(LANG==='hi'?'मंज़ूर':'Approved')+'</span>'
-                 :st==='rejected'?'<span class="pill red">✖ '+(LANG==='hi'?'नामंज़ूर':'Rejected')+'</span>'
-                 :'<span class="pill amber">⏳ '+(LANG==='hi'?'आपके फ़ैसले का इंतज़ार':'Awaiting your decision')+'</span>';
+        const score=(biz[d.date]&&biz[d.date].score!=null)?biz[d.date].score:null;
+        const chip=st==='approved'?'<span class="pill green">✓ '+(LANG==='hi'?'मंज़ूर':'Approved')+(score!=null?' · '+score+'/10':'')+'</span>'
+                 :'<span class="pill amber">⏳ '+(LANG==='hi'?'आपके फ़ैसले का इंतज़ार':'Awaiting your decision')+(score!=null?' · '+score+'/10':'')+'</span>';
         const okU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('APPROVE '+d.date);
         const noU='https://github.com/'+REPO+'/issues/new?title='+encodeURIComponent('REJECT '+d.date)+'&body='+encodeURIComponent(LANG==='hi'?'वजह (छोटी सी लिख दें):\n':'Reason (short):\n');
-        const btns=st?'':'<a class="abtn ok" target="_blank" href="'+okU+'">✅ '+(LANG==='hi'?'मंज़ूर':'Approve')+'</a><a class="abtn no" target="_blank" href="'+noU+'">❌ '+(LANG==='hi'?'नामंज़ूर':'Reject')+'</a>';
+        const btns=st==='approved'?'':'<a class="abtn ok" target="_blank" href="'+okU+'">✅ '+(LANG==='hi'?'मंज़ूर':'Approve')+'</a><a class="abtn no" target="_blank" href="'+noU+'">❌ '+(LANG==='hi'?'नामंज़ूर':'Reject')+'</a>';
         const qv=qa[d.date];
         let qaBadge='';
         if(qv&&qv.verdict&&qv.verdict!=='skipped'&&qv.verdict!=='error'){
@@ -336,14 +340,13 @@ function render(){
           const clbl=LANG==='hi'?'ग्राहक की नज़र से (Kimi)':'Customer reaction (Kimi)';
           custBadge='<div class="pill '+ccls+'" style="margin-top:6px;display:block;white-space:normal;line-height:1.4">👤 '+clbl+' ('+(cv.score||'-')+'/10): '+(cv.gut_reaction||'')+'</div>';
         }
-        return '<div class="appr"><a href="content/queue/'+d.date+'-ig.png" target="_blank"><img loading="lazy" src="content/queue/'+d.date+'-ig.png" alt=""></a>'+
+        return '<div class="appr"><a href="content/queue/'+d.date+'-ig.png" target="_blank"><img loading="lazy" src="content/queue/'+d.date+'-ig.png" alt="" onerror="this.style.display=\'none\'"></a>'+
           '<div class="ainfo"><div class="ad">'+d.date+' · 7:00 pm</div><div class="ah">'+(d.ig&&d.ig.hook_en||'')+'</div>'+chip+qaBadge+custBadge+'<div style="margin-top:8px">'+btns+'</div></div></div>';
       }).join('');
     } else {
-      ab.innerHTML='<div class="empty">'+(LANG==='hi'?'अभी कोई आने वाला पोस्ट नहीं।':'No upcoming posts.')+'</div>';
+      ab.innerHTML='<div class="empty">'+(LANG==='hi'?'कोई मंज़ूर / ≥7 कार्ड नहीं। नामंज़ूर कार्ड छुपाए गए हैं।':'No approved or ≥7 cards. Rejected cards are hidden.')+'</div>';
     }
   }
-  // leads
   const lb=document.getElementById('leadsBox');
   const ldr=DATA.lead_daily_report;
   document.getElementById('leadsSummary').textContent = ldr ? (LANG==='hi'?ldr.note_hi:ldr.note_en) : '';
