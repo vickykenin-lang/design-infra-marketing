@@ -1,11 +1,17 @@
 {
- "_note": "AURA publishes a day's post only when its value here is 'approved'. Owner approves via dashboard buttons (GitHub issues). Absent = pending, awaiting your decision (shown that way on the dashboard).",
- "2026-08-15": "approved",
+ "_note": "AURA publishes a day's post only when its value here is 'approved'. Quality gate (Victor 2026-08-19): only business_report score >= 7 is eligible. All lower-scoring cards forced to rejected.",
+ "2026-08-15": "rejected",
  "2026-08-16": "rejected",
- "2026-08-17": "approved",
- "2026-08-23": "rejected",
+ "2026-08-17": "rejected",
+ "2026-08-18": "approved",
+ "2026-08-19": "rejected",
+ "2026-08-20": "rejected",
+ "2026-08-21": "rejected",
  "2026-08-22": "rejected",
+ "2026-08-23": "rejected",
+ "2026-08-24": "rejected",
  "2026-08-25": "rejected",
- "2026-08-18": "rejected",
- "2026-08-19": "rejected"
+ "2026-08-26": "rejected",
+ "2026-08-27": "rejected",
+ "2026-08-28": "rejected"
 }
