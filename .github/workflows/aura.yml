@@ -94,11 +94,12 @@ jobs:
       - run: |
           npm install playwright --no-audit --no-fund
           npx playwright install --with-deps chromium
-      - name: Research real interior photos (Wikimedia/Openverse, CC0/CC-BY, tagged by room, Gemini-vetted; Cloudflare AI concept-image fallback for thin rooms)
+      - name: Image research v6 (real folder + Unsplash + Openverse/Wikimedia + Cloudflare AI concepts)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: python scripts/fetch_images.py
         continue-on-error: true
       - name: Render post cards (uses real photos when available, illustration as fallback)
