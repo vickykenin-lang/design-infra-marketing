@@ -41,161 +41,132 @@
   "score": 3
  },
  "2026-08-18": {
-  "would_shortlist_over_competitors": true,
-  "builds_trust_vs_generic_ad": true,
-  "missing_info_a_comparison_shopper_would_want": [
-   "actual price range or starting figure",
-   "breakdown by square footage",
-   "timeline for completion",
-   "warranty or post-installation support",
-   "sample of real project photos with costs",
-   "what's included vs excluded (modular, electrical, painting)"
-  ],
-  "gut_reaction": "Finally, someone not hiding behind 'DM for price' — the directness makes me feel they're not trying to trap me. But I still need numbers, not just a promise of honesty.",
-  "score": 7
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-19": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing hint or package range",
-   "project timeline or delivery commitment",
-   "real project photos with before/after",
-   "client testimonials or reviews",
-   "warranty or post-installation support",
-   "designer credentials or team experience",
-   "material quality or sourcing details"
-  ],
-  "gut_reaction": "This feels like a generic trend post, not proof they can handle my lakhs. I need to see actual work, not just a pretty concept.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-20": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing hint or per-square-foot cost range",
-   "project timeline or duration commitment",
-   "warranty or post-handover support details",
-   "real project photos or client testimonials",
-   "breakdown of what's included vs excluded in turnkey"
-  ],
-  "gut_reaction": "This is just a generic explainer post — it tells me what turnkey means, but nothing about why Design Infra is better than the other two companies I'm comparing. I need proof, not a definition.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-21": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing range or package hint",
-   "project timeline or duration",
-   "portfolio of completed projects with real photos",
-   "client testimonials or reviews",
-   "warranty or post-installation support",
-   "process clarity (design to execution steps)",
-   "material quality or brand partnerships"
-  ],
-  "gut_reaction": "This feels like a generic festive push, not a serious vendor pitch. I need proof of their work and cost transparency before I even consider booking a consultation.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-22": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing range or per sq ft cost hint",
-   "project timeline or duration for a bedroom",
-   "warranty or post-handover support details",
-   "real client testimonials or verifiable project location",
-   "breakdown of what 'turnkey' includes vs excludes",
-   "before-after photos with actual dates, not just a hook"
-  ],
-  "gut_reaction": "This feels like every other Instagram ad — nice Hindi emotional pitch, but zero substance. I need numbers, timelines, and proof of real Delhi NCR projects before I even consider booking a free consultation that'll probably end in a hard sell.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: IncompleteRead(0 bytes read)"
  },
  "2026-08-23": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing range or package hint",
-   "project timeline",
-   "warranty on workmanship",
-   "real before/after photos with client names or locations",
-   "number of projects completed",
-   "process breakdown (who manages what)",
-   "material brand partnerships or quality guarantees"
-  ],
-  "gut_reaction": "This feels like every other Instagram ad — nice vibe but zero substance. I need to see actual work, not a concept visualization, and I'm not calling without some idea of cost or timeline.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-24": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing range or per sq ft cost hint",
-   "project timeline",
-   "warranty/after-sales support",
-   "real project photos vs concept visualisation",
-   "client testimonials or reviews",
-   "material quality/brand details",
-   "breakup of what's included (furniture, electrical, lighting)"
-  ],
-  "gut_reaction": "This feels like a pretty generic before-after ad with no real substance. I'm not going to book a consultation based on this alone — I need to see actual work, costs, and timelines before I trust them with my money.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-25": {
-  "would_shortlist_over_competitors": false,
-  "builds_trust_vs_generic_ad": false,
-  "missing_info_a_comparison_shopper_would_want": [
-   "pricing hint or range per sq ft",
-   "timeline for project completion",
-   "warranty on materials and workmanship",
-   "before/after photos of actual client projects (not concept visualisation)",
-   "client testimonials or reviews",
-   "breakdown of what's included (appliances, hardware, installation)"
-  ],
-  "gut_reaction": "This feels like every other Instagram ad—pretty but vague. I need real project proof and cost signals before I even consider booking a consultation.",
-  "score": 3
+  "error": true,
+  "note": "deepseek review failed: The read operation timed out"
  },
  "2026-08-26": {
   "would_shortlist_over_competitors": false,
   "builds_trust_vs_generic_ad": false,
   "missing_info_a_comparison_shopper_would_want": [
-   "actual price range or per sq ft cost",
-   "breakdown of what's included vs excluded",
-   "timeline for project completion",
+   "pricing range or package starting cost",
+   "project timeline for bathroom remodel",
    "warranty or post-installation support",
-   "real client testimonials or before/after project photos",
-   "process transparency (how vendor bills are handled)",
-   "any mention of contract terms or escalation clauses"
+   "before/after photos with real client details",
+   "material quality or brand partnerships",
+   "process transparency (who manages plumbing, tiling, etc.)"
   ],
-  "gut_reaction": "This feels like every other generic ad — 'no hidden costs' is a claim, not proof. I need numbers, a sample contract, or at least a real project walkthrough before I trust them with my money.",
+  "gut_reaction": "This feels like every other Instagram ad — nice hook but zero substance. I still don't know if they're actually better than the other two companies I'm comparing, or if they'll just vanish after taking my money.",
   "score": 3
  },
  "2026-08-27": {
   "would_shortlist_over_competitors": false,
   "builds_trust_vs_generic_ad": false,
   "missing_info_a_comparison_shopper_would_want": [
-   "actual price range or per sq ft cost",
-   "timeline for completion",
-   "warranty on workmanship/materials",
-   "real project photos or client testimonials",
-   "breakdown of what 'no hidden costs' covers (e.g., electrical, painting, hardware)",
-   "process transparency (who pays, when, milestones)"
+   "pricing range or package starting point",
+   "project timeline or duration",
+   "before/after photos or video of this specific project",
+   "client testimonial or review for this project",
+   "warranty or post-installation support details",
+   "material quality or brand names used",
+   "clear scope of what 'turnkey' includes (electrical, furniture, lighting, etc.)"
   ],
-  "gut_reaction": "This sounds like every other Instagram ad — 'no hidden costs' is a red flag if they don't show any numbers or proof. I'd scroll past unless they show a real bedroom they've done with a budget breakdown.",
+  "gut_reaction": "This feels like a generic ad with a nice hook but zero substance—I can't tell if they're actually good or just good at captions. I'd need to see real projects with costs and timelines before even considering a consultation.",
   "score": 3
  },
  "2026-08-28": {
   "would_shortlist_over_competitors": false,
   "builds_trust_vs_generic_ad": false,
   "missing_info_a_comparison_shopper_would_want": [
-   "No indicative price range or per-sq-ft cost for bathroom work",
-   "No timeline for project completion or phases",
-   "No warranty or workmanship guarantee on waterproofing/tiling",
-   "No before/after photos or real client project details",
-   "No mention of materials used or brand partnerships",
-   "No clear process for how the fixed budget is calculated or what's included/excluded"
+   "pricing range or per-square-foot cost hint",
+   "project timeline (start to finish)",
+   "warranty or after-sales service details",
+   "before/after photos with real client location or testimonial",
+   "breakdown of what 'turnkey' includes (materials, appliances, civil work)"
   ],
-  "gut_reaction": "This feels like a generic lead-gen ad, not proof they can actually deliver. I need to see real bathroom projects and cost breakdowns before I trust them with my money.",
+  "gut_reaction": "This feels like every other Instagram ad — nice hook but no substance. I still don't know if they're in my budget or how long it'll take, so I'd keep scrolling and check the other two companies first.",
+  "score": 4
+ },
+ "2026-08-29": {
+  "would_shortlist_over_competitors": false,
+  "builds_trust_vs_generic_ad": true,
+  "missing_info_a_comparison_shopper_would_want": [
+   "pricing hint or range for a living room",
+   "project timeline or delivery commitment",
+   "warranty or post-installation support",
+   "proof of real projects (photos/videos with client names or locations)",
+   "breakdown of what 'transparency' covers (e.g., hidden costs, material upgrades)",
+   "consultation process details (what happens in the free session)"
+  ],
+  "gut_reaction": "The transparency claim is nice, but it's just a promise—I need to see actual numbers or a portfolio to believe it. The Hindi caption feels local, but without any cost or timeline info, I'm still comparing blindly.",
+  "score": 5
+ },
+ "2026-08-30": {
+  "would_shortlist_over_competitors": false,
+  "builds_trust_vs_generic_ad": false,
+  "missing_info_a_comparison_shopper_would_want": [
+   "actual price range or per sq ft cost",
+   "project timeline or duration",
+   "warranty or post-installation support",
+   "real project photos or client testimonials",
+   "breakdown of what's included in the contract",
+   "process for handling changes or extra work"
+  ],
+  "gut_reaction": "This feels like a generic promise—everyone says 'no hidden costs' until the site visit. I need numbers, timelines, and proof of actual work before I even consider booking.",
+  "score": 3
+ },
+ "2026-08-31": {
+  "would_shortlist_over_competitors": true,
+  "builds_trust_vs_generic_ad": true,
+  "missing_info_a_comparison_shopper_would_want": [
+   "actual price range or starting cost for bathroom remodel",
+   "project timeline or duration",
+   "warranty on workmanship/materials",
+   "real before-after photos or client testimonials",
+   "breakdown of what 'transparent budget' includes (e.g., demolition, waterproofing, fixtures)"
+  ],
+  "gut_reaction": "Okay, the 'no hidden leaks' hook is clever and the Hindi caption feels local, but I still can't tell if they're actually cheaper or just saying it. I'd need to see real numbers or past projects before I book.",
+  "score": 6
+ },
+ "2026-09-01": {
+  "would_shortlist_over_competitors": false,
+  "builds_trust_vs_generic_ad": false,
+  "missing_info_a_comparison_shopper_would_want": [
+   "actual cost range or starting price per sq ft",
+   "project timeline or duration",
+   "real project photos or case studies with budgets",
+   "breakdown of what 'full quotation transparency' includes (e.g., material costs, labor, hidden charges)",
+   "client testimonials or reviews",
+   "warranty or post-handover support details"
+  ],
+  "gut_reaction": "This feels like a generic ad—every turnkey company says 'no surprise costs.' I need proof, not promises. Show me a real budget breakdown or a completed home office project before I even consider booking.",
   "score": 3
  }
 }

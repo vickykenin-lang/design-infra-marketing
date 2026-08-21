@@ -54,5 +54,21 @@
  "2026-08-28": {
   "error": true,
   "note": "kimi review failed: HTTP 429 from Kimi: {\"error\":{\"message\":\"Your account org-0755c366964e456394424307ea167d9d \\u003cak-fbzp6i9tmcwi11azwob1\\u003e is suspended due to insufficient balance, please recharge your account or check your plan and billing details\",\"type\":\"exceeded_current_quota_error\"}}"
+ },
+ "2026-08-29": {
+  "error": true,
+  "note": "kimi review failed: HTTP 429 from Kimi: {\"error\":{\"message\":\"Your account org-0755c366964e456394424307ea167d9d \\u003cak-fbzp6i9tmcwi11azwob1\\u003e is suspended due to insufficient balance, please recharge your account or check your plan and billing details\",\"type\":\"exceeded_current_quota_error\"}}"
+ },
+ "2026-08-30": {
+  "error": true,
+  "note": "kimi review failed: HTTP 429 from Kimi: {\"error\":{\"message\":\"Your account org-0755c366964e456394424307ea167d9d \\u003cak-fbzp6i9tmcwi11azwob1\\u003e is suspended due to insufficient balance, please recharge your account or check your plan and billing details\",\"type\":\"exceeded_current_quota_error\"}}"
+ },
+ "2026-08-31": {
+  "error": true,
+  "note": "kimi review failed: HTTP 429 from Kimi: {\"error\":{\"message\":\"Your account org-0755c366964e456394424307ea167d9d \\u003cak-fbzp6i9tmcwi11azwob1\\u003e is suspended due to insufficient balance, please recharge your account or check your plan and billing details\",\"type\":\"exceeded_current_quota_error\"}}"
+ },
+ "2026-09-01": {
+  "error": true,
+  "note": "kimi review failed: HTTP 429 from Kimi: {\"error\":{\"message\":\"Your account org-0755c366964e456394424307ea167d9d \\u003cak-fbzp6i9tmcwi11azwob1\\u003e is suspended due to insufficient balance, please recharge your account or check your plan and billing details\",\"type\":\"exceeded_current_quota_error\"}}"
  }
 }

@@ -1,83 +1,55 @@
-[wikimedia] reject duplicate (already in pool): File:La Florentina - Balay Bacabac-Babar Ancestral House.png
-[wikimedia] reject duplicate (already in pool): File:Spacious Living Room Interior Design in Kolkata by Estate Lookup Interiors.png
-[openverse] reject duplicate (already in pool): Interior Design
-[openverse] reject (no-interior-hint): Coffee Table
-[openverse] reject duplicate (already in pool): Couch Furniture
-== living: 0/10 from 'modern living room interior design sofa'
-[wikimedia] reject duplicate (already in pool): File:American homes and gardens (1907) (17970714579).jpg
-[wikimedia] reject duplicate (already in pool): File:American homes and gardens (1909) (17536680823).jpg
-[wikimedia] reject duplicate (already in pool): File:Luxury Living Room Interior Design in Kolkata by Estate Lookup Interiors.png
-[wikimedia] reject (bad-keyword): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== living: 0/10 from 'living room interior design India'
-[wikimedia] reject (bad-keyword): File:Miggla logo.png
-[wikimedia] reject by Gemini vision check: File:Modern Furniture and Interior Design for Home and Office.jpg — The image is a promotional advertisement banner for office workspaces with text and logos, not a photo of a kitchen.
-[wikimedia] reject duplicate (already in pool): File:Modular Kitchen Design - Picker Online.jpg
-== kitchen: 0/8 from 'modular kitchen interior design'
-[wikimedia] reject (bad-keyword): File:Interior, kitchen - Pope-Leighey House, 9000 Richmond Highway (moved from Falls Church, VA), Mount Vernon, Fairfax County, VA HABS VA,30-FALCH,2-23.tif
-[wikimedia] reject duplicate (already in pool): File:Interior view of kitchen north wall, with cabinets, window, and chimney flue - High Island Bridge Tender's Station, Residence, State Highway 124 Crossing of Mud Bayou, High HABS TEX,84-HISL.V,1A-12.tif
-[wikimedia] reject (bad-keyword): File:KITCHEN, LOOKING TOWARD DOOR TO DINING ROOM - Mr. and Mrs. Charles Collier House, 6080 Leesburg Pike, Falls Church, Falls Church, VA HABS VA,30-FALCH.V,3-13.tif
-[wikimedia] reject duplicate (already in pool): File:NORTHEAST INTERIOR CORNER OF 1936 KITCHEN-DINETTE ADDITION SHOWING CABINETS. VIEW IS TO NORTHEAST. - Randle Ranger Residence, Building No. 1135, Silverbrook Road, Randle, Lewis HABS WASH,21-RAND,1-5.tif
-[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
-[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
-[openverse] reject duplicate (already in pool): Kitchens of New Bern Tour
-[openverse] reject duplicate (already in pool): Kitchen Interior
-[openverse] reject duplicate (already in pool): Kitchen Cabinet
-[openverse] reject duplicate (already in pool): Modern kitchen design with sleek cabinets and minimalistic counter space in a contemporary apartment
-[openverse] reject duplicate (already in pool): Modern kitchen interior design featuring light colors and minimalist style with sleek cabinets and elegant countertops
-[openverse] reject duplicate (already in pool): View From Dining Area
-== kitchen: 0/8 from 'kitchen interior design cabinets'
-[wikimedia] reject (bad-keyword): File:Architect and engineer (1922) (14595095638).jpg
-[wikimedia] reject duplicate (already in pool): File:Honor bilt modern homes. (1921) (14577607049).jpg
-[wikimedia] reject by Gemini vision check: File:Remove Wardrobe Door To Replace With Sliding Curtains To Free Up Bedroom Space.png — This is a hand-drawn floor plan sketch rather than a genuine photograph of an interior room.
-[wikimedia] reject (bad-keyword): File:Tuberculosis hospital and sanatorium construction; (1911) (14781353822).jpg
-== bedroom: 0/8 from 'bedroom interior design wardrobe'
-[wikimedia] reject duplicate (already in pool): File:HillfortPalaceInterior4.jpg
-[wikimedia] reject (bad-keyword): File:William Powell & Sons - Gun & Rifle Makers - Carrs Lane (4226472210).jpg
-== bedroom: 0/8 from 'bedroom interior design India'
-[wikimedia] reject (bad-keyword): File:Building with assurance (1921) (14740809366).jpg
-[openverse] reject (no-interior-hint): multimedia desk
-[openverse] reject duplicate (already in pool): standing desk in den / kitchen
-[openverse] reject (no-interior-hint): Detention cell
-[openverse] reject duplicate (already in pool): Home Office
-[openverse] reject duplicate (already in pool): Home Office
-[openverse] reject duplicate (already in pool): Home Office
-[openverse] reject duplicate (already in pool): Home Office
-[openverse] reject duplicate (already in pool): Home Office
-[openverse] reject (no-interior-hint): Creative Corner Workspace
-== office: 0/6 from 'home office room interior design desk'
-[wikimedia] reject duplicate (already in pool): File:1972 DINING ROOM, NOW A STUDY FIRST (SECOND) FLOOR - Clarence Moore House, 1746 Massachusetts Avenue Northwest, Washington, District of Columbia, DC HABS DC,WASH,210-7.tif
-[wikimedia] reject duplicate (already in pool): File:A peep into Friar Bacon's study. (BM 1851,0901.178).jpg
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, east section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-13.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-11.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-12.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, northwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-18.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, south section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-15.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southeast section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-14.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, southwest section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, HABS CA-2678-A-16.tif
-[wikimedia] reject duplicate (already in pool): File:Detail view of Powell Library main reading room rotunda ceiling, west section. - University of California Los Angeles, Powell Library, Westwood, Los Angeles, Los Angeles County, CA HABS CA-2678-A-17.tif
-[wikimedia] reject (bad-keyword): File:Drawing, An Interior, 1837–40 (CH 18708251).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Cushions for Living Room Seat, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800297-2).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture and Plan of Glass Disc for Mr. Allen's Study and Mrs. Allen's Dressing Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800307).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture and Plan of Glass Disc for Mr. Allen's Study and Mrs. Allen's Dressing Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800307-2).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Light Fixture for Mr. Allen's Study and Mrs. Allen's Room, Henry J. Allen Residence, Wichita, Kansas, 1917 (CH 18800305-2).jpg
-[wikimedia] reject (bad-keyword): File:Drawing, Sitting Room, 7 Owen's Row, Islington, 1855 (CH 18708207).jpg
-[wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10604.tiff
-[wikimedia] reject duplicate (already in pool): File:First Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10605.tiff
-[wikimedia] reject duplicate (already in pool): File:INTERIOR OF EAST STORAGE ROOM (FORMERLY FIRST FLOOR OF SIGNAL TOWER). - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-33.tif
-[wikimedia] reject duplicate (already in pool): File:INTERIOR VIEW OF SECOND FLOOR ROOM LOOKING EAST. - Dugway Proving Ground, German-Japanese Village, German Village, South of Stark Road, in WWII Incendiary Test Area, Dugway, HAER UTAH,23-DUG,2A-10.tif
-[wikimedia] reject (bad-keyword): File:Richard Parminter Cuff - Sitting Room, 7 Owen's Row, Islington - Google Art Project.jpg
-[wikimedia] reject duplicate (already in pool): File:SECOND FLOOR - STORAGE ROOM, ADJACENT TO SOUTHEAST ROOM - Blandfield, U.S. Route 17 and State Route 624, Caret, Essex County, VA HABS VA,29-CAR.V,1-75.tif
-[wikimedia] reject duplicate (already in pool): File:Second Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10610.tiff
-[wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1870,1008.600).jpg
-[wikimedia] reject duplicate (already in pool): File:The study of Samuel Taylor Coleridge (BM 1927,1126.1.11.2).jpg
-[wikimedia] reject duplicate (already in pool): File:Third Class Smoking Room on the 'Balmoral Castle' (1910) RMG G10614.tiff
-[wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT NORTH AND EAST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-24.tif
-[wikimedia] reject duplicate (already in pool): File:WAITING ROOM INTERIOR, LOOKING AT SOUTH AND WEST WALLS. - Baltimore and Ohio Railroad, Harpers Ferry Station, Potomac Street, Harpers Ferry, Jefferson County, WV HAER WV-86-26.tif
-[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Music Lesson (ca. 1662–1665) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (bad-keyword-archival): Johannes Vermeer’s Girl Interrupted at Her Music (ca. 1660–1661) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Astronomer (ca. 1668) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (bad-keyword-archival): Johannes Vermeer’s The Geographer (1669) famous painting. Original from Wikimedia Commons. Digitally enhanced by rawpixel.
-[openverse] reject (no-interior-hint): Creative Corner Workspace
-== office: 0/6 from 'study room interior design'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+== living: 0/6 from 'modern living room interior India apartment'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+== living: 0/6 from 'contemporary living room warm wood marble'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+== kitchen: 0/6 from 'modern modular kitchen India interior'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[wikimedia] saved kitchen-10.jpg (145KB) lic='cc by 2.0' vision='A clean, modern modular kitchen with warm wood cabinetry and under-cabinet lighting, highly aspirational for premium Indian apartments.'
+[wikimedia] reject by Gemini vision: File:Woman prepares drink in modern kitchen.jpg — The photo features a person as the main subject of a lifestyle shot rather than focusing primarily on the kitchen interior.
+== kitchen: 1/6 from 'modern kitchen cabinets warm lighting'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+== bedroom: 0/6 from 'modern bedroom interior wardrobe India'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[wikimedia] reject by Gemini vision: File:Cozy bedroom with suitcase and natural light from the window in a modern apartment setting.jpg — The image shows a basic, budget-style bedroom with a radiator and suitcase, lacking the premium, aspirational design quality required for modern Indian metro clients.
+== bedroom: 0/6 from 'cozy modern bedroom natural light apartment'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] reject duplicate: Home Office
+[openverse] reject duplicate: Home Office
+[openverse] reject duplicate: Home Office
+[openverse] reject duplicate: Home Office
+[openverse] reject duplicate: Home Office
+[openverse] reject duplicate: Home Office
+[wikimedia] reject by Gemini vision: File:A woman sits at a desk with her laptop, deeply focused on her work in a low-light environment.jpg — The image is a portrait of a person with a laptop against a black background, not a photograph of an interior office space.
+== office: 0/5 from 'modern home office desk apartment interior'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[wikimedia] reject (bad-keyword): File:Costumed villagers, The Citadel of Aleppo, Syria.jpg
+[wikimedia] reject (bad-keyword): File:The Citadel of Aleppo, Syria, panoramic.jpg
+[wikimedia] reject (bad-keyword): File:Theater inside the Citadel of Aleppo, Syria.jpg
+== office: 0/4 from 'modern study room interior residential'
+[unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] reject (no-interior-hint): 1055 California Street
+[openverse] saved bathroom-ov-1.jpg (40KB) vision='A bright, spacious, and modern bathroom featuring a freestanding tub and light wood cabinetry suitable for premium homes.'
+== bathroom: 1/4 from 'modern bathroom interior design apartment'
+[cloudflare-ai] not configured — skipping AI fill for bedroom
+[cloudflare-ai] not configured — skipping AI fill for bathroom

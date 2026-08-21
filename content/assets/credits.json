@@ -376,5 +376,29 @@
   "query": "study room interior design",
   "room": "office",
   "provider": "wikimedia"
+ },
+ "kitchen-10.jpg": {
+  "title": "File:Modern kitchen design featuring minimalistic elements, warm lighting, and high-end appliances in a contemporary setting.jpg",
+  "creator": "Shixart1985",
+  "license": "cc by 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Modern_kitchen_design_featuring_minimalistic_elements,_warm_lighting,_and_high-end_appliances_in_a_contemporary_setting.jpg",
+  "query": "modern kitchen cabinets warm lighting",
+  "room": "kitchen",
+  "provider": "wikimedia",
+  "concept": true,
+  "ai_generated": false,
+  "real_project": false
+ },
+ "bathroom-ov-1.jpg": {
+  "title": "Modern bathroom, house interior",
+  "creator": "",
+  "license": "cc0",
+  "source": "https://www.rawpixel.com/image/6042742/photo-image-public-domain-house-room",
+  "query": "modern bathroom interior design apartment",
+  "room": "bathroom",
+  "provider": "openverse",
+  "concept": true,
+  "ai_generated": false,
+  "real_project": false
  }
 }
