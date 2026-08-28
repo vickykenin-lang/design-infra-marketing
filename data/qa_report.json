@@ -25,185 +25,271 @@
  "2026-08-18": {
   "verdict": "reject",
   "score": 3,
-  "design_notes": "The background image contains a prominent watermark from another brand ('ESTATE LOOKUP INTERIORS'), which ruins our premium positioning. Furthermore, listing wardrobes for '3 बेडरूम' (3 bedrooms) under a '2BHK' budget breakdown is a glaring technical error that any homeowner would spot.",
-  "marketing_notes": "The transparency hook is highly scroll-stopping, but the competitor's watermark completely destroys brand trust and makes us look unprofessional. The mismatch between 2BHK and 3 bedrooms in the table will make prospects question our attention to detail.",
+  "design_notes": "The budget breakdown lists wardrobes for '3 bedrooms' (3 बेडरूम) while the post is explicitly hooked on a '2BHK' configuration, which is a glaring technical mismatch that undermines our authority as design experts.",
+  "marketing_notes": "Featuring a prominent watermark of another brand ('ESTATE LOOKUP INTERIORS') on the top right completely destroys brand trust, makes us look unprofessional, and suggests we are using stolen content.",
   "issues": [
-   "Competitor watermark ('ESTATE LOOKUP INTERIORS') is clearly visible in the top right of the background image.",
-   "Logical mismatch: The table lists wardrobe costs for '3 बेडरूम' (3 bedrooms) while the main hook is for a '2BHK' (2 bedrooms).",
-   "Using a watermarked stock/competitor image severely damages the credibility of a premium turnkey design firm."
+   "Competitor watermark 'ESTATE LOOKUP INTERIORS' is clearly visible on the top right of the image.",
+   "Logical mismatch: The table lists wardrobe costs for '3 bedrooms' (3 बेडरूम) instead of 2 bedrooms for a 2BHK budget post.",
+   "The top-left 'Design Infra' orange icon looks cheap and poorly integrated with the background image."
   ],
-  "fix_suggestion": "Replace the background image with an authentic, unwatermarked project photo from Design Infra's own portfolio. Correct the second row of the table to read 'वॉर्डरोब (2 बेडरूम)' to match the 2BHK hook, and adjust the price range accordingly."
+  "fix_suggestion": "Replace the header image with an authentic, high-quality project photo from Design Infra's own portfolio (ensuring no competitor watermarks), and correct the Hindi text from 'वॉर्डरोब (3 बेडरूम)' to 'वॉर्डरोब (2 बेडरूम)' with adjusted pricing (e.g., ₹1.8-3 lakh) to match the 2BHK theme."
  },
  "2026-08-19": {
   "verdict": "revise",
   "score": 4,
-  "design_notes": "The featured room looks like a dated, sterile, cold-toned Western stock photo rather than a premium Delhi NCR home. The lack of rich textures, warm lighting, or premium materials (like veneer, marble, or brass) fails to showcase the high-end turnkey execution capabilities of Design Infra.",
-  "marketing_notes": "Pluttering the graphic with the entire Hindi body copy makes it look like a cheap, low-budget Facebook ad rather than a premium, aspirational Instagram post. The top logo also suffers from poor contrast against the faded white background, weakening brand recall.",
+  "design_notes": "The featured living room looks like a dated, sterile, cold-toned stock render from a decade ago, featuring cheap-looking white leather, chrome, and a basic shag rug. It completely lacks the warmth, premium materials (like rich veneers, marble, or brass accents), and layered styling expected of a high-end Delhi NCR residential project.",
+  "marketing_notes": "The graphic is heavily overloaded with text; duplicating the entire Hindi body copy onto the image card ruins the premium aesthetic and reduces scroll-stop power. Additionally, the 'One Team, One Contract' Hindi button at the bottom is a jarring, salesy mismatch for an educational design tip post.",
   "issues": [
-   "Dated and sterile stock image that lacks premium Indian residential appeal.",
-   "Too much text on the image; the Hindi paragraph should be in the caption, not on the graphic.",
-   "Poor contrast and legibility for the top logo and 'Turnkey Interiors' text against the light background.",
-   "The cold grey-and-white color palette feels uninviting and does not drive aspiration."
+   "The background image looks like a cheap, sterile stock photo rather than an aspirational, premium Indian home.",
+   "Too much text on the image card, making it look like a cluttered blog banner instead of a sleek Instagram post.",
+   "The bottom-right CTA button is irrelevant to the educational theme of the post and feels forced."
   ],
-  "fix_suggestion": "Replace the background image with a warm, contemporary Indian living room shot featuring a beautifully floated layout. Remove the Hindi paragraph from the graphic entirely to declutter the visual, and increase the contrast/shadow behind the top logo for better legibility."
+  "fix_suggestion": "Replace the image with a high-quality, warm-toned photograph of a real premium Indian living room featuring a floating furniture layout. Remove the Hindi body text paragraph and the bottom-right CTA button from the graphic entirely, keeping only the strong English hook to maintain a clean, high-end aesthetic."
  },
  "2026-08-20": {
   "verdict": "revise",
   "score": 4,
-  "design_notes": "While the featured bedroom render is aesthetically pleasing with its fluted paneling and symmetrical layout, it completely fails to illustrate the design mistake mentioned in the hook. Showing a perfectly centered, spacious bed does not help the client visualize the 'bed in a corner' layout issue or its solution.",
-  "marketing_notes": "The 'CC BY' watermark from another designer ('SPL Interiors1') is a massive trust killer for a premium turnkey brand. Additionally, putting the entire Hindi body copy directly onto the image card makes it look like a cluttered presentation slide rather than a sleek, scroll-stopping Instagram post.",
+  "design_notes": "The featured bedroom beautifully showcases a premium Indian contemporary aesthetic with fluted paneling and warm cove lighting, but it only shows the 'correct' layout. To teach a 'design mistake' effectively, we need a visual contrast showing a bed awkwardly pushed into a corner versus this centered setup.",
+  "marketing_notes": "The prominent 'SPL Interiors1 • CC BY' watermark on the image is a massive trust-killer for a premium turnkey brand, signaling that we don't execute our own projects. Additionally, putting the entire block of Hindi explanation text directly on the image makes it look like a textbook slide rather than a high-engagement social post.",
   "issues": [
-   "Visual-hook mismatch: The image shows a perfectly centered bed, failing to visually demonstrate the 'bed in a corner' mistake or layout fix.",
-   "Credibility issue: The visible 'SPL Interiors1 · CC BY' watermark reveals the image is not Design Infra's own work, damaging brand authority.",
-   "Text clutter: The image card is overloaded with text, repeating the body caption on-image instead of keeping it in the post description."
+   "External CC-BY watermark ('SPL Interiors1') destroys brand authority and premium positioning.",
+   "No visual representation of the 'mistake' mentioned in the hook, creating a conceptual mismatch.",
+   "Too much body text on the image card, which should ideally be reserved for the caption to keep the visual clean."
   ],
-  "fix_suggestion": "Replace the image with an authentic Design Infra project photo that clearly demonstrates a smart bedroom layout. Remove the long Hindi paragraph from the image card entirely, leaving only the strong English hook to keep the visual clean and high-contrast."
+  "fix_suggestion": "Replace the image with our own high-quality portfolio shoot. Use a split-screen 'Don't vs. Do' visual to clearly demonstrate the corner-bed mistake, remove the heavy body text from the card, and move it to the Instagram caption."
  },
  "2026-08-21": {
   "verdict": "revise",
-  "score": 6,
-  "design_notes": "The bathroom image looks like a generic, mid-range European stock photo rather than a premium Indian residential project. Crucially, the vanity shown has no visible lighting fixtures, failing to visually represent either the overhead lighting mistake or the side-sconce solution.",
-  "marketing_notes": "The hook is highly relatable, but printing the entire Hindi explanation directly on the image clutters the design and reduces scroll-stop power. The 'One Team, One Contract' sales badge feels forced on an educational value-first post.",
+  "score": 5,
+  "design_notes": "The bathroom shown is a generic, dated Western stock photo with hanging fish decor and basic wood laminates that do not represent premium Indian turnkey design. More importantly, the image completely fails to showcase the design tip: there are no visible vanity lights, side sconces, or overhead fixtures to illustrate the lighting mistake or its solution.",
+  "marketing_notes": "The hook is strong and relatable, but the graphic is way too text-heavy for Instagram, looking more like a blog banner than a premium social post. Using a generic stock photo instead of an aspirational, beautifully lit Indian bathroom layout fails to build trust or stop the scroll.",
   "issues": [
-   "The image is a generic stock photo that doesn't reflect premium Delhi NCR design sensibilities.",
-   "The featured bathroom lacks any visible vanity lighting, making the visual irrelevant to the lighting tip.",
-   "Too much text on the image; the Hindi explanation should be moved to the caption body to keep the graphic clean.",
-   "The sales badge at the bottom right clashes with the educational theme of the post."
+   "The image is a generic stock photo that doesn't reflect premium Delhi NCR/Indian residential design aesthetics.",
+   "The visual does not demonstrate the lighting mistake or the correct side-lighting solution mentioned in the text.",
+   "The graphic is overcrowded with text; the entire Hindi explanation is printed on the image instead of being kept in the caption.",
+   "The styling elements, like the hanging fish in the window and plain drapes, look cheap and dated."
   ],
-  "fix_suggestion": "Replace the stock photo with a premium Indian bathroom render or site photo showing elegant side-sconce lighting or a backlit mirror. Remove the long Hindi paragraph and the sales badge from the image, keeping only the English hook to maximize visual impact and drive users to read the caption."
+  "fix_suggestion": "Replace the stock photo with a high-end, real shot of a modern Indian bathroom vanity featuring elegant side-mounted sconces or a backlit mirror. Remove the Hindi paragraph from the image to declutter the design, leaving only the main English hook, and move that explanation entirely to the post caption."
  },
  "2026-08-22": {
   "verdict": "reject",
-  "score": 1,
-  "design_notes": "The image shows a vintage, black-and-white industrial utility or server room instead of a premium residential home office. It completely fails to showcase modern Indian interior design, materials, or styling, making it entirely irrelevant to our brand.",
-  "marketing_notes": "The massive disconnect between the home office hook and the industrial archival photo will confuse users, kill scroll-stopping power, and severely damage brand credibility as a premium turnkey service.",
+  "score": 2,
+  "design_notes": "The image shows an old, industrial utility or server room instead of a premium residential home office. It completely fails to showcase any design sensibility, materials, or aspirational styling expected from a luxury turnkey firm.",
+  "marketing_notes": "Massive visual mismatch that will confuse users and destroy brand credibility; a black-and-white archival photo of industrial shelving has zero scroll-stopping power for someone looking for home interior inspiration.",
   "issues": [
-   "The image shows an old industrial/electrical room instead of a premium home office.",
-   "The black-and-white historical aesthetic completely mismatches the modern, premium brand identity of Design Infra.",
-   "The Hindi caption text is printed directly on the image card, which clutters the layout and contradicts the clean, premium aesthetic."
+   "The image is completely irrelevant to the home office topic, showing an old industrial utility room instead of a residential workspace.",
+   "The black-and-white, grungy aesthetic contradicts the premium, modern brand identity of Design Infra.",
+   "The graphic contains too much body text on-image, which reduces visual impact and duplicates the caption."
   ],
-  "fix_suggestion": "Replace the background image with a high-quality, brightly lit, contemporary Indian home office designed by Design Infra, showing a desk positioned near a window or facing an open room layout."
+  "fix_suggestion": "Replace the background image with a high-quality, brightly lit photograph of a premium Indian home office featuring a desk positioned near a window or facing into an open room, showcasing elegant materials like polished wood, fluted panels, or brass accents."
  },
  "2026-08-23": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The image shows a dilapidated, dirty, and abandoned kitchen ruin in black-and-white, which completely contradicts the hook 'Your kitchen looks great' and severely damages our premium brand identity.",
-  "marketing_notes": "The massive cognitive dissonance between the depressing visual and the positive hook will confuse users, while cramming the entire Hindi body copy onto the card makes the ad look cluttered, cheap, and amateurish.",
+  "design_notes": "The image shows a dilapidated, dirty, and abandoned kitchen which completely contradicts the hook 'Your kitchen looks great' and ruins our premium brand positioning. It looks like a derelict Western house rather than a high-end Indian modular kitchen.",
+  "marketing_notes": "The visual-to-text mismatch is jarring and will confuse users scrolling through their feed. Showing a ruined, unhygienic space will repel high-ticket clients, and crowding the card with the entire Hindi body copy makes it look like a cheap brochure.",
   "issues": [
-   "Severe visual-text mismatch: showing a ruined, dirty kitchen while the hook says 'Your kitchen looks great'.",
-   "The image looks depressing and cheap, which is completely off-brand for a premium turnkey design firm.",
-   "Too much body text printed directly on the image card, ruining the visual hierarchy and clean aesthetic."
+   "Severe mismatch between the hook ('Your kitchen looks great') and the visual of a ruined, dirty kitchen.",
+   "The image of a dilapidated room is highly off-brand for a premium turnkey interior design firm.",
+   "Too much body text on the image card, which should be reserved for the caption to maintain a clean aesthetic."
   ],
-  "fix_suggestion": "Replace the image with a stunning, high-end, modern Indian modular kitchen that looks visually flawless, and remove the long Hindi paragraph from the card, leaving only the main hook to drive users to read the caption."
+  "fix_suggestion": "Replace the background image with a stunning, high-end, contemporary Indian modular kitchen that looks visually beautiful. Move the Hindi paragraph text off the image and into the actual Instagram caption, leaving only the hook on the card."
  },
  "2026-08-24": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The image shows a vintage, rustic Western-style dining room with a stone fireplace and antique plates, which completely contradicts the 'blank concrete shell' hook and has zero relevance to premium Indian residential living room design.",
-  "marketing_notes": "A massive visual-to-text mismatch that instantly destroys brand trust. Using a sepia-toned historical archive photo instead of an actual raw site 'before' image fails to showcase our turnkey execution capabilities to Delhi NCR homeowners.",
+  "design_notes": "The image depicts a rustic, historic Western-style dining room with a stone fireplace and plate racks, which completely contradicts the 'blank concrete shell' hook and has zero relevance to premium Indian residential design.",
+  "marketing_notes": "Dumping the entire Hindi caption onto the image card ruins the premium aesthetic, making it look like a cheap flyer. Additionally, there is no visual 'before and after' to support the transformation hook, failing to build trust.",
   "issues": [
-   "Visual shows a fully furnished antique dining room instead of a raw 'blank concrete shell' as claimed in the hook.",
-   "The design style is historical Western rustic, which is completely irrelevant to the premium Indian market.",
-   "Cramming the entire Hindi body caption onto the image card makes the graphic look cluttered and cheapens the premium brand aesthetic."
+   "Image shows a historic rustic dining room, not a blank concrete shell or a modern Indian living room.",
+   "The entire body caption is printed on the image, making it extremely cluttered and text-heavy.",
+   "No 'before' and 'after' visual comparison is present despite the 'Before/After' theme label.",
+   "The sepia, low-quality historical photo looks like stock archive footage, damaging brand trust."
   ],
-  "fix_suggestion": "Replace the vintage image with a high-contrast split-screen showing an actual raw, under-construction Indian apartment shell (grey concrete/exposed brick) on the left, and a stunning, finished premium Delhi NCR living room designed by Design Infra on the right."
+  "fix_suggestion": "Replace the image with a high-quality split-screen or carousel showing an actual raw concrete site (before) transitioning into a luxury, modern Indian living room designed by Design Infra (after). Remove the long Hindi body text from the image card, keeping only the main hook, and move the body text to the actual Instagram caption."
  },
  "2026-08-25": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The visual depicts a generic living room setup with a sofa and coffee table, completely mismatching the copy which explicitly focuses on a bedroom (बेडरूम) transformation. Furthermore, using flat, basic vector illustrations instead of real site photos or high-end 3D renders fails to project the premium, material-rich aesthetic of a luxury turnkey design firm.",
-  "marketing_notes": "This post has zero scroll-stopping power or trust-building capability because it lacks real proof of work. High-intent Indian homeowners looking for turnkey services want to see actual material finishes and execution, not a cartoonish stock graphic that confuses them by showing a living room while talking about a bedroom.",
+  "design_notes": "There is a glaring mismatch: the flat vector illustration depicts a living room setup (sofa, coffee table), while the text explicitly discusses bedroom design ('बेडरूम'). Furthermore, a premium turnkey brand should never use generic cartoon illustrations; we need high-quality, real site photographs or premium 3D renders showing actual materials and textures.",
+  "marketing_notes": "Flat vector graphics have zero scroll-stopping power for high-ticket Indian homeowners looking for premium interior execution. Cramming the entire Hindi body caption onto the image card makes it look like a cheap brochure rather than an aspirational social media post.",
   "issues": [
-   "Severe content mismatch: Visual shows a living room, but the text and caption talk about a bedroom transformation.",
-   "Flat vector illustration looks cheap and generic, failing to reflect a premium, high-end turnkey interior brand.",
-   "No actual 'before' or 'after' visual proof, despite the pillar being 'Before/After & Concept Transformations'.",
-   "Too much body text repeated on the image card, making it look cluttered and less like a premium social media asset."
+   "Severe content mismatch: Illustration shows a living room, but the text and caption talk about a bedroom.",
+   "Cheap, flat vector illustration style completely misaligns with a mid-to-premium brand positioning.",
+   "Too much body text crammed onto the image card, reducing visual breathing room and premium feel.",
+   "The 'Before/After' theme is completely lost because there is no actual 'Before' visual shown."
   ],
-  "fix_suggestion": "Replace the flat vector illustration with a high-quality, real-site split-screen photo showing an actual 'Before' (raw concrete site) and 'After' (premium, fully styled bedroom) from our Delhi NCR portfolio, aligning perfectly with the bedroom copy."
+  "fix_suggestion": "Replace the vector graphic with a high-quality split-screen photo showing a real 'Before' (raw concrete site) and 'After' (luxurious finished bedroom) from our portfolio, and move the Hindi body text entirely to the post caption, leaving only the hook on the image."
  },
  "2026-08-26": {
   "verdict": "revise",
   "score": 5,
-  "design_notes": "The bathroom shown is extremely spacious and country-styled, completely contradicting the 'cramped' hook. Additionally, fabric curtains next to a tub are highly impractical for Indian wet-room layouts and the styling looks like a generic Western stock photo rather than a premium Indian home.",
-  "marketing_notes": "Promising a 'Before/After' transformation but only showing a single, spacious 'After' photo destroys credibility. The stock-like image lacks the aspirational, high-end finish needed to stop the scroll and build trust with premium Delhi NCR clients.",
+  "design_notes": "The bathroom shown is exceptionally spacious with a Western layout and shaker-style cabinetry, which completely contradicts the 'cramped bathroom' hook and feels unrepresentative of typical Delhi NCR apartment layouts.",
+  "marketing_notes": "The visual-to-hook mismatch hurts brand authenticity, making the post feel like a generic stock-photo ad. Additionally, putting the entire Hindi body copy on the image card makes it look cluttered and reduces scroll-stop power.",
   "issues": [
-   "Visual mismatch: The bathroom is extremely spacious, making the 'cramped' hook inaccurate.",
-   "No 'Before' visual is provided despite the 'Before/After' category tag.",
-   "The image looks like a generic Western stock photo rather than an actual Design Infra project.",
-   "Impractical design elements for Indian homes, such as full-length fabric curtains in a bathroom."
+   "Direct contradiction between the 'cramped bathroom' hook and the very large, spacious bathroom pictured.",
+   "The image looks like a generic Western stock photo rather than an authentic Indian turnkey project.",
+   "Excessive text on the graphic; duplicating the body caption on the image card makes it look like a brochure rather than a native social post."
   ],
-  "fix_suggestion": "Replace the image with a genuine split-screen Before/After shot of a local Delhi NCR bathroom renovation, or change the hook to focus purely on 'Luxury Home Spa' and use a more contemporary, high-end Indian bathroom design."
+  "fix_suggestion": "Replace the image with a real 'Before vs. After' split-screen of a compact Indian bathroom optimized for space. Remove the Hindi body text from the card, leaving only the main English hook and the CTA button, and move that text to the post caption."
  },
  "2026-08-27": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The visual is a 19th-century vintage engraving/sketch, which completely contradicts the text claiming a transformation into a 'modern and calm home office'. It fails to showcase any actual interior design capability, materials, or contemporary Indian styling.",
-  "marketing_notes": "There is a massive disconnect between the premium turnkey branding and a black-and-white historical sketch. It lacks scroll-stopping power for modern homeowners and damages brand trust by looking like a placeholder rather than a real portfolio transformation.",
+  "design_notes": "Using a 19th-century historical engraving instead of a real Indian residential space completely fails to showcase our design capabilities, material finishes, or spatial planning expertise.",
+  "marketing_notes": "The visual is completely disconnected from our premium turnkey brand identity, looking more like a history textbook than an aspirational home transformation, which destroys trust and scroll-stop power.",
   "issues": [
-   "The visual is a historical sketch, completely irrelevant to a modern turnkey interior design transformation.",
-   "Mismatched content: The text claims a transformation to a 'modern and calm' space, but no modern office or 'after' shot is shown.",
-   "The card is text-heavy and cluttered, cramming the category, hook, Hindi description, and a button all on one graphic."
+   "The image is a historical sketch/engraving, not a real interior design project or a relatable 'before' space.",
+   "Mismatched context: The text claims we transformed this 'boring space' into a modern office, but no modern 'after' design is shown.",
+   "Too much text on the image, including long Hindi sentences, which dilutes the premium aesthetic and makes it look like a cheap flyer."
   ],
-  "fix_suggestion": "Replace the vintage sketch with a high-quality, split 'Before/After' photo or a carousel showing a real, premium modern home office designed by Design Infra, keeping the text minimal on the cover slide."
+  "fix_suggestion": "Replace the historical sketch with a high-quality, split-screen 'Before/After' photo or a carousel showing a real, cluttered Indian home corner transformed into a sleek, modern, functional home office designed by Design Infra."
  },
  "2026-08-28": {
   "verdict": "revise",
   "score": 4,
-  "design_notes": "While clean, this kitchen is highly Westernized and impractical for Delhi NCR homes, featuring high-maintenance mosaic tile grouting and white fabric bar stools prone to masala stains. It lacks typical Indian modular kitchen essentials like a heavy-duty chimney or a practical hob zone.",
-  "marketing_notes": "Claiming a 'Before/After' transformation without showing the 'Before' image completely invalidates the hook and feels deceptive. Additionally, plastering the entire Hindi body copy onto the image card makes it look like a cluttered, cheap brochure rather than a premium design studio's portfolio.",
+  "design_notes": "The kitchen shown is a generic, Western-style stock photo with a dated glass-mosaic backsplash from the 2010s; it lacks the authentic material palette and layout typical of premium Delhi NCR residences.",
+  "marketing_notes": "A 'Before/After' hook is completely wasted here because there is no 'Before' visual to show the transformation. Additionally, baking a long paragraph of Hindi body text directly onto the image makes it look like a cluttered brochure rather than a premium, scroll-stopping social post.",
   "issues": [
-   "No 'Before' visual is shown to support the 'chaotic to clutter-free' transformation hook.",
-   "The card is severely text-heavy, duplicating the Hindi caption on the image itself which ruins the premium aesthetic.",
-   "The kitchen image looks like a generic Western stock photo rather than an authentic, aspirational Indian home project."
+   "No 'Before' image is shown to justify the 'chaotic to clutter-free' transformation hook.",
+   "The kitchen image looks like an aspirational Western stock photo, reducing brand trust and authenticity.",
+   "Too much text on the image card, including redundant Hindi body copy that belongs in the caption.",
+   "The glass mosaic backsplash looks dated and doesn't represent modern, premium Indian design trends."
   ],
-  "fix_suggestion": "Convert this into a carousel post. Slide 1 should show a split 'Before/After' image with only the main English hook. Remove the long Hindi paragraph and the bottom-right badge from the image entirely, keeping them strictly in the post caption."
+  "fix_suggestion": "Switch to a split-screen 'Before vs After' visual using a real Indian kitchen project, remove the long Hindi paragraph from the image (keep it in the caption only), and let the clean 'After' shot breathe."
  },
  "2026-08-29": {
   "verdict": "revise",
   "score": 7,
-  "design_notes": "The living room design is excellent and highly authentic for an Indian home, featuring a premium contemporary layout with a beautifully integrated mandir corner on the left. The color palette, arched wall paneling, and styling look incredibly premium and realistic.",
-  "marketing_notes": "The main hook is strong and addresses a major consumer pain point, but duplicating the entire Hindi caption text directly onto the image clutters the visual hierarchy and makes the post look like a cheap brochure rather than a premium ad.",
+  "design_notes": "The interior design is outstanding and highly authentic to premium Indian homes, showcasing a seamless transition from a modern sage-green living room to a traditional mandir corner with a brass bell and swastika detail. The material choices, including the arched fluted wall panels and marble flooring, are perfectly aligned with Delhi NCR's luxury residential tastes.",
+  "marketing_notes": "The hook targets a major industry pain point (budget escalation), but the graphic is severely cluttered because the entire Hindi body caption has been pasted onto the image. This text overload ruins the premium aesthetic and makes the post look like a cheap flyer rather than a high-end design studio's portfolio.",
   "issues": [
-   "Too much body text on the image, duplicating the caption and cluttering the layout.",
-   "The Hindi body text font on the image looks default and cheapens the overall premium aesthetic."
+   "Text duplication: The entire three-line Hindi caption is printed on the image, creating visual clutter.",
+   "Bilingual layout clash: Mixing a bold English hook, a long Hindi paragraph, and a Hindi pill button on a single card dilutes the premium brand identity."
   ],
-  "fix_suggestion": "Remove the two-line Hindi body text paragraph from the image entirely, keeping only the bold English hook and the bottom 'एक टीम। एक कॉन्ट्रैक्ट।' badge to restore a clean, high-contrast, and premium look."
+  "fix_suggestion": "Remove the three-line Hindi paragraph from the image completely, keeping it only in the social media caption body. This will clean up the white space, make the main English hook pop, and restore the premium, uncluttered aesthetic."
  },
  "2026-08-30": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The visual shows a vintage American Craftsman house exterior illustration from an old Sears catalog, which has absolutely zero relevance to a premium Indian 'dream bedroom' or modern turnkey interior design.",
-  "marketing_notes": "Using an irrelevant historical house sketch instead of an aspirational bedroom render or site photo completely fails to build trust or stop the scroll for Delhi NCR homeowners. Additionally, pasting the entire long Hindi caption directly onto the image makes it look cluttered and cheap.",
+  "design_notes": "The visual features a vintage, black-and-white American Craftsman house exterior sketch from an old Sears catalog, which completely contradicts the 'dream bedroom' copy and has zero relevance to modern Indian premium residential design.",
+  "marketing_notes": "Using a historical exterior illustration for a bedroom interior campaign destroys scroll-stop power and trust. Furthermore, baking the entire Hindi body paragraph onto the image makes it look like a cluttered, cheap brochure rather than a premium social media asset.",
   "issues": [
-   "Complete mismatch between the hook ('dream bedroom') and the visual (vintage American house exterior).",
-   "The entire long Hindi caption is printed on the image, cluttering the layout.",
-   "The vintage Sears catalog aesthetic does not align with a premium, modern Indian turnkey interior design brand."
+   "Severe visual-to-copy mismatch: shows a vintage American house exterior instead of a bedroom",
+   "Overcrowded graphic with too much body text baked directly onto the image",
+   "Fails to project a premium, aspirational turnkey design aesthetic for Indian homeowners"
   ],
-  "fix_suggestion": "Replace the vintage exterior illustration with a high-quality, real photograph of a premium, modern Indian bedroom designed by Design Infra, and move the long Hindi body text off the image into the actual Instagram caption space."
+  "fix_suggestion": "Replace the vintage illustration with a high-quality, aspirational photograph of a real bedroom designed for the Indian market. Remove the long Hindi body text from the image (keep it in the caption) to let the visual and the main hook breathe."
  },
  "2026-08-31": {
   "verdict": "revise",
-  "score": 6,
-  "design_notes": "The bathroom styling is a generic Western stock photo; fabric curtains hanging right next to a bathtub are highly impractical for Indian wet-room layouts due to high humidity and dust. The light wood cabinetry and dated fish wall decor do not reflect a premium Delhi NCR turnkey aesthetic.",
-  "marketing_notes": "While the 'hidden leaks' pun is clever, putting the entire Hindi body copy directly on the image card makes it look like a corporate brochure rather than a high-performing social post. The 50/50 split layout restricts the actual design work to the top half, reducing its scroll-stopping power.",
+  "score": 5,
+  "design_notes": "The bathroom styling looks like a generic Western stock photo with dated fish wall decor and basic wooden cabinetry; it lacks the premium marble, high-end CP fittings, and contemporary luxury finishes expected by Delhi NCR clients.",
+  "marketing_notes": "While the 'hidden leaks' hook is clever, pasting the entire Hindi body copy onto the image card creates massive visual clutter, making it look like a cheap brochure rather than a premium, scroll-stopping social post.",
   "issues": [
-   "Impractical styling for Indian bathrooms (fabric curtains next to wet areas).",
-   "Visual looks like a low-contrast, generic Western stock photo rather than premium Indian turnkey execution.",
-   "Too much body text on the image card, cluttering the design and reducing visual breathing room.",
-   "The 50/50 split layout minimizes the visual impact of the project photo."
+   "Excessive text on the image card; the paragraph of Hindi body text should be in the caption, not on the graphic.",
+   "The featured bathroom image looks like a generic, non-Indian stock photo with dated styling elements.",
+   "Inconsistency between the CTA button text ('एक कॉन्ट्रैक्ट') and the metadata caption tagline ('ज़ीरो झंझट')."
   ],
-  "fix_suggestion": "Replace the stock photo with a high-contrast, premium Indian bathroom project featuring modern materials like fluted panels or marble. Remove the long Hindi paragraph from the image card (keep it in the caption body) and expand the visual to occupy 70% of the frame with the hook overlaid cleanly."
+  "fix_suggestion": "Remove the paragraph of Hindi text from the image card to let the layout breathe. Replace the background image with an actual, high-end Indian bathroom project featuring premium materials like Italian marble, led-backlit mirrors, or modern fluted vanities."
  },
  "2026-09-01": {
   "verdict": "reject",
   "score": 2,
-  "design_notes": "The visual is a monochrome historic archive photograph of a classic Western executive study complete with archival film markings, which is completely irrelevant to modern Indian residential interior design.",
-  "marketing_notes": "Using a black-and-white historic stock photo destroys brand credibility and visual appeal, failing entirely to inspire Indian homeowners seeking contemporary turnkey home office solutions.",
+  "design_notes": "The image is a black-and-white archival photo of a historic US building (marked 'HABS No. DC-267' on the right) with heavy Gilded Age wood paneling. This is completely irrelevant to modern Indian residential design and does not showcase our actual turnkey capabilities.",
+  "marketing_notes": "Using a stamped, public-domain archival photo destroys brand trust and looks incredibly cheap. Furthermore, baking the entire Hindi caption directly onto the image card creates a cluttered, text-heavy layout that users will instantly scroll past.",
   "issues": [
-   "Irrelevant black-and-white vintage archive image used instead of a modern residential home office",
-   "Severe disconnect between contemporary branding typography and antiquated visual content",
-   "Fails to showcase actual design capability, material finishes, or real project work"
+   "Image is a black-and-white historic archival photo instead of a contemporary Indian home office design.",
+   "Archival catalog text ('HABS No. DC-267') is visible on the right margin, signaling a low-effort stock/public-domain pull.",
+   "The entire Hindi body caption is printed on the image, making the card look cluttered and unprofessional.",
+   "The ornate, classical Gilded Age styling contradicts the 'budget-friendly' messaging of the hook."
   ],
-  "fix_suggestion": "Replace the vintage monochrome image with a vibrant, high-resolution color photo of a modern Indian residential home office design."
+  "fix_suggestion": "Replace the archival image with a high-quality, color photograph of a modern, functional Indian home office designed by us. Remove the Hindi body text from the image card entirely, keeping only the main hook and CTA, and move that text to the actual Instagram caption field."
+ },
+ "2026-09-02": {
+  "verdict": "revise",
+  "score": 3,
+  "design_notes": "The image shows a generic, blurry close-up of two basic mugs on a shelf rather than showcasing an actual premium modular kitchen layout, high-end finishes (like acrylic or PU), or functional Indian kitchen storage solutions.",
+  "marketing_notes": "A generic stock photo of mugs has zero scroll-stopping power and fails to build trust for a high-ticket turnkey service; premium Delhi NCR clients need to see aspirational, real-world execution.",
+  "issues": [
+   "The image does not show a kitchen, only a blurry shelf with two mugs, failing to represent 'modular kitchen' design.",
+   "Too much body text is crammed onto the image card, making it look like a blog banner rather than a premium social media post.",
+   "The visual lacks any festive cues or premium styling elements despite the 'Festive/Seasonal' theme."
+  ],
+  "fix_suggestion": "Replace the image with a high-resolution, beautifully styled shot of a real Design Infra modular kitchen project—ideally showcasing an organized pantry pull-out or clean quartz countertops—and move the Hindi body text entirely to the caption, leaving only the main hook on the image."
+ },
+ "2026-09-03": {
+  "verdict": "reject",
+  "score": 2,
+  "design_notes": "The image is a black-and-white archival photograph of a vintage Western interior, completely lacking the 'warm lights', 'brass accents', or contemporary Indian festive aesthetic promised by the hook.",
+  "marketing_notes": "A monochrome, historical photo will completely fail to stop the scroll for an Indian homeowner looking for festive inspiration; additionally, pasting the entire body caption onto the image card creates massive visual clutter.",
+  "issues": [
+   "The image is a black-and-white vintage archival photo, completely mismatched with a 'warm lights and brass accents' festive theme.",
+   "The featured space is a historic Western hallway/fireplace, not a premium Indian residential living room.",
+   "Too much body text is crammed onto the image card, violating clean visual hierarchy and social media best practices.",
+   "The monochrome color palette feels cold and dated rather than celebratory, warm, and premium."
+  ],
+  "fix_suggestion": "Replace the archival black-and-white image with a high-quality, vibrant, color photograph of a modern Indian living room styled with warm ambient lighting, brass diyas/decor, and rich festive textiles. Remove the long Hindi paragraph from the image card, keeping only the main hook and the call-to-action."
+ },
+ "2026-09-04": {
+  "verdict": "revise",
+  "score": 4,
+  "design_notes": "The room features sleek contemporary fluted paneling and modern loop sconces, but completely lacks the 'ethnic textures' (एथनिक टेक्सचर्स) claimed in the copy. There are no Indian motifs, brass elements, or festive styling cues to justify the seasonal theme.",
+  "marketing_notes": "The visible 'SPLInteriors1 · CC BY' watermark is a massive trust-killer that screams 'stock photo,' destroying our credibility as a premium turnkey execution brand. The hook is also too generic to compete in the crowded pre-festive feed.",
+  "issues": [
+   "Visible CC-BY attribution watermark proves the image is not Design Infra's actual execution.",
+   "Mismatched copy: text promises 'ethnic textures' but the visual shows a purely westernized, contemporary bedroom.",
+   "Lacks genuine festive warmth or Indian styling elements beyond standard warm LED backlights."
+  ],
+  "fix_suggestion": "Replace the image with an authentic, high-resolution photo of a Design Infra project that actually incorporates warm Indian elements (like rich textiles, brass accents, or festive styling) and remove any external attribution watermarks."
+ },
+ "2026-09-05": {
+  "verdict": "revise",
+  "score": 5,
+  "design_notes": "The featured bathroom is an obvious European stock photo featuring a radiator, basic light-wood shaker cabinets, and plain floor tiles. It completely misses the premium, marble-heavy, luxury aesthetic (like large-format vitrified tiles, quartz counters, and backlit mirrors) that Delhi NCR clients expect from a high-end turnkey designer.",
+  "marketing_notes": "The hook targeting contractor hassle is excellent for the Indian market, but printing the entire Hindi caption directly on the image card ruins the premium brand aesthetic. It makes the post look like a cheap brochure or a Facebook ad flyer rather than an aspirational Instagram post.",
+  "issues": [
+   "The entire Hindi body caption is printed on the image, creating a cluttered, text-heavy layout.",
+   "The image is a generic Western stock photo with non-Indian design elements like a wall radiator and European window frames.",
+   "The 50/50 split layout minimizes the actual design showcase, reducing its scroll-stopping power."
+  ],
+  "fix_suggestion": "Replace the stock photo with a real, premium Indian bathroom project showing luxury finishes. Remove the long Hindi paragraph from the image entirely, leaving only the strong English hook, and move that text to the actual post caption."
+ },
+ "2026-09-06": {
+  "verdict": "revise",
+  "score": 4,
+  "design_notes": "The photo is an extreme close-up of a white keyboard and mouse, completely failing to show any interior design, custom carpentry, lighting, or room layout. For an interior design brand, clients need to see rich spatial details like wall fluting, storage solutions, and warm ambient lighting.",
+  "marketing_notes": "The internal campaign pillar name 'TURNKEY EDUCATION & BRAND STORY' is accidentally left visible on the creative, making it look unpolished. Furthermore, generic tech stock imagery will not stop the scroll or build trust for high-ticket home renovation services.",
+  "issues": [
+   "Generic stock imagery shows computer peripherals instead of home office interior design.",
+   "Internal content pillar tag 'TURNKEY EDUCATION & BRAND STORY' left on the final post card.",
+   "Too much paragraph text embedded on the visual card itself."
+  ],
+  "fix_suggestion": "Replace the stock desktop photo with a wide, aspirational shot of a completed Design Infra home office featuring stylish cabinetry and lighting, and remove the internal category header text."
+ },
+ "2026-09-07": {
+  "verdict": "revise",
+  "score": 4,
+  "design_notes": "The image features a European electrical socket and displays a visible Creative Commons stock tag, damaging brand credibility. Furthermore, no kitchen sink is visible to visually support the hook's warning about sink-to-stove placement.",
+  "marketing_notes": "The hook addresses a genuine pain point for Indian kitchens, but the visible CC attribution badge immediately signals cheap stock content and erodes consumer trust. The heavy text layout below a cropped image feels more like an ad banner than an organic visual post.",
+  "issues": [
+   "Visible Creative Commons attribution watermark on the image",
+   "Image lacks a sink, failing to visually demonstrate the layout issue in the hook",
+   "Non-Indian European electrical socket visible on the backsplash",
+   "Generic stock photo aesthetic undermines premium turnkey positioning"
+  ],
+  "fix_suggestion": "Replace the stock photo with an authentic Indian kitchen portfolio shot that clearly shows the recommended layout distance between the sink and stove, removing the stock watermark."
+ },
+ "2026-09-08": {
+  "verdict": "reject",
+  "score": 2,
+  "design_notes": "The top background is a screenshot of a text document about a heritage house in the Philippines complete with a Creative Commons attribution bar, providing zero visual interior design context. It completely fails to show any living room or rug styling, making the design advice visually non-existent.",
+  "marketing_notes": "While the copy hook is high-intent and relevant, pairing it with an irrelevant text screenshot destroys brand credibility and scroll-stopping impact. Indian homeowners looking for premium turnkey services will view this as an unpolished, automated graphics error.",
+  "issues": [
+   "Background image is a text page about a Filipino ancestral home rather than an interior design photo",
+   "Visible Creative Commons attribution badge ('Ajuytourism2026 • CC BY') degrades brand authority",
+   "No visual representation of a living room, furniture layout, or rug"
+  ],
+  "fix_suggestion": "Replace the document screenshot with a high-resolution photograph of a premium Indian living room correctly styled with an appropriately sized area rug anchoring the seating area."
  }
 }
