@@ -1,55 +1,36 @@
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern living room interior India apartment': The read operation timed out
 == living: 0/6 from 'modern living room interior India apartment'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'contemporary living room warm wood marble': The read operation timed out
 == living: 0/6 from 'contemporary living room warm wood marble'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern modular kitchen India interior': The read operation timed out
 == kitchen: 0/6 from 'modern modular kitchen India interior'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] search failed for 'modern kitchen cabinets warm lighting': The read operation timed out
 [wikimedia] reject duplicate: File:Modern kitchen design featuring minimalistic elements, warm lighting, and high-end appliances in a contemporary setting.jpg
-[wikimedia] reject by Gemini vision: File:Woman prepares drink in modern kitchen.jpg — The image features a person as the main subject, making it a lifestyle portrait rather than a dedicated interior design photograph.
+[wikimedia] reject by Gemini vision: File:Woman prepares drink in modern kitchen.jpg — The image is a lifestyle portrait with a person as the main subject, rather than a dedicated interior design photograph.
 == kitchen: 0/6 from 'modern kitchen cabinets warm lighting'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern bedroom interior wardrobe India': The read operation timed out
 == bedroom: 0/6 from 'modern bedroom interior wardrobe India'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[wikimedia] reject by Gemini vision: File:Cozy bedroom with suitcase and natural light from the window in a modern apartment setting.jpg — The image shows a basic, budget-style guest room with a radiator and a suitcase, which lacks the premium, aspirational aesthetic expected by modern Indian metro homeowners.
+[openverse] search failed for 'cozy modern bedroom natural light apartment': The read operation timed out
+[wikimedia] reject by Gemini vision: File:Cozy bedroom with suitcase and natural light from the window in a modern apartment setting.jpg — The image shows a basic, budget-style bedroom with a radiator and suitcase, lacking the premium, aspirational quality expected by modern Indian metro homeowners.
 == bedroom: 0/6 from 'cozy modern bedroom natural light apartment'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[wikimedia] reject by Gemini vision: File:A woman sits at a desk with her laptop, deeply focused on her work in a low-light environment.jpg — The image is a studio portrait of a person with a laptop against a black background, not a photo of an interior office space.
+[openverse] search failed for 'modern home office desk apartment interior': The read operation timed out
+[wikimedia] reject by Gemini vision: File:A woman sits at a desk with her laptop, deeply focused on her work in a low-light environment.jpg — The image is a studio portrait of a person with a laptop against a black background, not a photograph of an interior office space.
 == office: 0/5 from 'modern home office desk apartment interior'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern study room interior residential': The read operation timed out
 [wikimedia] reject (bad-keyword): File:Costumed villagers, The Citadel of Aleppo, Syria.jpg
 [wikimedia] reject (bad-keyword): File:The Citadel of Aleppo, Syria, panoramic.jpg
 [wikimedia] reject (bad-keyword): File:Theater inside the Citadel of Aleppo, Syria.jpg
 == office: 0/4 from 'modern study room interior residential'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject (no-interior-hint): 1055 California Street
-[openverse] reject duplicate: Modern bathroom, house interior
+[openverse] search failed for 'modern bathroom interior design apartment': The read operation timed out
 == bathroom: 0/4 from 'modern bathroom interior design apartment'
 [cloudflare-ai] not configured — skipping AI fill for bedroom
 [cloudflare-ai] not configured — skipping AI fill for bathroom
