@@ -23,352 +23,183 @@
   "note": "gemini review failed: The read operation timed out"
  },
  "2026-08-18": {
-  "verdict": "reject",
-  "score": 3,
-  "design_notes": "The top image features a competitor's watermark ('ESTATE LOOKUP INTERIORS') clearly visible in the upper right quadrant. Furthermore, there is a major design mismatch: the table lists wardrobe costs for '3 बेडरूम' (3 Bedrooms) on a post explicitly showcasing a '2BHK' budget.",
-  "marketing_notes": "Budget transparency is an incredibly strong hook for Delhi NCR homeowners, but displaying another brand's watermark and failing basic math/spec consistency (2BHK vs 3 Bedrooms) completely destroys brand trust and makes us look unprofessional.",
-  "issues": [
-   "Competitor watermark 'ESTATE LOOKUP INTERIORS' is visible in the top right background.",
-   "Mismatched content: Table lists wardrobe costs for '3 बेडरूम' (3 Bedrooms) instead of 2 Bedrooms for a 2BHK flat.",
-   "The white gradient overlay at the top looks unpolished and poorly blended with the header text."
-  ],
-  "fix_suggestion": "Replace the hero image with an authentic, watermark-free photo of a Design Infra 2BHK project. Correct the second line item to read 'वॉर्डरोब (2 बेडरूम)' and adjust the price range to accurately reflect a 2BHK configuration."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-19": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The featured space looks like a dated, sterile, mid-2010s Western stock photo with cold white leather, basic chrome, and a cheap shag rug. It completely lacks the premium warmth, material richness (like polished veneers, marble, or brass), and contemporary styling expected of a leading Indian turnkey design firm.",
-  "marketing_notes": "While the hook is highly relatable and scroll-stopping, cramming the entire Hindi explanation onto the image makes it look like a presentation slide rather than a premium social post. The visual also fails to show a clear 'Before/After' or 'Wrong vs. Right' comparison, which is crucial for educational design tips.",
-  "issues": [
-   "The room styling looks cheap, dated, and like a generic stock photo, which dilutes the brand's premium positioning.",
-   "Too much body text is hardcoded onto the image, reducing visual impact and breathing room.",
-   "The 'One Team, One Contract' badge at the bottom feels forced and irrelevant to this specific educational tip."
-  ],
-  "fix_suggestion": "Replace the image with a real, high-end Indian living room project featuring a warm, modern, floated layout. Remove the Hindi body text from the image entirely (move it to the caption) to let the bold English hook and a stunning visual do the heavy lifting."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-20": {
   "verdict": "error",
   "score": 0,
-  "note": "gemini review failed: Unterminated string starting at: line 10 column 5 (char 1116)"
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-21": {
-  "verdict": "revise",
-  "score": 6,
-  "design_notes": "The bathroom image feels like a generic, slightly dated Western stock photo (complete with hanging fish decor in the window) rather than a premium Indian residential project. Crucially, the vanity lighting—which is the entire subject of the design tip—is distant, unclear, and does not showcase the recommended side-sconce solution.",
-  "marketing_notes": "While the hook is highly relatable and the typography is clean, the visual fails to deliver on the promise. A high-performing post needs a clear 'before/after' or a stunning 'hero' shot of perfect vanity lighting to stop the scroll and build authority.",
-  "issues": [
-   "The image does not visually demonstrate the lighting mistake or the correct side-lighting solution mentioned in the text.",
-   "The bathroom styling looks like generic stock rather than a premium, aspirational Indian home designed by a turnkey firm.",
-   "The 'एक टीम। एक कॉन्ट्रैक्ट।' pill button at the bottom feels disconnected from the educational content of this specific card."
-  ],
-  "fix_suggestion": "Replace the image with a high-quality, close-up shot of a modern vanity area featuring elegant wall sconces styled on both sides of a premium mirror, clearly illustrating the design solution described in the text."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-22": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The image is a catastrophic mismatch; instead of a premium, aspirational Indian home office showcasing smart spatial layout, it features a gritty, black-and-white historical industrial utility room with exposed wiring.",
-  "marketing_notes": "This completely fails to stop the scroll for a luxury home-decor audience and destroys brand trust, looking like a random template error rather than a premium turnkey design firm's portfolio.",
-  "issues": [
-   "Complete mismatch between the home office design tip and the industrial black-and-white utility room image.",
-   "Fails to showcase any actual interior design capability, materials, or premium residential aesthetic.",
-   "The image looks like a historical archive photo, which is highly confusing for a modern turnkey interior brand."
-  ],
-  "fix_suggestion": "Replace the background image with a high-quality, brightly lit photograph of a premium Indian home office designed by Design Infra, showing a desk positioned creatively with a view of a window or an open, styled room."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-23": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The image shows a dilapidated, filthy, and abandoned kitchen which completely contradicts the hook 'Your kitchen looks great' and severely damages our premium brand identity.",
-  "marketing_notes": "Using a depressing, horror-like image destroys brand trust for a premium service; additionally, pasting the entire Hindi caption directly onto the image card creates massive visual clutter and looks unprofessional.",
-  "issues": [
-   "Severe visual-text mismatch: The image shows a ruined, dirty kitchen while the hook claims it 'looks great'.",
-   "The image is highly off-brand, resembling an abandoned house rather than a premium Delhi NCR home.",
-   "Too much body text printed directly on the image card, violating clean social media design principles."
-  ],
-  "fix_suggestion": "Replace the image with a stunning, high-end Indian modular kitchen that visually 'looks great', and move the long Hindi paragraph off the image card into the actual post caption, leaving only the hook on the graphic."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-24": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The image features a vintage, 19th-century Western rustic dining room with a stone fireplace and plate racks, which is completely irrelevant to premium Indian residential design and fails to showcase any modern materials, layouts, or actual design capability.",
-  "marketing_notes": "There is a massive disconnect between the 'blank concrete shell' hook and the fully furnished historical photo. Additionally, pasting the entire Hindi body caption directly onto the image card creates extreme text clutter, making it look like a cheap flyer rather than a premium, scroll-stopping social post.",
-  "issues": [
-   "The image shows an ancient Western dining room/cabin instead of a modern Indian living room.",
-   "No 'before' or 'after' visual is shown despite the 'Before/After' theme and 'blank concrete shell' hook.",
-   "The entire Hindi body caption is printed on the image card, causing severe text clutter.",
-   "The sepia archive photo looks like a generic historical stock image, destroying brand trust and authenticity."
-  ],
-  "fix_suggestion": "Replace the vintage sepia image with a high-quality split-screen or carousel showing an actual 'before' (raw concrete site in India) and 'after' (premium, modern Indian living room designed by Design Infra), and move the long Hindi text block off the image card into the post's caption field."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-25": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The illustration depicts a living room with a sofa and coffee table, which completely mismatches the bedroom-focused copy. Additionally, using a flat 2D vector graphic looks cheap and amateurish for a premium turnkey brand that should be showcasing real site photography or high-fidelity 3D renders with actual material textures.",
-  "marketing_notes": "This has zero scroll-stopping power for high-intent homeowners and looks like a generic tech blog banner rather than an aspirational design post. Putting the entire Hindi body copy directly on the image card creates massive visual clutter and fails to build the trust that real portfolio images would.",
-  "issues": [
-   "Visual-copy mismatch: The graphic shows a living room, but the text explicitly discusses a bedroom transformation.",
-   "Cheap visual medium: Flat 2D vector illustrations do not reflect a premium, high-end turnkey interior design service.",
-   "Text clutter: The entire Hindi caption is printed on the image card instead of being in the post body, making the card look crowded and unprofessional.",
-   "Poor contrast: The brand header at the top left is difficult to read against the light window and yellow glow graphic."
-  ],
-  "fix_suggestion": "Replace the vector graphic with a high-quality, split-screen 'Before' (raw concrete site) and 'After' (fully styled, premium real bedroom) photo. Move the Hindi body text entirely to the post caption, leaving only the English hook on the image in a clean, high-contrast font."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-26": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The featured bathroom looks like a mid-range Western/European stock photo with dated light-oak shaker cabinets and full-length fabric curtains, completely lacking the premium 'home spa' elements (like Italian marble, ambient LED lighting, or high-end fixtures) that appeal to Delhi NCR clients.",
-  "marketing_notes": "The hook promises a transformation from 'cramped' to 'spa', but showing only a single, spacious, generic 'after' photo fails to deliver on the Before/After curiosity loop. Additionally, plastering the entire Hindi body copy onto the image card makes it look cluttered and cheapens the brand aesthetic.",
-  "issues": [
-   "No 'Before' visual is shown to justify the 'Before/After' theme and 'cramped' hook.",
-   "The bathroom styling is distinctly non-Indian (European radiator, window style, and decor) which hurts local brand authenticity.",
-   "The image lacks premium luxury cues expected of a 'home spa' transformation.",
-   "Too much body text on the image card, reducing visual breathing room and premium feel."
-  ],
-  "fix_suggestion": "Replace the single image with a side-by-side split-screen showing a real 'Before' (cramped, dated Indian bathroom) and 'After' (premium, modern Indian home spa with marble/granite, concealed plumbing, and warm profile lighting), and move the Hindi body text entirely to the caption, leaving only the main hook on the card."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-27": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The image is a 19th-century vintage engraving, not a real interior design project. It completely fails to showcase modern Indian materials, spatial planning, or actual turnkey execution capabilities.",
-  "marketing_notes": "The visual-to-text mismatch is a trust-killer; claiming 'we transformed this boring space' while showing a historical sketch makes the brand look fake. It lacks any aspirational value for a premium Delhi NCR homeowner.",
-  "issues": [
-   "The image is a historical sketch/engraving, not a real 'before' or 'after' interior design project.",
-   "Severe mismatch between the Hindi text ('we transformed this boring space') and the vintage illustration shown.",
-   "Fails to showcase any actual design expertise, premium materials, or modern Indian aesthetics."
-  ],
-  "fix_suggestion": "Replace the vintage sketch with a high-quality, real-life split 'Before/After' photo of a modern Indian home office transformation executed by Design Infra."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-28": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The kitchen shown relies on a dated glass-mosaic backsplash and a highly Westernized layout that lacks typical Indian modular kitchen elements like a prominent chimney/hob setup, making it look like a generic stock photo rather than a premium Delhi NCR project.",
-  "marketing_notes": "Claiming a 'Before/After' transformation without actually showing the 'Before' image completely kills the hook's credibility. Additionally, plastering a full paragraph of Hindi body copy onto the image makes it look like a cluttered print brochure rather than a high-performing, native social post.",
-  "issues": [
-   "No 'Before' visual is provided to justify the 'chaotic to clutter-free' transformation hook.",
-   "Excessive text on the image card, including a full Hindi paragraph that should be moved to the caption.",
-   "The kitchen image looks like a sterile, Western stock photo, which hurts local brand authenticity and trust.",
-   "The glass mosaic backsplash is a dated design trend that doesn't align with a premium, modern aesthetic."
-  ],
-  "fix_suggestion": "Change the layout to a split-screen showing a real 'Before' and 'After' transition, remove the Hindi paragraph from the image card entirely to let the design breathe, and use a project photo featuring contemporary Indian premium finishes like seamless quartz countertops and clean gola-profile handles."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-29": {
-  "verdict": "revise",
-  "score": 7,
-  "design_notes": "The interior styling is exceptionally strong and authentic to premium Indian homes, featuring on-trend arched wall molding, a sophisticated sage-and-neutral palette, and a beautifully integrated mandir corner with traditional brass details.",
-  "marketing_notes": "The hook addressing budget transparency is highly effective for lead generation, but printing the entire multi-line Hindi caption directly on the image cluttering the layout, making it look like a busy print flyer rather than a premium social post.",
-  "issues": [
-   "The entire Hindi caption is printed on the image, violating the metadata spec and cluttering the visual hierarchy.",
-   "The bottom-right pill button adds redundant text that competes with the main hook and footer handle.",
-   "The graphic layout feels too text-heavy, which reduces the aspirational, premium feel of the actual project photo."
-  ],
-  "fix_suggestion": "Remove the three-line Hindi paragraph and the 'एक टीम। एक कॉन्ट्रैक्ट।' pill button from the image. Keep only the category tag, the main English hook, and the clean footer, moving all secondary copy to the caption of the post."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-30": {
-  "verdict": "reject",
-  "score": 3,
-  "design_notes": "The visual shows a vintage American Craftsman exterior house sketch from an old Sears catalog, which completely contradicts the hook promising a 'dream bedroom' and has zero relevance to premium Indian residential interiors.",
-  "marketing_notes": "A massive visual-to-text mismatch that instantly kills conversion; no Indian homeowner looking for a bedroom renovation will stop for a black-and-white US architectural drawing. Furthermore, plastering the entire long Hindi body copy onto the image card looks cluttered and cheapens the brand.",
-  "issues": [
-   "Severe mismatch between the 'dream bedroom' hook and the vintage exterior house illustration.",
-   "The vintage American catalog aesthetic is completely irrelevant to a contemporary Indian turnkey interior design firm.",
-   "Too much body text on the image card, which should be kept clean and premium by moving the paragraph to the caption."
-  ],
-  "fix_suggestion": "Replace the vintage house illustration with a high-quality, aspirational photograph of a real bedroom designed for the Indian context, and move the long Hindi paragraph from the image card into the post's caption field."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-08-31": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The featured bathroom relies on a generic Western stock photo with highly impractical floor-length fabric curtains and basic laminate cabinetry, failing to showcase the premium stone, tile, and moisture-resistant execution expected of a luxury Indian turnkey firm.",
-  "marketing_notes": "The card is excessively text-heavy by duplicating the entire Hindi caption onto the image, which kills scroll-stop engagement, and there is a mismatch between the bottom-right pill tagline and the caption copy.",
-  "issues": [
-   "Impractical design elements for Indian homes, specifically floor-length fabric curtains in a wet area.",
-   "Overly text-heavy graphic that duplicates the body caption onto the image card.",
-   "Inconsistent branding with a tagline mismatch between the on-image pill and the caption.",
-   "Visuals look like cheap/mid-range stock photography rather than aspirational, premium Delhi NCR homes."
-  ],
-  "fix_suggestion": "Replace the background with an actual premium Indian bathroom project showcasing high-end marble or tile work. Remove the paragraph of Hindi text from the graphic to let the hook breathe, and update the bottom pill to match the caption's 'एक टीम, ज़ीरो झंझट' tagline."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-01": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The featured image is a black-and-white archival photo of a historic US building (marked 'HABS No. DC-267'), which completely misrepresents modern Indian residential design, materials, and spatial planning.",
-  "marketing_notes": "Using a public-domain historical photo destroys brand credibility for a premium turnkey service. Additionally, plastering the entire long Hindi caption directly onto the image card makes it look like a cheap flyer rather than a premium, scroll-stopping social post.",
-  "issues": [
-   "The image is a black-and-white archival photo of a historic US office, not a contemporary Indian home office.",
-   "Visible archival catalog text ('HABS No. DC-267') is left on the right edge of the image, looking highly unprofessional.",
-   "The image card is extremely text-heavy; the entire Hindi body copy should be in the caption, not on the graphic.",
-   "The black-and-white aesthetic fails to showcase the premium materials, colors, and finishes that Delhi NCR clients expect to see."
-  ],
-  "fix_suggestion": "Replace the archival image with a high-resolution, colorful photograph of a real, modern Indian home office project. Remove the long Hindi paragraph from the image card entirely, leaving only the main English hook to keep the visual clean and premium."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-02": {
-  "verdict": "reject",
-  "score": 3,
-  "design_notes": "Showing a blurry, generic close-up of two basic white mugs on a plain shelf completely fails to represent a premium modular kitchen. It lacks any showcase of high-end materials, finishes, profile lighting, or smart storage solutions that Delhi NCR homeowners expect from a turnkey designer.",
-  "marketing_notes": "The scroll-stop power is extremely low because the image looks like a cheap, generic stock photo rather than an aspirational home interior. Furthermore, printing the entire Hindi body copy directly onto the image card clutters the visual and dilutes the impact of the main hook.",
-  "issues": [
-   "The image does not actually show a kitchen, only a generic shelf with mugs.",
-   "Too much body text is duplicated on the image card, violating clean ad design principles.",
-   "The visual lacks the premium, high-end aesthetic required to build trust for a turnkey service."
-  ],
-  "fix_suggestion": "Replace the entire background image with a high-quality, well-lit photograph of a real modular kitchen designed by Design Infra, highlighting smart, clutter-free storage (like a tall pantry unit or tandem drawers). Remove the Hindi paragraph from the image card entirely, keeping only the main English hook to ensure a clean, premium look."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-03": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The image is a black-and-white vintage archival photograph of a Western historic home, completely contradicting the 'warm lights and brass accents' festive Indian theme. It lacks color, contemporary Indian styling, and any visible brass or warm lighting elements.",
-  "marketing_notes": "There is a massive disconnect between the visual and the hook; a black-and-white historical photo will not stop the scroll for an Indian homeowner looking for modern festive inspiration. It looks like a placeholder template error, severely damaging brand trust.",
-  "issues": [
-   "Complete mismatch between the black-and-white vintage image and the 'warm lights and brass accents' festive theme.",
-   "The featured interior is Western historical/Craftsman style, not a premium Indian residential living room.",
-   "The image lacks color, warmth, and festive appeal required for a seasonal Indian campaign.",
-   "Too much body text duplicated on the image card, making it look like a cheap flyer rather than a premium social post."
-  ],
-  "fix_suggestion": "Replace the vintage black-and-white image with a high-quality, vibrant, color photograph of a contemporary Indian living room featuring actual brass decor, warm ambient lighting, and modern festive styling. Remove the paragraph of Hindi body text from the image card to keep the visual clean, leaving only the main hook."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-04": {
-  "verdict": "reject",
-  "score": 3,
-  "design_notes": "The bedroom styling is strictly modern-minimalist with cool grey fluted panels and neutral tones; it completely lacks the 'ethnic textures' or 'festive warmth' promised in the copy.",
-  "marketing_notes": "The visible 'SPL Interiors1 • CC BY' attribution watermark instantly destroys our credibility as a premium turnkey design firm, making us look like we use stock images instead of our own execution.",
-  "issues": [
-   "Visible CC-BY attribution watermark ('SPL Interiors1') ruins premium brand trust.",
-   "Complete mismatch between the 'festive warmth/ethnic textures' copy and the cool, sterile, modern grey bedroom image.",
-   "The lighting in the render is cool/neutral white, contradicting the 'warm lights' claim in the Hindi caption."
-  ],
-  "fix_suggestion": "Replace the image with an actual Design Infra project that features warm lighting, rich Indian textiles (like block prints or silks), or brass accents, and ensure all external watermarks are removed."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-05": {
-  "verdict": "revise",
-  "score": 6,
-  "design_notes": "The bathroom visual looks like generic Western stock imagery featuring flat laminate cabinetry and tilt-window styling, lacking the aspirational marble, fluted accents, and bespoke lighting expected from a mid-to-premium Indian turnkey firm.",
-  "marketing_notes": "The hook addresses a huge Indian homeowner pain point, but baking the full Hindi body text onto the graphic turns it into a crowded brochure banner rather than a sleek, image-first Instagram card.",
-  "issues": [
-   "Image card is overly text-heavy with body copy baked onto the graphic instead of staying in the caption",
-   "Room photograph occupies under 50% of the frame, reducing visual punch",
-   "Bathroom photo looks like stock European interior design rather than an authentic Indian project showcase"
-  ],
-  "fix_suggestion": "Expand the bathroom image to cover 70% of the card, remove the multi-line Hindi body copy from the visual (keep only the English hook and CTA), and use a high-res shot of a real Indian luxury bathroom project."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-06": {
-  "verdict": "revise",
-  "score": 4,
-  "design_notes": "The photo is a generic macro stock shot of a computer keyboard and mouse rather than an actual designed home office interior showing joinery, lighting, or architectural details. It fails completely to showcase turnkey design expertise or material craftsmanship.",
-  "marketing_notes": "Pasting the entire Hindi caption text onto the graphic creates heavy cognitive clutter and looks cheap. Indian homeowners scrolling Instagram look for aspirational, real-looking room reveals, not stock tech images with wall-of-text graphics.",
-  "issues": [
-   "Generic stock photo showing tech peripherals instead of interior design",
-   "Graphic is overcrowded with full Hindi paragraph text",
-   "No visual proof of turnkey carpentry, lighting, or space planning"
-  ],
-  "fix_suggestion": "Replace the stock photo with a wide or medium shot of a styled home office featuring custom built-ins and lighting, and remove the Hindi body text block from the graphic so only the headline hook remains."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-07": {
-  "verdict": "revise",
-  "score": 4,
-  "design_notes": "The featured image shows modern dark veneer cabinetry with European-style power outlets, but fails to show a kitchen sink at all to visually demonstrate the layout tip.",
-  "marketing_notes": "The visible Creative Commons attribution badge destroys trust for a premium turnkey company, while putting the entire Hindi paragraph on the image card creates visual clutter.",
-  "issues": [
-   "Visible CC-BY stock image attribution badge damages premium brand image",
-   "Image does not show a sink, making the layout tip purely abstract",
-   "Non-Indian European wall sockets visible on backsplash reveal stock origin",
-   "Excessive body text cluttering the image graphic"
-  ],
-  "fix_suggestion": "Replace the stock photo with a real project image clearly showing stove-to-sink counter spacing, remove the attribution tag, and keep only the main bold hook on the graphic card while moving the body text to the post caption."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-08": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The background is a dense text excerpt about a heritage house in the Philippines with a CC-BY attribution tag, offering zero visual interior design or rug reference. It completely fails to showcase aspirational Indian residential interiors or proper rug placement.",
-  "marketing_notes": "While the headline hook is strong, presenting a wall of irrelevant scanned document text completely destroys brand credibility and scroll-stopping appeal. It looks like a template glitch or asset loading error rather than a premium turnkey interior service post.",
-  "issues": [
-   "Background image is an irrelevant text document about a Filipino heritage house",
-   "CC-BY attribution tag visible on image asset",
-   "No visual representation of a living room or rug sizing",
-   "Looks like a asset error or wrong template used"
-  ],
-  "fix_suggestion": "Replace the text background with a high-quality, real shot of a well-designed Indian living room featuring a correctly proportioned rug beneath the furniture."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-09": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The visual displays a generic living room vector graphic with a sofa and coffee table, completely contradicting the copy about bedroom bedside table height. Furthermore, using flat 2D clip art fails to show actual material finishes or spatial proportions required for a premium turnkey design brand.",
-  "marketing_notes": "A stock vector illustration looks low-budget and template-generated, destroying brand trust among high-ticket Indian home-renovation clients. The complete disconnect between a living room graphic and a bedroom design tip signals severe lack of quality control.",
-  "issues": [
-   "Visual shows a living room setup instead of a bedroom with bedside tables",
-   "Uses cheap flat vector illustration instead of high-quality project photos or 3D renders",
-   "Complete mismatch between graphic content and tip copy"
-  ],
-  "fix_suggestion": "Replace the illustration with a high-resolution real photograph or aspirational 3D render of a luxury bedroom showing correct bedside table alignment with the mattress height."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-10": {
-  "verdict": "revise",
-  "score": 6,
-  "design_notes": "The visual shows a dated European-style bathroom with shaker cabinets and fish windowsill decor, failing to showcase modern Indian luxury bathroom aesthetics like backlit mirrors or sleek side sconces.",
-  "marketing_notes": "The copy contrast and graphic layout are clean, but using a generic wide shot instead of a close-up vanity lighting demonstration reduces educational impact and trust.",
-  "issues": [
-   "Image does not visually demonstrate side sconces or task lighting around the mirror",
-   "Styling and decor feel like generic European stock photography rather than modern Indian interior design",
-   "Misses a visual comparison or focused callout on vanity lighting"
-  ],
-  "fix_suggestion": "Replace background image with a crisp close-up of a contemporary Indian vanity setup featuring dual wall sconces or vertical profile lights on both sides of the mirror."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-11": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The visual background shows an intricate monochrome historic carved ceiling/arch, which has zero relevance to modern residential home office design or desk placement.",
-  "marketing_notes": "A severe visual-to-copy mismatch destroys scroll-stop effectiveness and brand trust; users expecting a home office tip will scroll past or feel confused by an architectural ceiling photo.",
-  "issues": [
-   "Irrelevant image selection showing a historic architectural ceiling instead of a home office",
-   "Lack of visual context to demonstrate desk placement or spatial lighting"
-  ],
-  "fix_suggestion": "Replace the image with a high-resolution photo of an aspirational, well-lit modern home office setup showing a desk correctly positioned near a window."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-12": {
-  "verdict": "revise",
-  "score": 4,
-  "design_notes": "The image clearly shows European-spec electrical outlets and a straight-line galley layout, which contradicts the 'work triangle' rule discussed in the text.",
-  "marketing_notes": "A visible CC-BY stock attribution badge ('Shixart1985') severely damages brand trust for a premium interior firm, while embedding a full Hindi paragraph clutter-loads the visual card.",
-  "issues": [
-   "Visible CC-BY stock attribution watermark ('Shixart1985 · CC BY') ruins premium positioning.",
-   "Non-Indian European electrical sockets reveal generic stock imagery.",
-   "Heavy paragraph body text on the image card reduces visual impact and scroll-stop clarity."
-  ],
-  "fix_suggestion": "Replace with an actual Indian project photo showing standard 3-pin switches, remove the stock attribution tag, and remove the long Hindi body paragraph from the graphic card (keep only the bold hook on-image and put the detailed text in the caption)."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-13": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The living room setup relies on dated, monochromatic Western stock aesthetic (white leather sectional, chrome glass tables) that lacks the warmth, rich textures, and functional practical luxury expected in contemporary Indian homes.",
-  "marketing_notes": "Labeling the post as 'Before/After & Concept Transformations' without showing a 'Before' visual undermines trust, while the generic stock photo fails to stop the scroll or showcase authentic execution proof.",
-  "issues": [
-   "No 'Before' comparison image despite being categorized under Before/After transformations",
-   "Generic stock photography lacks authentic Indian residential context and real execution proof",
-   "On-card text hook is generic and lacks local relevance or pain-point urgency"
-  ],
-  "fix_suggestion": "Replace the stock visual with a high-res split-screen or side-by-side Before/After shot from a real Delhi NCR project showcasing warm, modern Indian interior styling."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-14": {
-  "verdict": "reject",
-  "score": 2,
-  "design_notes": "The visual shows a 1920s vintage American house exterior sketch rather than an interior bedroom space, completely failing to represent modern Indian turnkey interior craftsmanship.",
-  "marketing_notes": "A monochrome architectural catalog image lacks scroll-stopping aesthetic appeal and creates massive trust mismatch against the Hindi copy promising a dream bedroom sanctuary.",
-  "issues": [
-   "Visual shows a vintage US house exterior instead of an Indian bedroom interior",
-   "Complete mismatch between image subject and copy describing a bedroom sanctuary",
-   "Generic, non-converting hook that lacks local relevance for Delhi NCR homeowners"
-  ],
-  "fix_suggestion": "Replace the vintage exterior diagram with a real or high-end 3D visual of a modern, warm Indian master bedroom interior highlighting turnkey execution."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  },
  "2026-09-15": {
-  "verdict": "revise",
-  "score": 5,
-  "design_notes": "The featured bathroom is spacious with a freestanding tub and tall cabinetry, contradicting the 'cramped' headline, and lacks authentic Indian wet/dry zone planning or realistic project context.",
-  "marketing_notes": "Promising a 'Before/After' transformation without visually showing the 'Before' destroys credibility, while baking full paragraph Hindi copy onto the graphic creates unnecessary visual clutter.",
-  "issues": [
-   "No 'Before' visual provided despite being categorized under Before/After transformations",
-   "Mismatch between headline ('cramped, wet mess') and image (spacious, airy bathroom with freestanding tub)",
-   "Excessive text printed on the image graphic weakens visual impact and readability"
-  ],
-  "fix_suggestion": "Switch to a split-screen layout displaying real Before vs. After project photos, and strip out the long paragraph Hindi copy from the image template."
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-16": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-17": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-18": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-19": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-20": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-21": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-09-22": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  }
 }
