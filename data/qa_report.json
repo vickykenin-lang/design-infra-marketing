@@ -271,5 +271,40 @@
   "verdict": "error",
   "score": 0,
   "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-07": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-08": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-09": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-10": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-11": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-12": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+ },
+ "2026-10-13": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
  }
 }
