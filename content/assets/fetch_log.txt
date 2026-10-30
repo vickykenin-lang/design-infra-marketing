@@ -1,8 +1,11 @@
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern living room interior India apartment': The read operation timed out
 == living: 0/6 from 'modern living room interior India apartment'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'contemporary living room warm wood marble': The read operation timed out
 == living: 0/6 from 'contemporary living room warm wood marble'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern modular kitchen India interior': The read operation timed out
 == kitchen: 0/6 from 'modern modular kitchen India interior'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
 [openverse] search failed for 'modern kitchen cabinets warm lighting': The read operation timed out
@@ -20,6 +23,7 @@
           
 == kitchen: 0/6 from 'modern kitchen cabinets warm lighting'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern bedroom interior wardrobe India': The read operation timed out
 == bedroom: 0/6 from 'modern bedroom interior wardrobe India'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
 [wikimedia] reject by Gemini vision: File:Cozy bedroom with suitcase and natural light from the window in a modern apartment setting.jpg — gemini check errored — rejecting rather than allowing unverified: HTTP 401 from Gemini (model=gemini-3.5-flash): {
@@ -35,12 +39,7 @@
           
 == bedroom: 0/6 from 'cozy modern bedroom natural light apartment'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
+[openverse] search failed for 'modern home office desk apartment interior': The read operation timed out
 [wikimedia] reject by Gemini vision: File:A woman sits at a desk with her laptop, deeply focused on her work in a low-light environment.jpg — gemini check errored — rejecting rather than allowing unverified: HTTP 401 from Gemini (model=gemini-3.5-flash): {
   "error": {
     "code": 401,
@@ -54,6 +53,7 @@
           
 == office: 0/5 from 'modern home office desk apartment interior'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern study room interior residential': The read operation timed out
 [wikimedia] reject (bad-keyword): File:Costumed villagers, The Citadel of Aleppo, Syria.jpg
 [wikimedia] reject (bad-keyword): File:The Citadel of Aleppo, Syria, panoramic.jpg
 [wikimedia] reject (bad-keyword): File:Theater inside the Citadel of Aleppo, Syria.jpg
