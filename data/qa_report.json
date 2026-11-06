@@ -446,5 +446,40 @@
   "verdict": "error",
   "score": 0,
   "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-11": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-12": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-13": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-14": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-15": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-16": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+ },
+ "2026-11-17": {
+  "verdict": "error",
+  "score": 0,
+  "note": "gemini review failed: HTTP 401 from Gemini (model=gemini-3.5-flash): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
  }
 }
