@@ -3,28 +3,10 @@
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
 == living: 0/6 from 'contemporary living room warm wood marble'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern modular kitchen India interior': HTTP Error 504: Gateway Timeout
 == kitchen: 0/6 from 'modern modular kitchen India interior'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
-[openverse] reject (no-interior-hint): Edinburgh | 3033 NW 160th Street Edmond OK
+[openverse] search failed for 'modern kitchen cabinets warm lighting': HTTP Error 504: Gateway Timeout
 [wikimedia] reject duplicate: File:Modern kitchen design featuring minimalistic elements, warm lighting, and high-end appliances in a contemporary setting.jpg
 [wikimedia] reject by Gemini vision: File:Woman prepares drink in modern kitchen.jpg — gemini check errored — rejecting rather than allowing unverified: HTTP 401 from Gemini (model=gemini-3.5-flash): {
   "error": {
@@ -39,6 +21,7 @@
           
 == kitchen: 0/6 from 'modern kitchen cabinets warm lighting'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
+[openverse] search failed for 'modern bedroom interior wardrobe India': HTTP Error 504: Gateway Timeout
 == bedroom: 0/6 from 'modern bedroom interior wardrobe India'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
 [wikimedia] reject by Gemini vision: File:Cozy bedroom with suitcase and natural light from the window in a modern apartment setting.jpg — gemini check errored — rejecting rather than allowing unverified: HTTP 401 from Gemini (model=gemini-3.5-flash): {
@@ -54,12 +37,7 @@
           
 == bedroom: 0/6 from 'cozy modern bedroom natural light apartment'
 [unsplash] UNSPLASH_ACCESS_KEY not set — skipping (add GitHub secret to enable)
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
-[openverse] reject duplicate: Home Office
+[openverse] search failed for 'modern home office desk apartment interior': HTTP Error 504: Gateway Timeout
 [wikimedia] reject by Gemini vision: File:A woman sits at a desk with her laptop, deeply focused on her work in a low-light environment.jpg — gemini check errored — rejecting rather than allowing unverified: HTTP 401 from Gemini (model=gemini-3.5-flash): {
   "error": {
     "code": 401,
